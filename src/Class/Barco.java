@@ -14,4 +14,6 @@ public class Barco {
     public int Id ;
     public String  Nombre;
     
+    public int barcoPirata=100000;
+    
 }
