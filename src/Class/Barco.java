@@ -13,4 +13,6 @@ public class Barco {
     
     public int id ;
     
+    public int barcoPirata=100000;
+    
 }
