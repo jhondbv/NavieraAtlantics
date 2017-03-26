@@ -11,6 +11,7 @@ package Class;
  */
 public class Barco {
     
-    public int id ;
+    public int Id ;
+    public String  Nombre;
     
 }
