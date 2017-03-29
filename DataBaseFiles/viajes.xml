@@ -1,0 +1,2497 @@
+<viajes>
+   <viaje id="0" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>12,3,33</puertosAtraco>
+      <tripulacion>25,7,21</tripulacion>
+      <numEncomiendas>73</numEncomiendas>
+   </viaje>
+   <viaje id="1" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>43,0,32</puertosAtraco>
+      <tripulacion>12,1,46</tripulacion>
+      <numEncomiendas>65</numEncomiendas>
+   </viaje>
+   <viaje id="2" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>4,8,18</puertosAtraco>
+      <tripulacion>44,5,43</tripulacion>
+      <numEncomiendas>34</numEncomiendas>
+   </viaje>
+   <viaje id="3" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>34,5,14</puertosAtraco>
+      <tripulacion>38,0,44</tripulacion>
+      <numEncomiendas>54</numEncomiendas>
+   </viaje>
+   <viaje id="4" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>2,4,48</puertosAtraco>
+      <tripulacion>40,0,12</tripulacion>
+      <numEncomiendas>92</numEncomiendas>
+   </viaje>
+   <viaje id="5" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>44,9,38</puertosAtraco>
+      <tripulacion>47,2,25</tripulacion>
+      <numEncomiendas>88</numEncomiendas>
+   </viaje>
+   <viaje id="6" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>20,3,24</puertosAtraco>
+      <tripulacion>23,9,32</tripulacion>
+      <numEncomiendas>50</numEncomiendas>
+   </viaje>
+   <viaje id="7" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>23,2,17</puertosAtraco>
+      <tripulacion>15,1,35</tripulacion>
+      <numEncomiendas>6</numEncomiendas>
+   </viaje>
+   <viaje id="8" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>22,4,34</puertosAtraco>
+      <tripulacion>35,3,46</tripulacion>
+      <numEncomiendas>91</numEncomiendas>
+   </viaje>
+   <viaje id="9" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>0,5,23</puertosAtraco>
+      <tripulacion>42,8,44</tripulacion>
+      <numEncomiendas>2</numEncomiendas>
+   </viaje>
+   <viaje id="10" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>26,6,2</puertosAtraco>
+      <tripulacion>34,1,6</tripulacion>
+      <numEncomiendas>3</numEncomiendas>
+   </viaje>
+   <viaje id="11" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>20,3,22</puertosAtraco>
+      <tripulacion>6,3,39</tripulacion>
+      <numEncomiendas>77</numEncomiendas>
+   </viaje>
+   <viaje id="12" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>18,3,1</puertosAtraco>
+      <tripulacion>6,5,11</tripulacion>
+      <numEncomiendas>85</numEncomiendas>
+   </viaje>
+   <viaje id="13" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>1,6,8</puertosAtraco>
+      <tripulacion>19,1,31</tripulacion>
+      <numEncomiendas>73</numEncomiendas>
+   </viaje>
+   <viaje id="14" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>1,5,38</puertosAtraco>
+      <tripulacion>47,1,13</tripulacion>
+      <numEncomiendas>34</numEncomiendas>
+   </viaje>
+   <viaje id="15" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>13,1,28</puertosAtraco>
+      <tripulacion>43,4,0</tripulacion>
+      <numEncomiendas>87</numEncomiendas>
+   </viaje>
+   <viaje id="16" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>41,6,36</puertosAtraco>
+      <tripulacion>4,5,10</tripulacion>
+      <numEncomiendas>54</numEncomiendas>
+   </viaje>
+   <viaje id="17" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>5,1,41</puertosAtraco>
+      <tripulacion>29,6,26</tripulacion>
+      <numEncomiendas>1</numEncomiendas>
+   </viaje>
+   <viaje id="18" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>45,9,40</puertosAtraco>
+      <tripulacion>39,1,28</tripulacion>
+      <numEncomiendas>90</numEncomiendas>
+   </viaje>
+   <viaje id="19" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>27,3,3</puertosAtraco>
+      <tripulacion>38,0,20</tripulacion>
+      <numEncomiendas>40</numEncomiendas>
+   </viaje>
+   <viaje id="20" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>45,7,10</puertosAtraco>
+      <tripulacion>36,6,12</tripulacion>
+      <numEncomiendas>6</numEncomiendas>
+   </viaje>
+   <viaje id="21" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>25,3,22</puertosAtraco>
+      <tripulacion>49,5,15</tripulacion>
+      <numEncomiendas>59</numEncomiendas>
+   </viaje>
+   <viaje id="22" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>14,3,38</puertosAtraco>
+      <tripulacion>15,4,16</tripulacion>
+      <numEncomiendas>46</numEncomiendas>
+   </viaje>
+   <viaje id="23" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>28,1,38</puertosAtraco>
+      <tripulacion>13,9,12</tripulacion>
+      <numEncomiendas>53</numEncomiendas>
+   </viaje>
+   <viaje id="24" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>10,8,10</puertosAtraco>
+      <tripulacion>35,2,14</tripulacion>
+      <numEncomiendas>9</numEncomiendas>
+   </viaje>
+   <viaje id="25" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>19,4,29</puertosAtraco>
+      <tripulacion>2,1,36</tripulacion>
+      <numEncomiendas>63</numEncomiendas>
+   </viaje>
+   <viaje id="26" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>4,6,26</puertosAtraco>
+      <tripulacion>29,9,9</tripulacion>
+      <numEncomiendas>71</numEncomiendas>
+   </viaje>
+   <viaje id="27" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>16,9,10</puertosAtraco>
+      <tripulacion>3,3,44</tripulacion>
+      <numEncomiendas>19</numEncomiendas>
+   </viaje>
+   <viaje id="28" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>21,8,18</puertosAtraco>
+      <tripulacion>2,6,43</tripulacion>
+      <numEncomiendas>56</numEncomiendas>
+   </viaje>
+   <viaje id="29" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>49,8,15</puertosAtraco>
+      <tripulacion>19,9,38</tripulacion>
+      <numEncomiendas>10</numEncomiendas>
+   </viaje>
+   <viaje id="30" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>32,0,29</puertosAtraco>
+      <tripulacion>4,5,7</tripulacion>
+      <numEncomiendas>9</numEncomiendas>
+   </viaje>
+   <viaje id="31" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>25,2,40</puertosAtraco>
+      <tripulacion>28,8,22</tripulacion>
+      <numEncomiendas>70</numEncomiendas>
+   </viaje>
+   <viaje id="32" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>37,8,44</puertosAtraco>
+      <tripulacion>25,3,38</tripulacion>
+      <numEncomiendas>10</numEncomiendas>
+   </viaje>
+   <viaje id="33" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>30,4,30</puertosAtraco>
+      <tripulacion>11,3,26</tripulacion>
+      <numEncomiendas>60</numEncomiendas>
+   </viaje>
+   <viaje id="34" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>2,2,40</puertosAtraco>
+      <tripulacion>2,5,47</tripulacion>
+      <numEncomiendas>60</numEncomiendas>
+   </viaje>
+   <viaje id="35" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>9,2,27</puertosAtraco>
+      <tripulacion>43,9,30</tripulacion>
+      <numEncomiendas>19</numEncomiendas>
+   </viaje>
+   <viaje id="36" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>35,6,24</puertosAtraco>
+      <tripulacion>46,0,5</tripulacion>
+      <numEncomiendas>26</numEncomiendas>
+   </viaje>
+   <viaje id="37" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>16,4,14</puertosAtraco>
+      <tripulacion>45,9,45</tripulacion>
+      <numEncomiendas>73</numEncomiendas>
+   </viaje>
+   <viaje id="38" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>4,2,44</puertosAtraco>
+      <tripulacion>40,6,37</tripulacion>
+      <numEncomiendas>20</numEncomiendas>
+   </viaje>
+   <viaje id="39" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>43,8,3</puertosAtraco>
+      <tripulacion>13,2,35</tripulacion>
+      <numEncomiendas>42</numEncomiendas>
+   </viaje>
+   <viaje id="40" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>40,5,4</puertosAtraco>
+      <tripulacion>21,6,42</tripulacion>
+      <numEncomiendas>85</numEncomiendas>
+   </viaje>
+   <viaje id="41" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>32,5,22</puertosAtraco>
+      <tripulacion>38,3,37</tripulacion>
+      <numEncomiendas>16</numEncomiendas>
+   </viaje>
+   <viaje id="42" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>10,8,23</puertosAtraco>
+      <tripulacion>37,0,47</tripulacion>
+      <numEncomiendas>90</numEncomiendas>
+   </viaje>
+   <viaje id="43" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>17,8,1</puertosAtraco>
+      <tripulacion>36,5,19</tripulacion>
+      <numEncomiendas>99</numEncomiendas>
+   </viaje>
+   <viaje id="44" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>18,8,22</puertosAtraco>
+      <tripulacion>32,5,31</tripulacion>
+      <numEncomiendas>30</numEncomiendas>
+   </viaje>
+   <viaje id="45" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>12,4,31</puertosAtraco>
+      <tripulacion>15,7,35</tripulacion>
+      <numEncomiendas>18</numEncomiendas>
+   </viaje>
+   <viaje id="46" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>27,1,46</puertosAtraco>
+      <tripulacion>43,1,4</tripulacion>
+      <numEncomiendas>32</numEncomiendas>
+   </viaje>
+   <viaje id="47" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>44,7,19</puertosAtraco>
+      <tripulacion>10,1,11</tripulacion>
+      <numEncomiendas>96</numEncomiendas>
+   </viaje>
+   <viaje id="48" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>29,4,7</puertosAtraco>
+      <tripulacion>28,9,19</tripulacion>
+      <numEncomiendas>57</numEncomiendas>
+   </viaje>
+   <viaje id="49" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>14,1,39</puertosAtraco>
+      <tripulacion>32,7,23</tripulacion>
+      <numEncomiendas>75</numEncomiendas>
+   </viaje>
+   <viaje id="50" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>42,3,30</puertosAtraco>
+      <tripulacion>34,3,4</tripulacion>
+      <numEncomiendas>4</numEncomiendas>
+   </viaje>
+   <viaje id="51" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>38,3,37</puertosAtraco>
+      <tripulacion>35,9,32</tripulacion>
+      <numEncomiendas>50</numEncomiendas>
+   </viaje>
+   <viaje id="52" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>49,3,41</puertosAtraco>
+      <tripulacion>8,8,45</tripulacion>
+      <numEncomiendas>45</numEncomiendas>
+   </viaje>
+   <viaje id="53" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>5,5,10</puertosAtraco>
+      <tripulacion>24,6,13</tripulacion>
+      <numEncomiendas>16</numEncomiendas>
+   </viaje>
+   <viaje id="54" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>35,0,42</puertosAtraco>
+      <tripulacion>21,0,28</tripulacion>
+      <numEncomiendas>29</numEncomiendas>
+   </viaje>
+   <viaje id="55" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>28,9,28</puertosAtraco>
+      <tripulacion>39,7,44</tripulacion>
+      <numEncomiendas>32</numEncomiendas>
+   </viaje>
+   <viaje id="56" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>18,9,21</puertosAtraco>
+      <tripulacion>47,8,20</tripulacion>
+      <numEncomiendas>93</numEncomiendas>
+   </viaje>
+   <viaje id="57" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>20,8,17</puertosAtraco>
+      <tripulacion>18,8,21</tripulacion>
+      <numEncomiendas>56</numEncomiendas>
+   </viaje>
+   <viaje id="58" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>28,8,17</puertosAtraco>
+      <tripulacion>45,4,18</tripulacion>
+      <numEncomiendas>83</numEncomiendas>
+   </viaje>
+   <viaje id="59" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>47,1,40</puertosAtraco>
+      <tripulacion>17,1,23</tripulacion>
+      <numEncomiendas>96</numEncomiendas>
+   </viaje>
+   <viaje id="60" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>33,8,41</puertosAtraco>
+      <tripulacion>47,1,46</tripulacion>
+      <numEncomiendas>86</numEncomiendas>
+   </viaje>
+   <viaje id="61" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>3,4,28</puertosAtraco>
+      <tripulacion>40,9,12</tripulacion>
+      <numEncomiendas>26</numEncomiendas>
+   </viaje>
+   <viaje id="62" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>5,4,14</puertosAtraco>
+      <tripulacion>5,1,35</tripulacion>
+      <numEncomiendas>32</numEncomiendas>
+   </viaje>
+   <viaje id="63" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>37,9,31</puertosAtraco>
+      <tripulacion>21,0,47</tripulacion>
+      <numEncomiendas>61</numEncomiendas>
+   </viaje>
+   <viaje id="64" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>34,4,32</puertosAtraco>
+      <tripulacion>43,2,39</tripulacion>
+      <numEncomiendas>4</numEncomiendas>
+   </viaje>
+   <viaje id="65" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>31,8,28</puertosAtraco>
+      <tripulacion>7,1,27</tripulacion>
+      <numEncomiendas>18</numEncomiendas>
+   </viaje>
+   <viaje id="66" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>49,6,18</puertosAtraco>
+      <tripulacion>19,3,21</tripulacion>
+      <numEncomiendas>28</numEncomiendas>
+   </viaje>
+   <viaje id="67" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>25,5,24</puertosAtraco>
+      <tripulacion>20,4,35</tripulacion>
+      <numEncomiendas>6</numEncomiendas>
+   </viaje>
+   <viaje id="68" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>16,1,32</puertosAtraco>
+      <tripulacion>7,0,6</tripulacion>
+      <numEncomiendas>30</numEncomiendas>
+   </viaje>
+   <viaje id="69" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>48,3,40</puertosAtraco>
+      <tripulacion>11,6,4</tripulacion>
+      <numEncomiendas>94</numEncomiendas>
+   </viaje>
+   <viaje id="70" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>35,6,39</puertosAtraco>
+      <tripulacion>17,6,37</tripulacion>
+      <numEncomiendas>93</numEncomiendas>
+   </viaje>
+   <viaje id="71" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>3,6,8</puertosAtraco>
+      <tripulacion>12,1,9</tripulacion>
+      <numEncomiendas>86</numEncomiendas>
+   </viaje>
+   <viaje id="72" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>26,0,32</puertosAtraco>
+      <tripulacion>15,0,26</tripulacion>
+      <numEncomiendas>33</numEncomiendas>
+   </viaje>
+   <viaje id="73" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>16,0,32</puertosAtraco>
+      <tripulacion>48,6,20</tripulacion>
+      <numEncomiendas>23</numEncomiendas>
+   </viaje>
+   <viaje id="74" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>15,6,41</puertosAtraco>
+      <tripulacion>4,1,23</tripulacion>
+      <numEncomiendas>21</numEncomiendas>
+   </viaje>
+   <viaje id="75" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>17,6,17</puertosAtraco>
+      <tripulacion>34,3,12</tripulacion>
+      <numEncomiendas>44</numEncomiendas>
+   </viaje>
+   <viaje id="76" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>5,3,17</puertosAtraco>
+      <tripulacion>41,3,31</tripulacion>
+      <numEncomiendas>13</numEncomiendas>
+   </viaje>
+   <viaje id="77" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>36,7,22</puertosAtraco>
+      <tripulacion>4,5,40</tripulacion>
+      <numEncomiendas>32</numEncomiendas>
+   </viaje>
+   <viaje id="78" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>15,5,9</puertosAtraco>
+      <tripulacion>33,9,47</tripulacion>
+      <numEncomiendas>57</numEncomiendas>
+   </viaje>
+   <viaje id="79" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>38,7,34</puertosAtraco>
+      <tripulacion>41,2,20</tripulacion>
+      <numEncomiendas>6</numEncomiendas>
+   </viaje>
+   <viaje id="80" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>29,2,48</puertosAtraco>
+      <tripulacion>6,1,38</tripulacion>
+      <numEncomiendas>19</numEncomiendas>
+   </viaje>
+   <viaje id="81" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>31,9,8</puertosAtraco>
+      <tripulacion>39,6,21</tripulacion>
+      <numEncomiendas>53</numEncomiendas>
+   </viaje>
+   <viaje id="82" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>30,6,5</puertosAtraco>
+      <tripulacion>0,4,38</tripulacion>
+      <numEncomiendas>63</numEncomiendas>
+   </viaje>
+   <viaje id="83" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>21,3,13</puertosAtraco>
+      <tripulacion>14,2,20</tripulacion>
+      <numEncomiendas>86</numEncomiendas>
+   </viaje>
+   <viaje id="84" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>15,1,12</puertosAtraco>
+      <tripulacion>36,0,25</tripulacion>
+      <numEncomiendas>67</numEncomiendas>
+   </viaje>
+   <viaje id="85" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>36,8,44</puertosAtraco>
+      <tripulacion>21,5,16</tripulacion>
+      <numEncomiendas>46</numEncomiendas>
+   </viaje>
+   <viaje id="86" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>21,3,46</puertosAtraco>
+      <tripulacion>18,9,7</tripulacion>
+      <numEncomiendas>81</numEncomiendas>
+   </viaje>
+   <viaje id="87" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>8,0,41</puertosAtraco>
+      <tripulacion>44,0,32</tripulacion>
+      <numEncomiendas>82</numEncomiendas>
+   </viaje>
+   <viaje id="88" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>30,3,28</puertosAtraco>
+      <tripulacion>12,2,47</tripulacion>
+      <numEncomiendas>33</numEncomiendas>
+   </viaje>
+   <viaje id="89" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>20,5,25</puertosAtraco>
+      <tripulacion>40,6,0</tripulacion>
+      <numEncomiendas>99</numEncomiendas>
+   </viaje>
+   <viaje id="90" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>17,2,48</puertosAtraco>
+      <tripulacion>35,4,31</tripulacion>
+      <numEncomiendas>44</numEncomiendas>
+   </viaje>
+   <viaje id="91" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>2,1,48</puertosAtraco>
+      <tripulacion>15,7,16</tripulacion>
+      <numEncomiendas>10</numEncomiendas>
+   </viaje>
+   <viaje id="92" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>13,1,39</puertosAtraco>
+      <tripulacion>9,4,28</tripulacion>
+      <numEncomiendas>55</numEncomiendas>
+   </viaje>
+   <viaje id="93" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>4,4,32</puertosAtraco>
+      <tripulacion>37,9,18</tripulacion>
+      <numEncomiendas>0</numEncomiendas>
+   </viaje>
+   <viaje id="94" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>9,7,16</puertosAtraco>
+      <tripulacion>46,9,3</tripulacion>
+      <numEncomiendas>84</numEncomiendas>
+   </viaje>
+   <viaje id="95" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>19,5,25</puertosAtraco>
+      <tripulacion>5,3,4</tripulacion>
+      <numEncomiendas>31</numEncomiendas>
+   </viaje>
+   <viaje id="96" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>30,1,36</puertosAtraco>
+      <tripulacion>43,7,5</tripulacion>
+      <numEncomiendas>19</numEncomiendas>
+   </viaje>
+   <viaje id="97" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>4,7,47</puertosAtraco>
+      <tripulacion>5,8,13</tripulacion>
+      <numEncomiendas>0</numEncomiendas>
+   </viaje>
+   <viaje id="98" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>18,9,28</puertosAtraco>
+      <tripulacion>34,6,10</tripulacion>
+      <numEncomiendas>38</numEncomiendas>
+   </viaje>
+   <viaje id="99" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>45,0,34</puertosAtraco>
+      <tripulacion>36,0,8</tripulacion>
+      <numEncomiendas>14</numEncomiendas>
+   </viaje>
+   <viaje id="100" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>1,7,48</puertosAtraco>
+      <tripulacion>40,4,33</tripulacion>
+      <numEncomiendas>48</numEncomiendas>
+   </viaje>
+   <viaje id="101" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>4,0,3</puertosAtraco>
+      <tripulacion>15,9,26</tripulacion>
+      <numEncomiendas>43</numEncomiendas>
+   </viaje>
+   <viaje id="102" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>23,7,33</puertosAtraco>
+      <tripulacion>3,7,37</tripulacion>
+      <numEncomiendas>85</numEncomiendas>
+   </viaje>
+   <viaje id="103" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>26,3,49</puertosAtraco>
+      <tripulacion>7,6,4</tripulacion>
+      <numEncomiendas>74</numEncomiendas>
+   </viaje>
+   <viaje id="104" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>18,1,35</puertosAtraco>
+      <tripulacion>2,3,14</tripulacion>
+      <numEncomiendas>83</numEncomiendas>
+   </viaje>
+   <viaje id="105" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>3,7,20</puertosAtraco>
+      <tripulacion>40,0,3</tripulacion>
+      <numEncomiendas>93</numEncomiendas>
+   </viaje>
+   <viaje id="106" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>6,7,13</puertosAtraco>
+      <tripulacion>27,4,15</tripulacion>
+      <numEncomiendas>62</numEncomiendas>
+   </viaje>
+   <viaje id="107" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>9,6,40</puertosAtraco>
+      <tripulacion>35,4,3</tripulacion>
+      <numEncomiendas>40</numEncomiendas>
+   </viaje>
+   <viaje id="108" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>23,2,12</puertosAtraco>
+      <tripulacion>0,6,42</tripulacion>
+      <numEncomiendas>46</numEncomiendas>
+   </viaje>
+   <viaje id="109" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>23,5,13</puertosAtraco>
+      <tripulacion>31,2,7</tripulacion>
+      <numEncomiendas>55</numEncomiendas>
+   </viaje>
+   <viaje id="110" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>21,1,26</puertosAtraco>
+      <tripulacion>18,6,6</tripulacion>
+      <numEncomiendas>6</numEncomiendas>
+   </viaje>
+   <viaje id="111" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>27,0,35</puertosAtraco>
+      <tripulacion>48,1,36</tripulacion>
+      <numEncomiendas>30</numEncomiendas>
+   </viaje>
+   <viaje id="112" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>39,2,3</puertosAtraco>
+      <tripulacion>27,1,40</tripulacion>
+      <numEncomiendas>12</numEncomiendas>
+   </viaje>
+   <viaje id="113" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>2,5,17</puertosAtraco>
+      <tripulacion>49,3,16</tripulacion>
+      <numEncomiendas>42</numEncomiendas>
+   </viaje>
+   <viaje id="114" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>40,0,7</puertosAtraco>
+      <tripulacion>34,1,10</tripulacion>
+      <numEncomiendas>14</numEncomiendas>
+   </viaje>
+   <viaje id="115" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>17,2,45</puertosAtraco>
+      <tripulacion>6,4,37</tripulacion>
+      <numEncomiendas>63</numEncomiendas>
+   </viaje>
+   <viaje id="116" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>15,8,33</puertosAtraco>
+      <tripulacion>27,6,25</tripulacion>
+      <numEncomiendas>5</numEncomiendas>
+   </viaje>
+   <viaje id="117" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>44,0,12</puertosAtraco>
+      <tripulacion>30,9,6</tripulacion>
+      <numEncomiendas>39</numEncomiendas>
+   </viaje>
+   <viaje id="118" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>26,0,48</puertosAtraco>
+      <tripulacion>41,2,35</tripulacion>
+      <numEncomiendas>94</numEncomiendas>
+   </viaje>
+   <viaje id="119" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>43,8,13</puertosAtraco>
+      <tripulacion>1,6,34</tripulacion>
+      <numEncomiendas>42</numEncomiendas>
+   </viaje>
+   <viaje id="120" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>23,3,33</puertosAtraco>
+      <tripulacion>41,0,7</tripulacion>
+      <numEncomiendas>66</numEncomiendas>
+   </viaje>
+   <viaje id="121" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>25,4,40</puertosAtraco>
+      <tripulacion>39,5,1</tripulacion>
+      <numEncomiendas>58</numEncomiendas>
+   </viaje>
+   <viaje id="122" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>22,6,5</puertosAtraco>
+      <tripulacion>4,8,45</tripulacion>
+      <numEncomiendas>95</numEncomiendas>
+   </viaje>
+   <viaje id="123" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>16,5,1</puertosAtraco>
+      <tripulacion>46,6,37</tripulacion>
+      <numEncomiendas>52</numEncomiendas>
+   </viaje>
+   <viaje id="124" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>2,3,10</puertosAtraco>
+      <tripulacion>7,3,19</tripulacion>
+      <numEncomiendas>65</numEncomiendas>
+   </viaje>
+   <viaje id="125" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>17,1,11</puertosAtraco>
+      <tripulacion>17,1,41</tripulacion>
+      <numEncomiendas>21</numEncomiendas>
+   </viaje>
+   <viaje id="126" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>4,7,1</puertosAtraco>
+      <tripulacion>20,7,17</tripulacion>
+      <numEncomiendas>15</numEncomiendas>
+   </viaje>
+   <viaje id="127" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>15,0,1</puertosAtraco>
+      <tripulacion>38,1,3</tripulacion>
+      <numEncomiendas>21</numEncomiendas>
+   </viaje>
+   <viaje id="128" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>43,0,2</puertosAtraco>
+      <tripulacion>32,4,24</tripulacion>
+      <numEncomiendas>27</numEncomiendas>
+   </viaje>
+   <viaje id="129" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>3,7,14</puertosAtraco>
+      <tripulacion>25,2,34</tripulacion>
+      <numEncomiendas>32</numEncomiendas>
+   </viaje>
+   <viaje id="130" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>15,4,23</puertosAtraco>
+      <tripulacion>45,4,13</tripulacion>
+      <numEncomiendas>91</numEncomiendas>
+   </viaje>
+   <viaje id="131" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>6,7,15</puertosAtraco>
+      <tripulacion>1,2,15</tripulacion>
+      <numEncomiendas>68</numEncomiendas>
+   </viaje>
+   <viaje id="132" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>48,6,13</puertosAtraco>
+      <tripulacion>24,4,26</tripulacion>
+      <numEncomiendas>83</numEncomiendas>
+   </viaje>
+   <viaje id="133" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>39,0,24</puertosAtraco>
+      <tripulacion>10,7,10</tripulacion>
+      <numEncomiendas>20</numEncomiendas>
+   </viaje>
+   <viaje id="134" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>24,3,7</puertosAtraco>
+      <tripulacion>34,0,25</tripulacion>
+      <numEncomiendas>39</numEncomiendas>
+   </viaje>
+   <viaje id="135" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>43,9,26</puertosAtraco>
+      <tripulacion>5,6,45</tripulacion>
+      <numEncomiendas>19</numEncomiendas>
+   </viaje>
+   <viaje id="136" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>1,8,14</puertosAtraco>
+      <tripulacion>4,2,31</tripulacion>
+      <numEncomiendas>11</numEncomiendas>
+   </viaje>
+   <viaje id="137" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>29,3,48</puertosAtraco>
+      <tripulacion>25,0,37</tripulacion>
+      <numEncomiendas>30</numEncomiendas>
+   </viaje>
+   <viaje id="138" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>25,8,24</puertosAtraco>
+      <tripulacion>24,2,27</tripulacion>
+      <numEncomiendas>51</numEncomiendas>
+   </viaje>
+   <viaje id="139" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>16,2,2</puertosAtraco>
+      <tripulacion>31,2,15</tripulacion>
+      <numEncomiendas>30</numEncomiendas>
+   </viaje>
+   <viaje id="140" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>3,0,19</puertosAtraco>
+      <tripulacion>2,8,37</tripulacion>
+      <numEncomiendas>34</numEncomiendas>
+   </viaje>
+   <viaje id="141" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>9,8,48</puertosAtraco>
+      <tripulacion>27,5,25</tripulacion>
+      <numEncomiendas>19</numEncomiendas>
+   </viaje>
+   <viaje id="142" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>41,8,44</puertosAtraco>
+      <tripulacion>8,5,23</tripulacion>
+      <numEncomiendas>3</numEncomiendas>
+   </viaje>
+   <viaje id="143" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>19,9,48</puertosAtraco>
+      <tripulacion>7,6,2</tripulacion>
+      <numEncomiendas>62</numEncomiendas>
+   </viaje>
+   <viaje id="144" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>16,3,48</puertosAtraco>
+      <tripulacion>25,9,23</tripulacion>
+      <numEncomiendas>92</numEncomiendas>
+   </viaje>
+   <viaje id="145" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>9,8,9</puertosAtraco>
+      <tripulacion>28,4,4</tripulacion>
+      <numEncomiendas>30</numEncomiendas>
+   </viaje>
+   <viaje id="146" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>22,8,46</puertosAtraco>
+      <tripulacion>8,4,8</tripulacion>
+      <numEncomiendas>13</numEncomiendas>
+   </viaje>
+   <viaje id="147" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>26,6,17</puertosAtraco>
+      <tripulacion>17,4,12</tripulacion>
+      <numEncomiendas>79</numEncomiendas>
+   </viaje>
+   <viaje id="148" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>22,7,34</puertosAtraco>
+      <tripulacion>29,2,27</tripulacion>
+      <numEncomiendas>70</numEncomiendas>
+   </viaje>
+   <viaje id="149" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>48,4,27</puertosAtraco>
+      <tripulacion>43,4,9</tripulacion>
+      <numEncomiendas>1</numEncomiendas>
+   </viaje>
+   <viaje id="150" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>6,9,19</puertosAtraco>
+      <tripulacion>11,0,33</tripulacion>
+      <numEncomiendas>27</numEncomiendas>
+   </viaje>
+   <viaje id="151" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>34,5,26</puertosAtraco>
+      <tripulacion>36,1,46</tripulacion>
+      <numEncomiendas>68</numEncomiendas>
+   </viaje>
+   <viaje id="152" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>10,0,21</puertosAtraco>
+      <tripulacion>42,7,42</tripulacion>
+      <numEncomiendas>82</numEncomiendas>
+   </viaje>
+   <viaje id="153" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>49,6,10</puertosAtraco>
+      <tripulacion>15,2,46</tripulacion>
+      <numEncomiendas>49</numEncomiendas>
+   </viaje>
+   <viaje id="154" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>17,7,42</puertosAtraco>
+      <tripulacion>37,0,47</tripulacion>
+      <numEncomiendas>87</numEncomiendas>
+   </viaje>
+   <viaje id="155" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>0,4,40</puertosAtraco>
+      <tripulacion>0,7,11</tripulacion>
+      <numEncomiendas>27</numEncomiendas>
+   </viaje>
+   <viaje id="156" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>0,6,32</puertosAtraco>
+      <tripulacion>37,8,4</tripulacion>
+      <numEncomiendas>96</numEncomiendas>
+   </viaje>
+   <viaje id="157" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>6,7,32</puertosAtraco>
+      <tripulacion>46,4,2</tripulacion>
+      <numEncomiendas>20</numEncomiendas>
+   </viaje>
+   <viaje id="158" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>16,7,5</puertosAtraco>
+      <tripulacion>28,8,3</tripulacion>
+      <numEncomiendas>59</numEncomiendas>
+   </viaje>
+   <viaje id="159" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>45,7,36</puertosAtraco>
+      <tripulacion>29,1,7</tripulacion>
+      <numEncomiendas>97</numEncomiendas>
+   </viaje>
+   <viaje id="160" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>5,2,5</puertosAtraco>
+      <tripulacion>49,7,4</tripulacion>
+      <numEncomiendas>84</numEncomiendas>
+   </viaje>
+   <viaje id="161" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>17,6,41</puertosAtraco>
+      <tripulacion>39,9,38</tripulacion>
+      <numEncomiendas>53</numEncomiendas>
+   </viaje>
+   <viaje id="162" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>49,4,42</puertosAtraco>
+      <tripulacion>45,6,46</tripulacion>
+      <numEncomiendas>6</numEncomiendas>
+   </viaje>
+   <viaje id="163" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>15,8,11</puertosAtraco>
+      <tripulacion>29,9,43</tripulacion>
+      <numEncomiendas>67</numEncomiendas>
+   </viaje>
+   <viaje id="164" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>9,8,49</puertosAtraco>
+      <tripulacion>48,5,0</tripulacion>
+      <numEncomiendas>27</numEncomiendas>
+   </viaje>
+   <viaje id="165" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>28,5,15</puertosAtraco>
+      <tripulacion>23,3,48</tripulacion>
+      <numEncomiendas>9</numEncomiendas>
+   </viaje>
+   <viaje id="166" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>42,2,12</puertosAtraco>
+      <tripulacion>25,4,30</tripulacion>
+      <numEncomiendas>1</numEncomiendas>
+   </viaje>
+   <viaje id="167" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>20,7,46</puertosAtraco>
+      <tripulacion>41,2,25</tripulacion>
+      <numEncomiendas>23</numEncomiendas>
+   </viaje>
+   <viaje id="168" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>0,6,20</puertosAtraco>
+      <tripulacion>13,5,25</tripulacion>
+      <numEncomiendas>57</numEncomiendas>
+   </viaje>
+   <viaje id="169" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>32,2,45</puertosAtraco>
+      <tripulacion>31,2,16</tripulacion>
+      <numEncomiendas>93</numEncomiendas>
+   </viaje>
+   <viaje id="170" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>15,8,8</puertosAtraco>
+      <tripulacion>27,0,38</tripulacion>
+      <numEncomiendas>3</numEncomiendas>
+   </viaje>
+   <viaje id="171" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>16,9,5</puertosAtraco>
+      <tripulacion>33,8,10</tripulacion>
+      <numEncomiendas>39</numEncomiendas>
+   </viaje>
+   <viaje id="172" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>7,3,3</puertosAtraco>
+      <tripulacion>32,7,29</tripulacion>
+      <numEncomiendas>20</numEncomiendas>
+   </viaje>
+   <viaje id="173" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>39,4,33</puertosAtraco>
+      <tripulacion>2,8,41</tripulacion>
+      <numEncomiendas>16</numEncomiendas>
+   </viaje>
+   <viaje id="174" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>11,6,26</puertosAtraco>
+      <tripulacion>34,7,23</tripulacion>
+      <numEncomiendas>64</numEncomiendas>
+   </viaje>
+   <viaje id="175" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>22,3,2</puertosAtraco>
+      <tripulacion>6,6,44</tripulacion>
+      <numEncomiendas>16</numEncomiendas>
+   </viaje>
+   <viaje id="176" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>35,2,35</puertosAtraco>
+      <tripulacion>25,8,45</tripulacion>
+      <numEncomiendas>63</numEncomiendas>
+   </viaje>
+   <viaje id="177" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>25,5,45</puertosAtraco>
+      <tripulacion>30,5,39</tripulacion>
+      <numEncomiendas>37</numEncomiendas>
+   </viaje>
+   <viaje id="178" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>17,6,28</puertosAtraco>
+      <tripulacion>46,8,37</tripulacion>
+      <numEncomiendas>5</numEncomiendas>
+   </viaje>
+   <viaje id="179" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>27,7,36</puertosAtraco>
+      <tripulacion>39,0,17</tripulacion>
+      <numEncomiendas>91</numEncomiendas>
+   </viaje>
+   <viaje id="180" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>33,8,38</puertosAtraco>
+      <tripulacion>25,5,28</tripulacion>
+      <numEncomiendas>91</numEncomiendas>
+   </viaje>
+   <viaje id="181" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>23,0,18</puertosAtraco>
+      <tripulacion>3,7,10</tripulacion>
+      <numEncomiendas>37</numEncomiendas>
+   </viaje>
+   <viaje id="182" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>46,0,5</puertosAtraco>
+      <tripulacion>14,8,5</tripulacion>
+      <numEncomiendas>1</numEncomiendas>
+   </viaje>
+   <viaje id="183" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>23,1,21</puertosAtraco>
+      <tripulacion>18,3,32</tripulacion>
+      <numEncomiendas>32</numEncomiendas>
+   </viaje>
+   <viaje id="184" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>44,2,7</puertosAtraco>
+      <tripulacion>31,8,13</tripulacion>
+      <numEncomiendas>67</numEncomiendas>
+   </viaje>
+   <viaje id="185" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>16,0,35</puertosAtraco>
+      <tripulacion>18,1,44</tripulacion>
+      <numEncomiendas>64</numEncomiendas>
+   </viaje>
+   <viaje id="186" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>28,7,5</puertosAtraco>
+      <tripulacion>6,4,18</tripulacion>
+      <numEncomiendas>72</numEncomiendas>
+   </viaje>
+   <viaje id="187" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>19,5,49</puertosAtraco>
+      <tripulacion>42,9,22</tripulacion>
+      <numEncomiendas>47</numEncomiendas>
+   </viaje>
+   <viaje id="188" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>3,0,36</puertosAtraco>
+      <tripulacion>22,0,16</tripulacion>
+      <numEncomiendas>23</numEncomiendas>
+   </viaje>
+   <viaje id="189" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>39,3,42</puertosAtraco>
+      <tripulacion>20,7,10</tripulacion>
+      <numEncomiendas>7</numEncomiendas>
+   </viaje>
+   <viaje id="190" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>12,3,40</puertosAtraco>
+      <tripulacion>33,4,2</tripulacion>
+      <numEncomiendas>85</numEncomiendas>
+   </viaje>
+   <viaje id="191" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>31,7,43</puertosAtraco>
+      <tripulacion>28,1,26</tripulacion>
+      <numEncomiendas>37</numEncomiendas>
+   </viaje>
+   <viaje id="192" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>7,1,46</puertosAtraco>
+      <tripulacion>4,0,3</tripulacion>
+      <numEncomiendas>46</numEncomiendas>
+   </viaje>
+   <viaje id="193" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>0,2,9</puertosAtraco>
+      <tripulacion>43,4,25</tripulacion>
+      <numEncomiendas>40</numEncomiendas>
+   </viaje>
+   <viaje id="194" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>26,6,45</puertosAtraco>
+      <tripulacion>3,2,21</tripulacion>
+      <numEncomiendas>67</numEncomiendas>
+   </viaje>
+   <viaje id="195" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>5,3,42</puertosAtraco>
+      <tripulacion>33,4,24</tripulacion>
+      <numEncomiendas>4</numEncomiendas>
+   </viaje>
+   <viaje id="196" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>15,6,28</puertosAtraco>
+      <tripulacion>26,2,2</tripulacion>
+      <numEncomiendas>93</numEncomiendas>
+   </viaje>
+   <viaje id="197" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>47,3,47</puertosAtraco>
+      <tripulacion>30,5,33</tripulacion>
+      <numEncomiendas>13</numEncomiendas>
+   </viaje>
+   <viaje id="198" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>34,8,41</puertosAtraco>
+      <tripulacion>33,6,2</tripulacion>
+      <numEncomiendas>21</numEncomiendas>
+   </viaje>
+   <viaje id="199" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>15,9,49</puertosAtraco>
+      <tripulacion>12,0,18</tripulacion>
+      <numEncomiendas>84</numEncomiendas>
+   </viaje>
+   <viaje id="200" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>34,6,2</puertosAtraco>
+      <tripulacion>31,7,6</tripulacion>
+      <numEncomiendas>85</numEncomiendas>
+   </viaje>
+   <viaje id="201" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>48,3,9</puertosAtraco>
+      <tripulacion>11,9,11</tripulacion>
+      <numEncomiendas>58</numEncomiendas>
+   </viaje>
+   <viaje id="202" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>37,6,46</puertosAtraco>
+      <tripulacion>23,4,18</tripulacion>
+      <numEncomiendas>83</numEncomiendas>
+   </viaje>
+   <viaje id="203" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>38,6,24</puertosAtraco>
+      <tripulacion>47,8,44</tripulacion>
+      <numEncomiendas>62</numEncomiendas>
+   </viaje>
+   <viaje id="204" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>15,5,38</puertosAtraco>
+      <tripulacion>30,9,48</tripulacion>
+      <numEncomiendas>81</numEncomiendas>
+   </viaje>
+   <viaje id="205" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>24,5,31</puertosAtraco>
+      <tripulacion>34,2,1</tripulacion>
+      <numEncomiendas>90</numEncomiendas>
+   </viaje>
+   <viaje id="206" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>2,3,21</puertosAtraco>
+      <tripulacion>37,3,24</tripulacion>
+      <numEncomiendas>16</numEncomiendas>
+   </viaje>
+   <viaje id="207" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>44,8,6</puertosAtraco>
+      <tripulacion>31,3,23</tripulacion>
+      <numEncomiendas>91</numEncomiendas>
+   </viaje>
+   <viaje id="208" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>11,0,45</puertosAtraco>
+      <tripulacion>28,9,46</tripulacion>
+      <numEncomiendas>81</numEncomiendas>
+   </viaje>
+   <viaje id="209" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>41,6,34</puertosAtraco>
+      <tripulacion>12,9,43</tripulacion>
+      <numEncomiendas>76</numEncomiendas>
+   </viaje>
+   <viaje id="210" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>42,7,39</puertosAtraco>
+      <tripulacion>30,3,38</tripulacion>
+      <numEncomiendas>33</numEncomiendas>
+   </viaje>
+   <viaje id="211" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>44,6,23</puertosAtraco>
+      <tripulacion>17,5,26</tripulacion>
+      <numEncomiendas>82</numEncomiendas>
+   </viaje>
+   <viaje id="212" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>46,3,6</puertosAtraco>
+      <tripulacion>2,4,20</tripulacion>
+      <numEncomiendas>75</numEncomiendas>
+   </viaje>
+   <viaje id="213" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>31,9,35</puertosAtraco>
+      <tripulacion>19,1,0</tripulacion>
+      <numEncomiendas>47</numEncomiendas>
+   </viaje>
+   <viaje id="214" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>45,1,35</puertosAtraco>
+      <tripulacion>15,8,5</tripulacion>
+      <numEncomiendas>40</numEncomiendas>
+   </viaje>
+   <viaje id="215" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>46,9,49</puertosAtraco>
+      <tripulacion>23,9,10</tripulacion>
+      <numEncomiendas>14</numEncomiendas>
+   </viaje>
+   <viaje id="216" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>29,2,0</puertosAtraco>
+      <tripulacion>35,7,39</tripulacion>
+      <numEncomiendas>83</numEncomiendas>
+   </viaje>
+   <viaje id="217" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>44,9,18</puertosAtraco>
+      <tripulacion>45,5,31</tripulacion>
+      <numEncomiendas>40</numEncomiendas>
+   </viaje>
+   <viaje id="218" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>6,9,31</puertosAtraco>
+      <tripulacion>3,0,23</tripulacion>
+      <numEncomiendas>75</numEncomiendas>
+   </viaje>
+   <viaje id="219" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>24,4,44</puertosAtraco>
+      <tripulacion>30,8,13</tripulacion>
+      <numEncomiendas>44</numEncomiendas>
+   </viaje>
+   <viaje id="220" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>35,1,30</puertosAtraco>
+      <tripulacion>19,4,23</tripulacion>
+      <numEncomiendas>43</numEncomiendas>
+   </viaje>
+   <viaje id="221" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>21,3,45</puertosAtraco>
+      <tripulacion>48,8,25</tripulacion>
+      <numEncomiendas>41</numEncomiendas>
+   </viaje>
+   <viaje id="222" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>6,8,37</puertosAtraco>
+      <tripulacion>31,8,2</tripulacion>
+      <numEncomiendas>1</numEncomiendas>
+   </viaje>
+   <viaje id="223" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>33,9,32</puertosAtraco>
+      <tripulacion>40,7,4</tripulacion>
+      <numEncomiendas>16</numEncomiendas>
+   </viaje>
+   <viaje id="224" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>37,1,36</puertosAtraco>
+      <tripulacion>49,5,3</tripulacion>
+      <numEncomiendas>69</numEncomiendas>
+   </viaje>
+   <viaje id="225" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>23,7,30</puertosAtraco>
+      <tripulacion>16,7,27</tripulacion>
+      <numEncomiendas>37</numEncomiendas>
+   </viaje>
+   <viaje id="226" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>39,4,29</puertosAtraco>
+      <tripulacion>48,8,38</tripulacion>
+      <numEncomiendas>62</numEncomiendas>
+   </viaje>
+   <viaje id="227" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>3,2,14</puertosAtraco>
+      <tripulacion>29,7,40</tripulacion>
+      <numEncomiendas>7</numEncomiendas>
+   </viaje>
+   <viaje id="228" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>48,9,26</puertosAtraco>
+      <tripulacion>15,7,27</tripulacion>
+      <numEncomiendas>33</numEncomiendas>
+   </viaje>
+   <viaje id="229" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>2,5,2</puertosAtraco>
+      <tripulacion>8,3,32</tripulacion>
+      <numEncomiendas>42</numEncomiendas>
+   </viaje>
+   <viaje id="230" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>43,3,45</puertosAtraco>
+      <tripulacion>44,2,41</tripulacion>
+      <numEncomiendas>0</numEncomiendas>
+   </viaje>
+   <viaje id="231" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>42,3,33</puertosAtraco>
+      <tripulacion>11,1,13</tripulacion>
+      <numEncomiendas>33</numEncomiendas>
+   </viaje>
+   <viaje id="232" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>16,2,40</puertosAtraco>
+      <tripulacion>4,2,1</tripulacion>
+      <numEncomiendas>3</numEncomiendas>
+   </viaje>
+   <viaje id="233" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>27,5,49</puertosAtraco>
+      <tripulacion>39,4,35</tripulacion>
+      <numEncomiendas>78</numEncomiendas>
+   </viaje>
+   <viaje id="234" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>32,1,26</puertosAtraco>
+      <tripulacion>9,4,44</tripulacion>
+      <numEncomiendas>6</numEncomiendas>
+   </viaje>
+   <viaje id="235" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>38,6,30</puertosAtraco>
+      <tripulacion>14,0,14</tripulacion>
+      <numEncomiendas>45</numEncomiendas>
+   </viaje>
+   <viaje id="236" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>27,5,46</puertosAtraco>
+      <tripulacion>1,4,24</tripulacion>
+      <numEncomiendas>25</numEncomiendas>
+   </viaje>
+   <viaje id="237" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>26,2,22</puertosAtraco>
+      <tripulacion>48,2,35</tripulacion>
+      <numEncomiendas>80</numEncomiendas>
+   </viaje>
+   <viaje id="238" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>35,2,43</puertosAtraco>
+      <tripulacion>39,3,30</tripulacion>
+      <numEncomiendas>48</numEncomiendas>
+   </viaje>
+   <viaje id="239" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>44,9,17</puertosAtraco>
+      <tripulacion>19,7,7</tripulacion>
+      <numEncomiendas>11</numEncomiendas>
+   </viaje>
+   <viaje id="240" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>33,7,16</puertosAtraco>
+      <tripulacion>27,8,15</tripulacion>
+      <numEncomiendas>82</numEncomiendas>
+   </viaje>
+   <viaje id="241" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>22,0,6</puertosAtraco>
+      <tripulacion>5,0,42</tripulacion>
+      <numEncomiendas>95</numEncomiendas>
+   </viaje>
+   <viaje id="242" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>3,0,12</puertosAtraco>
+      <tripulacion>16,2,21</tripulacion>
+      <numEncomiendas>21</numEncomiendas>
+   </viaje>
+   <viaje id="243" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>48,1,22</puertosAtraco>
+      <tripulacion>3,4,42</tripulacion>
+      <numEncomiendas>53</numEncomiendas>
+   </viaje>
+   <viaje id="244" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>14,2,28</puertosAtraco>
+      <tripulacion>41,8,40</tripulacion>
+      <numEncomiendas>55</numEncomiendas>
+   </viaje>
+   <viaje id="245" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>28,7,17</puertosAtraco>
+      <tripulacion>3,5,34</tripulacion>
+      <numEncomiendas>95</numEncomiendas>
+   </viaje>
+   <viaje id="246" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>34,2,44</puertosAtraco>
+      <tripulacion>17,6,39</tripulacion>
+      <numEncomiendas>68</numEncomiendas>
+   </viaje>
+   <viaje id="247" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>11,1,44</puertosAtraco>
+      <tripulacion>44,3,12</tripulacion>
+      <numEncomiendas>6</numEncomiendas>
+   </viaje>
+   <viaje id="248" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>22,3,3</puertosAtraco>
+      <tripulacion>34,6,26</tripulacion>
+      <numEncomiendas>84</numEncomiendas>
+   </viaje>
+   <viaje id="249" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>37,9,2</puertosAtraco>
+      <tripulacion>0,1,46</tripulacion>
+      <numEncomiendas>41</numEncomiendas>
+   </viaje>
+   <viaje id="250" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>32,4,36</puertosAtraco>
+      <tripulacion>46,3,4</tripulacion>
+      <numEncomiendas>47</numEncomiendas>
+   </viaje>
+   <viaje id="251" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>45,3,28</puertosAtraco>
+      <tripulacion>1,9,15</tripulacion>
+      <numEncomiendas>45</numEncomiendas>
+   </viaje>
+   <viaje id="252" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>30,5,4</puertosAtraco>
+      <tripulacion>30,0,34</tripulacion>
+      <numEncomiendas>7</numEncomiendas>
+   </viaje>
+   <viaje id="253" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>42,5,36</puertosAtraco>
+      <tripulacion>11,6,48</tripulacion>
+      <numEncomiendas>14</numEncomiendas>
+   </viaje>
+   <viaje id="254" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>32,4,27</puertosAtraco>
+      <tripulacion>40,2,3</tripulacion>
+      <numEncomiendas>46</numEncomiendas>
+   </viaje>
+   <viaje id="255" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>29,0,39</puertosAtraco>
+      <tripulacion>39,1,4</tripulacion>
+      <numEncomiendas>62</numEncomiendas>
+   </viaje>
+   <viaje id="256" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>32,2,5</puertosAtraco>
+      <tripulacion>9,4,19</tripulacion>
+      <numEncomiendas>57</numEncomiendas>
+   </viaje>
+   <viaje id="257" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>35,3,45</puertosAtraco>
+      <tripulacion>9,6,4</tripulacion>
+      <numEncomiendas>42</numEncomiendas>
+   </viaje>
+   <viaje id="258" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>21,2,32</puertosAtraco>
+      <tripulacion>26,1,34</tripulacion>
+      <numEncomiendas>52</numEncomiendas>
+   </viaje>
+   <viaje id="259" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>4,0,33</puertosAtraco>
+      <tripulacion>6,1,43</tripulacion>
+      <numEncomiendas>11</numEncomiendas>
+   </viaje>
+   <viaje id="260" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>22,9,30</puertosAtraco>
+      <tripulacion>41,0,46</tripulacion>
+      <numEncomiendas>42</numEncomiendas>
+   </viaje>
+   <viaje id="261" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>27,1,48</puertosAtraco>
+      <tripulacion>24,4,4</tripulacion>
+      <numEncomiendas>82</numEncomiendas>
+   </viaje>
+   <viaje id="262" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>48,7,6</puertosAtraco>
+      <tripulacion>29,7,6</tripulacion>
+      <numEncomiendas>85</numEncomiendas>
+   </viaje>
+   <viaje id="263" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>6,9,10</puertosAtraco>
+      <tripulacion>9,6,24</tripulacion>
+      <numEncomiendas>14</numEncomiendas>
+   </viaje>
+   <viaje id="264" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>32,6,20</puertosAtraco>
+      <tripulacion>17,2,35</tripulacion>
+      <numEncomiendas>15</numEncomiendas>
+   </viaje>
+   <viaje id="265" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>1,8,36</puertosAtraco>
+      <tripulacion>39,6,26</tripulacion>
+      <numEncomiendas>20</numEncomiendas>
+   </viaje>
+   <viaje id="266" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>35,3,4</puertosAtraco>
+      <tripulacion>35,0,32</tripulacion>
+      <numEncomiendas>20</numEncomiendas>
+   </viaje>
+   <viaje id="267" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>14,4,41</puertosAtraco>
+      <tripulacion>32,8,31</tripulacion>
+      <numEncomiendas>82</numEncomiendas>
+   </viaje>
+   <viaje id="268" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>45,4,38</puertosAtraco>
+      <tripulacion>39,8,44</tripulacion>
+      <numEncomiendas>75</numEncomiendas>
+   </viaje>
+   <viaje id="269" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>3,6,17</puertosAtraco>
+      <tripulacion>33,1,14</tripulacion>
+      <numEncomiendas>64</numEncomiendas>
+   </viaje>
+   <viaje id="270" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>25,5,9</puertosAtraco>
+      <tripulacion>45,9,45</tripulacion>
+      <numEncomiendas>72</numEncomiendas>
+   </viaje>
+   <viaje id="271" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>37,4,17</puertosAtraco>
+      <tripulacion>31,4,22</tripulacion>
+      <numEncomiendas>36</numEncomiendas>
+   </viaje>
+   <viaje id="272" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>3,5,24</puertosAtraco>
+      <tripulacion>12,1,20</tripulacion>
+      <numEncomiendas>86</numEncomiendas>
+   </viaje>
+   <viaje id="273" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>40,4,6</puertosAtraco>
+      <tripulacion>11,2,4</tripulacion>
+      <numEncomiendas>29</numEncomiendas>
+   </viaje>
+   <viaje id="274" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>0,8,19</puertosAtraco>
+      <tripulacion>47,2,0</tripulacion>
+      <numEncomiendas>33</numEncomiendas>
+   </viaje>
+   <viaje id="275" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>39,9,7</puertosAtraco>
+      <tripulacion>32,4,38</tripulacion>
+      <numEncomiendas>56</numEncomiendas>
+   </viaje>
+   <viaje id="276" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>29,9,35</puertosAtraco>
+      <tripulacion>23,9,1</tripulacion>
+      <numEncomiendas>6</numEncomiendas>
+   </viaje>
+   <viaje id="277" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>37,0,16</puertosAtraco>
+      <tripulacion>39,6,20</tripulacion>
+      <numEncomiendas>69</numEncomiendas>
+   </viaje>
+   <viaje id="278" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>17,4,43</puertosAtraco>
+      <tripulacion>40,3,35</tripulacion>
+      <numEncomiendas>48</numEncomiendas>
+   </viaje>
+   <viaje id="279" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>1,0,16</puertosAtraco>
+      <tripulacion>49,8,40</tripulacion>
+      <numEncomiendas>73</numEncomiendas>
+   </viaje>
+   <viaje id="280" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>42,1,32</puertosAtraco>
+      <tripulacion>43,0,29</tripulacion>
+      <numEncomiendas>20</numEncomiendas>
+   </viaje>
+   <viaje id="281" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>5,8,12</puertosAtraco>
+      <tripulacion>39,2,25</tripulacion>
+      <numEncomiendas>86</numEncomiendas>
+   </viaje>
+   <viaje id="282" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>7,5,8</puertosAtraco>
+      <tripulacion>20,6,4</tripulacion>
+      <numEncomiendas>36</numEncomiendas>
+   </viaje>
+   <viaje id="283" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>23,5,5</puertosAtraco>
+      <tripulacion>11,2,26</tripulacion>
+      <numEncomiendas>78</numEncomiendas>
+   </viaje>
+   <viaje id="284" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>15,7,35</puertosAtraco>
+      <tripulacion>28,3,8</tripulacion>
+      <numEncomiendas>8</numEncomiendas>
+   </viaje>
+   <viaje id="285" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>5,5,14</puertosAtraco>
+      <tripulacion>9,6,35</tripulacion>
+      <numEncomiendas>57</numEncomiendas>
+   </viaje>
+   <viaje id="286" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>7,4,12</puertosAtraco>
+      <tripulacion>9,9,19</tripulacion>
+      <numEncomiendas>26</numEncomiendas>
+   </viaje>
+   <viaje id="287" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>29,4,9</puertosAtraco>
+      <tripulacion>0,1,25</tripulacion>
+      <numEncomiendas>55</numEncomiendas>
+   </viaje>
+   <viaje id="288" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>21,0,38</puertosAtraco>
+      <tripulacion>49,2,11</tripulacion>
+      <numEncomiendas>94</numEncomiendas>
+   </viaje>
+   <viaje id="289" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>46,6,27</puertosAtraco>
+      <tripulacion>8,7,22</tripulacion>
+      <numEncomiendas>65</numEncomiendas>
+   </viaje>
+   <viaje id="290" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>10,7,15</puertosAtraco>
+      <tripulacion>17,9,2</tripulacion>
+      <numEncomiendas>32</numEncomiendas>
+   </viaje>
+   <viaje id="291" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>18,7,0</puertosAtraco>
+      <tripulacion>0,7,41</tripulacion>
+      <numEncomiendas>5</numEncomiendas>
+   </viaje>
+   <viaje id="292" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>43,7,28</puertosAtraco>
+      <tripulacion>44,4,7</tripulacion>
+      <numEncomiendas>28</numEncomiendas>
+   </viaje>
+   <viaje id="293" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>25,3,0</puertosAtraco>
+      <tripulacion>14,6,34</tripulacion>
+      <numEncomiendas>39</numEncomiendas>
+   </viaje>
+   <viaje id="294" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>36,7,43</puertosAtraco>
+      <tripulacion>35,1,26</tripulacion>
+      <numEncomiendas>78</numEncomiendas>
+   </viaje>
+   <viaje id="295" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>37,4,22</puertosAtraco>
+      <tripulacion>27,7,31</tripulacion>
+      <numEncomiendas>59</numEncomiendas>
+   </viaje>
+   <viaje id="296" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>21,5,43</puertosAtraco>
+      <tripulacion>24,0,17</tripulacion>
+      <numEncomiendas>89</numEncomiendas>
+   </viaje>
+   <viaje id="297" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>35,9,12</puertosAtraco>
+      <tripulacion>10,5,8</tripulacion>
+      <numEncomiendas>64</numEncomiendas>
+   </viaje>
+   <viaje id="298" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>46,5,38</puertosAtraco>
+      <tripulacion>27,6,48</tripulacion>
+      <numEncomiendas>53</numEncomiendas>
+   </viaje>
+   <viaje id="299" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>11,6,31</puertosAtraco>
+      <tripulacion>40,4,15</tripulacion>
+      <numEncomiendas>53</numEncomiendas>
+   </viaje>
+   <viaje id="300" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>30,8,16</puertosAtraco>
+      <tripulacion>26,2,27</tripulacion>
+      <numEncomiendas>20</numEncomiendas>
+   </viaje>
+   <viaje id="301" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>16,5,44</puertosAtraco>
+      <tripulacion>4,1,31</tripulacion>
+      <numEncomiendas>16</numEncomiendas>
+   </viaje>
+   <viaje id="302" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>22,1,11</puertosAtraco>
+      <tripulacion>26,4,39</tripulacion>
+      <numEncomiendas>0</numEncomiendas>
+   </viaje>
+   <viaje id="303" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>29,9,32</puertosAtraco>
+      <tripulacion>12,6,3</tripulacion>
+      <numEncomiendas>78</numEncomiendas>
+   </viaje>
+   <viaje id="304" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>30,9,4</puertosAtraco>
+      <tripulacion>42,5,49</tripulacion>
+      <numEncomiendas>70</numEncomiendas>
+   </viaje>
+   <viaje id="305" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>27,4,44</puertosAtraco>
+      <tripulacion>8,4,3</tripulacion>
+      <numEncomiendas>46</numEncomiendas>
+   </viaje>
+   <viaje id="306" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>15,2,8</puertosAtraco>
+      <tripulacion>2,7,45</tripulacion>
+      <numEncomiendas>90</numEncomiendas>
+   </viaje>
+   <viaje id="307" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>30,3,8</puertosAtraco>
+      <tripulacion>34,4,44</tripulacion>
+      <numEncomiendas>74</numEncomiendas>
+   </viaje>
+   <viaje id="308" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>44,0,8</puertosAtraco>
+      <tripulacion>28,9,43</tripulacion>
+      <numEncomiendas>9</numEncomiendas>
+   </viaje>
+   <viaje id="309" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>44,1,8</puertosAtraco>
+      <tripulacion>10,8,45</tripulacion>
+      <numEncomiendas>81</numEncomiendas>
+   </viaje>
+   <viaje id="310" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>13,3,23</puertosAtraco>
+      <tripulacion>3,4,48</tripulacion>
+      <numEncomiendas>30</numEncomiendas>
+   </viaje>
+   <viaje id="311" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>2,5,27</puertosAtraco>
+      <tripulacion>3,7,49</tripulacion>
+      <numEncomiendas>94</numEncomiendas>
+   </viaje>
+   <viaje id="312" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>13,4,5</puertosAtraco>
+      <tripulacion>19,1,21</tripulacion>
+      <numEncomiendas>61</numEncomiendas>
+   </viaje>
+   <viaje id="313" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>6,1,17</puertosAtraco>
+      <tripulacion>37,6,6</tripulacion>
+      <numEncomiendas>91</numEncomiendas>
+   </viaje>
+   <viaje id="314" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>41,7,44</puertosAtraco>
+      <tripulacion>34,6,40</tripulacion>
+      <numEncomiendas>98</numEncomiendas>
+   </viaje>
+   <viaje id="315" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>24,0,47</puertosAtraco>
+      <tripulacion>39,7,36</tripulacion>
+      <numEncomiendas>29</numEncomiendas>
+   </viaje>
+   <viaje id="316" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>12,9,21</puertosAtraco>
+      <tripulacion>13,8,4</tripulacion>
+      <numEncomiendas>50</numEncomiendas>
+   </viaje>
+   <viaje id="317" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>42,3,15</puertosAtraco>
+      <tripulacion>32,6,49</tripulacion>
+      <numEncomiendas>76</numEncomiendas>
+   </viaje>
+   <viaje id="318" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>7,4,38</puertosAtraco>
+      <tripulacion>41,0,46</tripulacion>
+      <numEncomiendas>59</numEncomiendas>
+   </viaje>
+   <viaje id="319" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>14,8,7</puertosAtraco>
+      <tripulacion>32,1,28</tripulacion>
+      <numEncomiendas>8</numEncomiendas>
+   </viaje>
+   <viaje id="320" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>40,7,10</puertosAtraco>
+      <tripulacion>31,1,3</tripulacion>
+      <numEncomiendas>57</numEncomiendas>
+   </viaje>
+   <viaje id="321" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>41,2,26</puertosAtraco>
+      <tripulacion>32,8,19</tripulacion>
+      <numEncomiendas>26</numEncomiendas>
+   </viaje>
+   <viaje id="322" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>31,7,31</puertosAtraco>
+      <tripulacion>37,5,40</tripulacion>
+      <numEncomiendas>11</numEncomiendas>
+   </viaje>
+   <viaje id="323" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>3,1,29</puertosAtraco>
+      <tripulacion>3,6,30</tripulacion>
+      <numEncomiendas>97</numEncomiendas>
+   </viaje>
+   <viaje id="324" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>24,7,28</puertosAtraco>
+      <tripulacion>26,4,29</tripulacion>
+      <numEncomiendas>49</numEncomiendas>
+   </viaje>
+   <viaje id="325" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>29,1,46</puertosAtraco>
+      <tripulacion>0,1,9</tripulacion>
+      <numEncomiendas>71</numEncomiendas>
+   </viaje>
+   <viaje id="326" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>8,8,27</puertosAtraco>
+      <tripulacion>37,9,27</tripulacion>
+      <numEncomiendas>53</numEncomiendas>
+   </viaje>
+   <viaje id="327" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>20,8,17</puertosAtraco>
+      <tripulacion>45,2,39</tripulacion>
+      <numEncomiendas>92</numEncomiendas>
+   </viaje>
+   <viaje id="328" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>8,0,22</puertosAtraco>
+      <tripulacion>47,0,4</tripulacion>
+      <numEncomiendas>89</numEncomiendas>
+   </viaje>
+   <viaje id="329" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>42,7,46</puertosAtraco>
+      <tripulacion>32,9,17</tripulacion>
+      <numEncomiendas>23</numEncomiendas>
+   </viaje>
+   <viaje id="330" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>37,1,46</puertosAtraco>
+      <tripulacion>49,0,13</tripulacion>
+      <numEncomiendas>77</numEncomiendas>
+   </viaje>
+   <viaje id="331" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>46,3,49</puertosAtraco>
+      <tripulacion>30,1,31</tripulacion>
+      <numEncomiendas>95</numEncomiendas>
+   </viaje>
+   <viaje id="332" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>40,7,22</puertosAtraco>
+      <tripulacion>2,3,22</tripulacion>
+      <numEncomiendas>47</numEncomiendas>
+   </viaje>
+   <viaje id="333" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>46,5,9</puertosAtraco>
+      <tripulacion>3,8,7</tripulacion>
+      <numEncomiendas>82</numEncomiendas>
+   </viaje>
+   <viaje id="334" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>25,5,17</puertosAtraco>
+      <tripulacion>40,4,8</tripulacion>
+      <numEncomiendas>51</numEncomiendas>
+   </viaje>
+   <viaje id="335" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>10,2,21</puertosAtraco>
+      <tripulacion>1,0,0</tripulacion>
+      <numEncomiendas>18</numEncomiendas>
+   </viaje>
+   <viaje id="336" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>33,4,25</puertosAtraco>
+      <tripulacion>13,4,9</tripulacion>
+      <numEncomiendas>84</numEncomiendas>
+   </viaje>
+   <viaje id="337" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>42,1,13</puertosAtraco>
+      <tripulacion>35,6,31</tripulacion>
+      <numEncomiendas>87</numEncomiendas>
+   </viaje>
+   <viaje id="338" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>10,1,39</puertosAtraco>
+      <tripulacion>49,4,49</tripulacion>
+      <numEncomiendas>19</numEncomiendas>
+   </viaje>
+   <viaje id="339" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>30,4,20</puertosAtraco>
+      <tripulacion>7,8,5</tripulacion>
+      <numEncomiendas>72</numEncomiendas>
+   </viaje>
+   <viaje id="340" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>21,3,8</puertosAtraco>
+      <tripulacion>37,3,4</tripulacion>
+      <numEncomiendas>79</numEncomiendas>
+   </viaje>
+   <viaje id="341" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>0,6,35</puertosAtraco>
+      <tripulacion>3,4,17</tripulacion>
+      <numEncomiendas>59</numEncomiendas>
+   </viaje>
+   <viaje id="342" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>45,0,46</puertosAtraco>
+      <tripulacion>33,4,32</tripulacion>
+      <numEncomiendas>96</numEncomiendas>
+   </viaje>
+   <viaje id="343" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>14,7,49</puertosAtraco>
+      <tripulacion>1,9,35</tripulacion>
+      <numEncomiendas>93</numEncomiendas>
+   </viaje>
+   <viaje id="344" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>24,3,15</puertosAtraco>
+      <tripulacion>37,7,27</tripulacion>
+      <numEncomiendas>65</numEncomiendas>
+   </viaje>
+   <viaje id="345" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>11,5,6</puertosAtraco>
+      <tripulacion>35,9,21</tripulacion>
+      <numEncomiendas>60</numEncomiendas>
+   </viaje>
+   <viaje id="346" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>3,1,6</puertosAtraco>
+      <tripulacion>19,8,3</tripulacion>
+      <numEncomiendas>42</numEncomiendas>
+   </viaje>
+   <viaje id="347" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>27,0,45</puertosAtraco>
+      <tripulacion>40,4,20</tripulacion>
+      <numEncomiendas>84</numEncomiendas>
+   </viaje>
+   <viaje id="348" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>43,9,16</puertosAtraco>
+      <tripulacion>49,1,16</tripulacion>
+      <numEncomiendas>44</numEncomiendas>
+   </viaje>
+   <viaje id="349" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>23,4,16</puertosAtraco>
+      <tripulacion>9,5,2</tripulacion>
+      <numEncomiendas>33</numEncomiendas>
+   </viaje>
+   <viaje id="350" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>34,9,42</puertosAtraco>
+      <tripulacion>47,6,37</tripulacion>
+      <numEncomiendas>26</numEncomiendas>
+   </viaje>
+   <viaje id="351" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>16,2,42</puertosAtraco>
+      <tripulacion>42,1,48</tripulacion>
+      <numEncomiendas>83</numEncomiendas>
+   </viaje>
+   <viaje id="352" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>24,6,25</puertosAtraco>
+      <tripulacion>26,7,28</tripulacion>
+      <numEncomiendas>40</numEncomiendas>
+   </viaje>
+   <viaje id="353" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>2,5,14</puertosAtraco>
+      <tripulacion>27,8,23</tripulacion>
+      <numEncomiendas>39</numEncomiendas>
+   </viaje>
+   <viaje id="354" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>15,6,21</puertosAtraco>
+      <tripulacion>35,5,24</tripulacion>
+      <numEncomiendas>39</numEncomiendas>
+   </viaje>
+   <viaje id="355" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>0,0,22</puertosAtraco>
+      <tripulacion>13,3,11</tripulacion>
+      <numEncomiendas>2</numEncomiendas>
+   </viaje>
+   <viaje id="356" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>49,5,27</puertosAtraco>
+      <tripulacion>14,7,31</tripulacion>
+      <numEncomiendas>2</numEncomiendas>
+   </viaje>
+   <viaje id="357" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>13,6,7</puertosAtraco>
+      <tripulacion>21,8,14</tripulacion>
+      <numEncomiendas>71</numEncomiendas>
+   </viaje>
+   <viaje id="358" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>15,0,40</puertosAtraco>
+      <tripulacion>33,2,32</tripulacion>
+      <numEncomiendas>55</numEncomiendas>
+   </viaje>
+   <viaje id="359" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>43,6,32</puertosAtraco>
+      <tripulacion>6,5,22</tripulacion>
+      <numEncomiendas>46</numEncomiendas>
+   </viaje>
+   <viaje id="360" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>12,8,8</puertosAtraco>
+      <tripulacion>10,7,47</tripulacion>
+      <numEncomiendas>47</numEncomiendas>
+   </viaje>
+   <viaje id="361" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>20,6,6</puertosAtraco>
+      <tripulacion>18,0,29</tripulacion>
+      <numEncomiendas>25</numEncomiendas>
+   </viaje>
+   <viaje id="362" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>17,0,47</puertosAtraco>
+      <tripulacion>31,8,9</tripulacion>
+      <numEncomiendas>81</numEncomiendas>
+   </viaje>
+   <viaje id="363" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>26,1,26</puertosAtraco>
+      <tripulacion>14,3,32</tripulacion>
+      <numEncomiendas>36</numEncomiendas>
+   </viaje>
+   <viaje id="364" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>29,6,36</puertosAtraco>
+      <tripulacion>39,4,6</tripulacion>
+      <numEncomiendas>85</numEncomiendas>
+   </viaje>
+   <viaje id="365" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>29,8,17</puertosAtraco>
+      <tripulacion>36,4,7</tripulacion>
+      <numEncomiendas>28</numEncomiendas>
+   </viaje>
+   <viaje id="366" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>9,5,9</puertosAtraco>
+      <tripulacion>12,1,29</tripulacion>
+      <numEncomiendas>23</numEncomiendas>
+   </viaje>
+   <viaje id="367" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>40,9,46</puertosAtraco>
+      <tripulacion>41,1,36</tripulacion>
+      <numEncomiendas>10</numEncomiendas>
+   </viaje>
+   <viaje id="368" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>23,1,34</puertosAtraco>
+      <tripulacion>3,1,20</tripulacion>
+      <numEncomiendas>77</numEncomiendas>
+   </viaje>
+   <viaje id="369" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>42,2,7</puertosAtraco>
+      <tripulacion>48,4,4</tripulacion>
+      <numEncomiendas>67</numEncomiendas>
+   </viaje>
+   <viaje id="370" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>26,0,18</puertosAtraco>
+      <tripulacion>45,4,37</tripulacion>
+      <numEncomiendas>24</numEncomiendas>
+   </viaje>
+   <viaje id="371" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>32,3,6</puertosAtraco>
+      <tripulacion>33,7,1</tripulacion>
+      <numEncomiendas>94</numEncomiendas>
+   </viaje>
+   <viaje id="372" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>13,7,3</puertosAtraco>
+      <tripulacion>11,0,32</tripulacion>
+      <numEncomiendas>25</numEncomiendas>
+   </viaje>
+   <viaje id="373" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>11,5,47</puertosAtraco>
+      <tripulacion>42,9,15</tripulacion>
+      <numEncomiendas>67</numEncomiendas>
+   </viaje>
+   <viaje id="374" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>25,5,15</puertosAtraco>
+      <tripulacion>19,3,39</tripulacion>
+      <numEncomiendas>47</numEncomiendas>
+   </viaje>
+   <viaje id="375" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>30,3,20</puertosAtraco>
+      <tripulacion>34,7,38</tripulacion>
+      <numEncomiendas>78</numEncomiendas>
+   </viaje>
+   <viaje id="376" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>13,7,18</puertosAtraco>
+      <tripulacion>16,5,21</tripulacion>
+      <numEncomiendas>74</numEncomiendas>
+   </viaje>
+   <viaje id="377" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>32,3,36</puertosAtraco>
+      <tripulacion>1,2,48</tripulacion>
+      <numEncomiendas>30</numEncomiendas>
+   </viaje>
+   <viaje id="378" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>44,4,3</puertosAtraco>
+      <tripulacion>45,6,32</tripulacion>
+      <numEncomiendas>23</numEncomiendas>
+   </viaje>
+   <viaje id="379" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>43,9,6</puertosAtraco>
+      <tripulacion>20,1,47</tripulacion>
+      <numEncomiendas>72</numEncomiendas>
+   </viaje>
+   <viaje id="380" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>16,2,45</puertosAtraco>
+      <tripulacion>37,6,30</tripulacion>
+      <numEncomiendas>14</numEncomiendas>
+   </viaje>
+   <viaje id="381" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>29,3,45</puertosAtraco>
+      <tripulacion>37,0,7</tripulacion>
+      <numEncomiendas>69</numEncomiendas>
+   </viaje>
+   <viaje id="382" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>5,4,10</puertosAtraco>
+      <tripulacion>46,8,30</tripulacion>
+      <numEncomiendas>78</numEncomiendas>
+   </viaje>
+   <viaje id="383" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>30,0,44</puertosAtraco>
+      <tripulacion>34,4,49</tripulacion>
+      <numEncomiendas>86</numEncomiendas>
+   </viaje>
+   <viaje id="384" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>41,4,10</puertosAtraco>
+      <tripulacion>20,1,28</tripulacion>
+      <numEncomiendas>40</numEncomiendas>
+   </viaje>
+   <viaje id="385" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>3,9,40</puertosAtraco>
+      <tripulacion>13,0,30</tripulacion>
+      <numEncomiendas>83</numEncomiendas>
+   </viaje>
+   <viaje id="386" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>7,2,41</puertosAtraco>
+      <tripulacion>11,9,36</tripulacion>
+      <numEncomiendas>22</numEncomiendas>
+   </viaje>
+   <viaje id="387" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>31,2,18</puertosAtraco>
+      <tripulacion>18,7,15</tripulacion>
+      <numEncomiendas>21</numEncomiendas>
+   </viaje>
+   <viaje id="388" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>10,0,21</puertosAtraco>
+      <tripulacion>30,3,47</tripulacion>
+      <numEncomiendas>5</numEncomiendas>
+   </viaje>
+   <viaje id="389" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>7,8,23</puertosAtraco>
+      <tripulacion>20,2,16</tripulacion>
+      <numEncomiendas>11</numEncomiendas>
+   </viaje>
+   <viaje id="390" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>48,0,27</puertosAtraco>
+      <tripulacion>46,5,3</tripulacion>
+      <numEncomiendas>28</numEncomiendas>
+   </viaje>
+   <viaje id="391" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>13,7,24</puertosAtraco>
+      <tripulacion>18,2,23</tripulacion>
+      <numEncomiendas>31</numEncomiendas>
+   </viaje>
+   <viaje id="392" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>2,5,24</puertosAtraco>
+      <tripulacion>40,6,27</tripulacion>
+      <numEncomiendas>75</numEncomiendas>
+   </viaje>
+   <viaje id="393" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>31,9,32</puertosAtraco>
+      <tripulacion>33,8,16</tripulacion>
+      <numEncomiendas>12</numEncomiendas>
+   </viaje>
+   <viaje id="394" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>1,8,5</puertosAtraco>
+      <tripulacion>0,4,40</tripulacion>
+      <numEncomiendas>16</numEncomiendas>
+   </viaje>
+   <viaje id="395" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>12,6,36</puertosAtraco>
+      <tripulacion>32,9,12</tripulacion>
+      <numEncomiendas>36</numEncomiendas>
+   </viaje>
+   <viaje id="396" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>1,5,49</puertosAtraco>
+      <tripulacion>36,9,31</tripulacion>
+      <numEncomiendas>33</numEncomiendas>
+   </viaje>
+   <viaje id="397" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>1,4,30</puertosAtraco>
+      <tripulacion>14,4,15</tripulacion>
+      <numEncomiendas>95</numEncomiendas>
+   </viaje>
+   <viaje id="398" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>22,4,38</puertosAtraco>
+      <tripulacion>19,8,18</tripulacion>
+      <numEncomiendas>74</numEncomiendas>
+   </viaje>
+   <viaje id="399" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>22,3,30</puertosAtraco>
+      <tripulacion>46,1,37</tripulacion>
+      <numEncomiendas>92</numEncomiendas>
+   </viaje>
+   <viaje id="401" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>41,5,13</puertosAtraco>
+      <tripulacion>29,2,39</tripulacion>
+      <numEncomiendas>6</numEncomiendas>
+   </viaje>
+   <viaje id="402" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>4,6,10</puertosAtraco>
+      <tripulacion>27,4,9</tripulacion>
+      <numEncomiendas>34</numEncomiendas>
+   </viaje>
+   <viaje id="403" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>35,0,8</puertosAtraco>
+      <tripulacion>5,2,10</tripulacion>
+      <numEncomiendas>47</numEncomiendas>
+   </viaje>
+   <viaje id="404" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>21,6,9</puertosAtraco>
+      <tripulacion>1,8,43</tripulacion>
+      <numEncomiendas>7</numEncomiendas>
+   </viaje>
+   <viaje id="405" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>25,8,22</puertosAtraco>
+      <tripulacion>32,9,19</tripulacion>
+      <numEncomiendas>28</numEncomiendas>
+   </viaje>
+   <viaje id="406" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>43,7,31</puertosAtraco>
+      <tripulacion>43,8,5</tripulacion>
+      <numEncomiendas>62</numEncomiendas>
+   </viaje>
+   <viaje id="407" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>2,1,17</puertosAtraco>
+      <tripulacion>33,7,17</tripulacion>
+      <numEncomiendas>25</numEncomiendas>
+   </viaje>
+   <viaje id="408" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>24,8,6</puertosAtraco>
+      <tripulacion>14,2,47</tripulacion>
+      <numEncomiendas>47</numEncomiendas>
+   </viaje>
+   <viaje id="409" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>46,5,5</puertosAtraco>
+      <tripulacion>29,9,29</tripulacion>
+      <numEncomiendas>65</numEncomiendas>
+   </viaje>
+   <viaje id="410" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>22,3,43</puertosAtraco>
+      <tripulacion>19,8,34</tripulacion>
+      <numEncomiendas>49</numEncomiendas>
+   </viaje>
+   <viaje id="411" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>21,1,16</puertosAtraco>
+      <tripulacion>49,7,21</tripulacion>
+      <numEncomiendas>0</numEncomiendas>
+   </viaje>
+   <viaje id="412" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>1,5,18</puertosAtraco>
+      <tripulacion>6,0,8</tripulacion>
+      <numEncomiendas>13</numEncomiendas>
+   </viaje>
+   <viaje id="413" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>15,2,44</puertosAtraco>
+      <tripulacion>28,6,28</tripulacion>
+      <numEncomiendas>92</numEncomiendas>
+   </viaje>
+   <viaje id="414" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>10,7,17</puertosAtraco>
+      <tripulacion>12,9,35</tripulacion>
+      <numEncomiendas>5</numEncomiendas>
+   </viaje>
+   <viaje id="415" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>8,0,37</puertosAtraco>
+      <tripulacion>48,2,25</tripulacion>
+      <numEncomiendas>44</numEncomiendas>
+   </viaje>
+   <viaje id="416" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>39,3,20</puertosAtraco>
+      <tripulacion>0,8,16</tripulacion>
+      <numEncomiendas>61</numEncomiendas>
+   </viaje>
+   <viaje id="417" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>28,8,12</puertosAtraco>
+      <tripulacion>37,6,20</tripulacion>
+      <numEncomiendas>3</numEncomiendas>
+   </viaje>
+   <viaje id="418" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>14,2,28</puertosAtraco>
+      <tripulacion>25,5,1</tripulacion>
+      <numEncomiendas>11</numEncomiendas>
+   </viaje>
+   <viaje id="419" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>2,0,17</puertosAtraco>
+      <tripulacion>28,3,31</tripulacion>
+      <numEncomiendas>18</numEncomiendas>
+   </viaje>
+   <viaje id="420" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>17,4,30</puertosAtraco>
+      <tripulacion>23,2,28</tripulacion>
+      <numEncomiendas>78</numEncomiendas>
+   </viaje>
+   <viaje id="421" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>17,7,8</puertosAtraco>
+      <tripulacion>5,3,20</tripulacion>
+      <numEncomiendas>23</numEncomiendas>
+   </viaje>
+   <viaje id="422" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>23,6,10</puertosAtraco>
+      <tripulacion>7,7,19</tripulacion>
+      <numEncomiendas>43</numEncomiendas>
+   </viaje>
+   <viaje id="423" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>26,2,48</puertosAtraco>
+      <tripulacion>44,0,7</tripulacion>
+      <numEncomiendas>89</numEncomiendas>
+   </viaje>
+   <viaje id="424" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>29,3,8</puertosAtraco>
+      <tripulacion>1,3,35</tripulacion>
+      <numEncomiendas>81</numEncomiendas>
+   </viaje>
+   <viaje id="425" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>1,3,1</puertosAtraco>
+      <tripulacion>35,6,34</tripulacion>
+      <numEncomiendas>54</numEncomiendas>
+   </viaje>
+   <viaje id="426" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>12,6,44</puertosAtraco>
+      <tripulacion>21,8,17</tripulacion>
+      <numEncomiendas>3</numEncomiendas>
+   </viaje>
+   <viaje id="427" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>27,1,7</puertosAtraco>
+      <tripulacion>24,2,47</tripulacion>
+      <numEncomiendas>34</numEncomiendas>
+   </viaje>
+   <viaje id="428" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>0,3,39</puertosAtraco>
+      <tripulacion>35,4,2</tripulacion>
+      <numEncomiendas>11</numEncomiendas>
+   </viaje>
+   <viaje id="429" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>2,6,16</puertosAtraco>
+      <tripulacion>20,2,19</tripulacion>
+      <numEncomiendas>63</numEncomiendas>
+   </viaje>
+   <viaje id="430" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>44,3,18</puertosAtraco>
+      <tripulacion>42,7,13</tripulacion>
+      <numEncomiendas>88</numEncomiendas>
+   </viaje>
+   <viaje id="431" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>36,2,20</puertosAtraco>
+      <tripulacion>41,5,45</tripulacion>
+      <numEncomiendas>83</numEncomiendas>
+   </viaje>
+   <viaje id="432" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>33,7,47</puertosAtraco>
+      <tripulacion>22,9,34</tripulacion>
+      <numEncomiendas>1</numEncomiendas>
+   </viaje>
+   <viaje id="433" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>13,1,2</puertosAtraco>
+      <tripulacion>23,9,38</tripulacion>
+      <numEncomiendas>69</numEncomiendas>
+   </viaje>
+   <viaje id="434" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>45,6,29</puertosAtraco>
+      <tripulacion>2,7,27</tripulacion>
+      <numEncomiendas>52</numEncomiendas>
+   </viaje>
+   <viaje id="435" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>34,3,15</puertosAtraco>
+      <tripulacion>3,7,2</tripulacion>
+      <numEncomiendas>68</numEncomiendas>
+   </viaje>
+   <viaje id="436" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>12,8,42</puertosAtraco>
+      <tripulacion>22,0,42</tripulacion>
+      <numEncomiendas>40</numEncomiendas>
+   </viaje>
+   <viaje id="437" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>15,1,44</puertosAtraco>
+      <tripulacion>38,4,40</tripulacion>
+      <numEncomiendas>75</numEncomiendas>
+   </viaje>
+   <viaje id="438" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>42,4,43</puertosAtraco>
+      <tripulacion>10,4,42</tripulacion>
+      <numEncomiendas>79</numEncomiendas>
+   </viaje>
+   <viaje id="439" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>27,2,32</puertosAtraco>
+      <tripulacion>3,8,9</tripulacion>
+      <numEncomiendas>34</numEncomiendas>
+   </viaje>
+   <viaje id="440" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>42,5,35</puertosAtraco>
+      <tripulacion>44,2,43</tripulacion>
+      <numEncomiendas>68</numEncomiendas>
+   </viaje>
+   <viaje id="441" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>4,4,15</puertosAtraco>
+      <tripulacion>6,4,20</tripulacion>
+      <numEncomiendas>64</numEncomiendas>
+   </viaje>
+   <viaje id="442" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>38,7,29</puertosAtraco>
+      <tripulacion>6,6,40</tripulacion>
+      <numEncomiendas>97</numEncomiendas>
+   </viaje>
+   <viaje id="443" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>13,1,15</puertosAtraco>
+      <tripulacion>3,6,49</tripulacion>
+      <numEncomiendas>73</numEncomiendas>
+   </viaje>
+   <viaje id="444" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>0,4,23</puertosAtraco>
+      <tripulacion>32,0,29</tripulacion>
+      <numEncomiendas>85</numEncomiendas>
+   </viaje>
+   <viaje id="445" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>37,9,16</puertosAtraco>
+      <tripulacion>13,2,23</tripulacion>
+      <numEncomiendas>74</numEncomiendas>
+   </viaje>
+   <viaje id="446" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>21,6,2</puertosAtraco>
+      <tripulacion>48,4,36</tripulacion>
+      <numEncomiendas>49</numEncomiendas>
+   </viaje>
+   <viaje id="447" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>27,8,39</puertosAtraco>
+      <tripulacion>30,3,2</tripulacion>
+      <numEncomiendas>81</numEncomiendas>
+   </viaje>
+   <viaje id="448" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>31,5,41</puertosAtraco>
+      <tripulacion>10,5,2</tripulacion>
+      <numEncomiendas>80</numEncomiendas>
+   </viaje>
+   <viaje id="449" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>9,0,46</puertosAtraco>
+      <tripulacion>47,6,36</tripulacion>
+      <numEncomiendas>53</numEncomiendas>
+   </viaje>
+   <viaje id="450" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>16,4,46</puertosAtraco>
+      <tripulacion>40,3,0</tripulacion>
+      <numEncomiendas>79</numEncomiendas>
+   </viaje>
+   <viaje id="451" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>39,4,7</puertosAtraco>
+      <tripulacion>38,9,5</tripulacion>
+      <numEncomiendas>0</numEncomiendas>
+   </viaje>
+   <viaje id="452" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>34,6,30</puertosAtraco>
+      <tripulacion>11,7,39</tripulacion>
+      <numEncomiendas>52</numEncomiendas>
+   </viaje>
+   <viaje id="453" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>16,8,46</puertosAtraco>
+      <tripulacion>7,0,13</tripulacion>
+      <numEncomiendas>87</numEncomiendas>
+   </viaje>
+   <viaje id="454" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>2,4,30</puertosAtraco>
+      <tripulacion>14,6,8</tripulacion>
+      <numEncomiendas>9</numEncomiendas>
+   </viaje>
+   <viaje id="455" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>20,1,26</puertosAtraco>
+      <tripulacion>30,1,12</tripulacion>
+      <numEncomiendas>99</numEncomiendas>
+   </viaje>
+   <viaje id="456" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>41,9,15</puertosAtraco>
+      <tripulacion>0,4,16</tripulacion>
+      <numEncomiendas>82</numEncomiendas>
+   </viaje>
+   <viaje id="457" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>24,6,22</puertosAtraco>
+      <tripulacion>20,3,36</tripulacion>
+      <numEncomiendas>99</numEncomiendas>
+   </viaje>
+   <viaje id="458" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>47,5,18</puertosAtraco>
+      <tripulacion>31,5,5</tripulacion>
+      <numEncomiendas>8</numEncomiendas>
+   </viaje>
+   <viaje id="459" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>0,0,31</puertosAtraco>
+      <tripulacion>2,2,12</tripulacion>
+      <numEncomiendas>91</numEncomiendas>
+   </viaje>
+   <viaje id="460" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>13,2,18</puertosAtraco>
+      <tripulacion>7,6,8</tripulacion>
+      <numEncomiendas>25</numEncomiendas>
+   </viaje>
+   <viaje id="461" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>47,0,27</puertosAtraco>
+      <tripulacion>22,0,18</tripulacion>
+      <numEncomiendas>8</numEncomiendas>
+   </viaje>
+   <viaje id="462" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>0,4,31</puertosAtraco>
+      <tripulacion>7,3,17</tripulacion>
+      <numEncomiendas>51</numEncomiendas>
+   </viaje>
+   <viaje id="463" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>1,3,0</puertosAtraco>
+      <tripulacion>38,2,19</tripulacion>
+      <numEncomiendas>79</numEncomiendas>
+   </viaje>
+   <viaje id="464" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>46,9,13</puertosAtraco>
+      <tripulacion>28,1,32</tripulacion>
+      <numEncomiendas>71</numEncomiendas>
+   </viaje>
+   <viaje id="465" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>29,5,43</puertosAtraco>
+      <tripulacion>13,5,8</tripulacion>
+      <numEncomiendas>51</numEncomiendas>
+   </viaje>
+   <viaje id="466" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>33,5,21</puertosAtraco>
+      <tripulacion>34,3,14</tripulacion>
+      <numEncomiendas>10</numEncomiendas>
+   </viaje>
+   <viaje id="467" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>40,3,47</puertosAtraco>
+      <tripulacion>16,4,23</tripulacion>
+      <numEncomiendas>85</numEncomiendas>
+   </viaje>
+   <viaje id="468" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>25,6,31</puertosAtraco>
+      <tripulacion>10,0,24</tripulacion>
+      <numEncomiendas>68</numEncomiendas>
+   </viaje>
+   <viaje id="469" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>0,7,37</puertosAtraco>
+      <tripulacion>20,7,43</tripulacion>
+      <numEncomiendas>93</numEncomiendas>
+   </viaje>
+   <viaje id="470" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>33,1,28</puertosAtraco>
+      <tripulacion>49,4,27</tripulacion>
+      <numEncomiendas>92</numEncomiendas>
+   </viaje>
+   <viaje id="471" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>7,9,16</puertosAtraco>
+      <tripulacion>25,2,40</tripulacion>
+      <numEncomiendas>6</numEncomiendas>
+   </viaje>
+   <viaje id="472" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>34,9,12</puertosAtraco>
+      <tripulacion>42,5,40</tripulacion>
+      <numEncomiendas>48</numEncomiendas>
+   </viaje>
+   <viaje id="473" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>0,7,43</puertosAtraco>
+      <tripulacion>5,2,8</tripulacion>
+      <numEncomiendas>71</numEncomiendas>
+   </viaje>
+   <viaje id="474" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>49,3,10</puertosAtraco>
+      <tripulacion>32,3,12</tripulacion>
+      <numEncomiendas>14</numEncomiendas>
+   </viaje>
+   <viaje id="475" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>8,5,48</puertosAtraco>
+      <tripulacion>46,5,28</tripulacion>
+      <numEncomiendas>19</numEncomiendas>
+   </viaje>
+   <viaje id="476" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>41,7,27</puertosAtraco>
+      <tripulacion>7,0,19</tripulacion>
+      <numEncomiendas>17</numEncomiendas>
+   </viaje>
+   <viaje id="477" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>1,0,17</puertosAtraco>
+      <tripulacion>31,2,39</tripulacion>
+      <numEncomiendas>83</numEncomiendas>
+   </viaje>
+   <viaje id="478" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>0,7,49</puertosAtraco>
+      <tripulacion>34,0,35</tripulacion>
+      <numEncomiendas>87</numEncomiendas>
+   </viaje>
+   <viaje id="479" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>5,5,7</puertosAtraco>
+      <tripulacion>36,5,14</tripulacion>
+      <numEncomiendas>9</numEncomiendas>
+   </viaje>
+   <viaje id="480" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>12,2,8</puertosAtraco>
+      <tripulacion>25,5,44</tripulacion>
+      <numEncomiendas>23</numEncomiendas>
+   </viaje>
+   <viaje id="481" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>26,1,15</puertosAtraco>
+      <tripulacion>48,6,14</tripulacion>
+      <numEncomiendas>17</numEncomiendas>
+   </viaje>
+   <viaje id="482" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>41,4,7</puertosAtraco>
+      <tripulacion>42,5,9</tripulacion>
+      <numEncomiendas>33</numEncomiendas>
+   </viaje>
+   <viaje id="483" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>39,2,33</puertosAtraco>
+      <tripulacion>30,4,19</tripulacion>
+      <numEncomiendas>96</numEncomiendas>
+   </viaje>
+   <viaje id="484" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>13,0,42</puertosAtraco>
+      <tripulacion>32,3,18</tripulacion>
+      <numEncomiendas>80</numEncomiendas>
+   </viaje>
+   <viaje id="485" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>23,7,3</puertosAtraco>
+      <tripulacion>46,2,30</tripulacion>
+      <numEncomiendas>31</numEncomiendas>
+   </viaje>
+   <viaje id="486" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>38,8,11</puertosAtraco>
+      <tripulacion>15,4,39</tripulacion>
+      <numEncomiendas>18</numEncomiendas>
+   </viaje>
+   <viaje id="487" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>17,7,34</puertosAtraco>
+      <tripulacion>29,3,40</tripulacion>
+      <numEncomiendas>97</numEncomiendas>
+   </viaje>
+   <viaje id="488" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>49,2,48</puertosAtraco>
+      <tripulacion>18,3,16</tripulacion>
+      <numEncomiendas>88</numEncomiendas>
+   </viaje>
+   <viaje id="489" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>38,5,6</puertosAtraco>
+      <tripulacion>26,7,31</tripulacion>
+      <numEncomiendas>94</numEncomiendas>
+   </viaje>
+   <viaje id="490" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>46,2,11</puertosAtraco>
+      <tripulacion>10,9,24</tripulacion>
+      <numEncomiendas>37</numEncomiendas>
+   </viaje>
+   <viaje id="491" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>12,6,33</puertosAtraco>
+      <tripulacion>32,2,28</tripulacion>
+      <numEncomiendas>10</numEncomiendas>
+   </viaje>
+   <viaje id="492" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>26,2,11</puertosAtraco>
+      <tripulacion>37,5,49</tripulacion>
+      <numEncomiendas>13</numEncomiendas>
+   </viaje>
+   <viaje id="493" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>19,6,2</puertosAtraco>
+      <tripulacion>34,5,15</tripulacion>
+      <numEncomiendas>90</numEncomiendas>
+   </viaje>
+   <viaje id="494" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>13,3,0</puertosAtraco>
+      <tripulacion>42,5,41</tripulacion>
+      <numEncomiendas>42</numEncomiendas>
+   </viaje>
+   <viaje id="495" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>3,5,29</puertosAtraco>
+      <tripulacion>28,8,2</tripulacion>
+      <numEncomiendas>8</numEncomiendas>
+   </viaje>
+   <viaje id="496" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>43,2,5</puertosAtraco>
+      <tripulacion>34,1,4</tripulacion>
+      <numEncomiendas>53</numEncomiendas>
+   </viaje>
+   <viaje id="497" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>42,1,11</puertosAtraco>
+      <tripulacion>23,2,13</tripulacion>
+      <numEncomiendas>65</numEncomiendas>
+   </viaje>
+   <viaje id="498" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>5,2,10</puertosAtraco>
+      <tripulacion>23,4,26</tripulacion>
+      <numEncomiendas>4</numEncomiendas>
+   </viaje>
+   <viaje id="499" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+      <puertosAtraco>8,3,14</puertosAtraco>
+      <tripulacion>26,4,3</tripulacion>
+      <numEncomiendas>53</numEncomiendas>
+   </viaje>
+</viajes>
