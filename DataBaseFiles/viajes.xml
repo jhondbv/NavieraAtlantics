@@ -1780,7 +1780,7 @@
       <numEncomiendas>2</numEncomiendas>
    </viaje>
    <viaje id="356" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
-      <puertosAtraco>49,5,27</puertosAtraco>
+      <puertosAtraco>0,1,0,1</puertosAtraco>
       <tripulacion>14,7,31</tripulacion>
       <numEncomiendas>2</numEncomiendas>
    </viaje>

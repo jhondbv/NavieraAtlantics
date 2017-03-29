@@ -5,20 +5,20 @@
  */
 package Persistence.Interface;
 
-import Class.Viaje;
-import Class.Viajes;
+import Class.Puerto;
+import Class.Puertos;
+
+
 
 /**
  *
  * @author jhon_Ballesteros
  */
-public interface IViajeDao {
-    
-    Viajes Consultar();
-    Viaje Consultar(int id);
-    void Guardar(Viaje viaje);
-    void Actualizar(Viaje viaje);
+public interface IPuertoDao {
+    Puertos Consultar();
+    Puerto Consultar(int id);
+    void Guardar(Puerto viaje);
+    void Actualizar(Puerto viaje);
     void Eliminar(int id);
     void GuardarCambios();
-    
 }

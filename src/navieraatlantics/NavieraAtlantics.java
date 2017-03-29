@@ -28,7 +28,10 @@ public class NavieraAtlantics {
 
         //InitializeFile();
        ViajeLogic logic = new ViajeLogic();
-       logic.EliminarViaje(400);
+       Viaje viaje = logic.ConsultarViaje(356);
+       viaje.setPuertosAtraco("0,1,0,1");
+       logic.ActualizarViaje(viaje);
+       //logic.EliminarViaje(400);
       
     }
 

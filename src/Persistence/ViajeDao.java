@@ -34,26 +34,38 @@ public class ViajeDao implements IViajeDao {
     }
 
     @Override
-    public Viajes ConsultarViajes() {
+    public Viajes Consultar() {
         return viajes;
     }
 
     @Override
-    public Viaje ConsultarViaje(int id) {
+    public Viaje Consultar(int id) {
 
         for (Viaje viaje : viajes.List) {
             if (viaje.getId() == id) {
-                return viaje;
+                return new Viaje(viaje);
             }
         }
         return null;
     }
 
-    @Override
-    public void GuardarViaje(Viaje viaje) {
+      
+     private Viaje ConsultarReferencia(int id) {
 
-        int maxId = viajes.List.size() - 1;
-        Viaje lastViaje = viajes.List.get(maxId);
+        for (Viaje viaje : viajes.List) {
+            if (viaje.getId() == id) {
+                return  viaje;
+            }
+        }
+        return null;
+    }
+     
+     
+    @Override
+    public void Guardar(Viaje viaje) {
+
+        int maxpos = viajes.List.size() - 1;
+        Viaje lastViaje = viajes.List.get(maxpos);
         if (lastViaje != null) {
             viaje.setId(lastViaje.getId() + 1);
             viajes.List.add(viaje);
@@ -62,22 +74,20 @@ public class ViajeDao implements IViajeDao {
     }
 
     @Override
-    public void ActualizarViaje(Viaje viaje) {
+    public void Actualizar(Viaje viaje) {
 
-        Viaje objViaje = ConsultarViaje(viaje.getId());
+        Viaje objViaje = ConsultarReferencia(viaje.getId());
         objViaje.setIdBarco(viaje.getIdBarco());
         objViaje.setIdPuertoDestino(viaje.getIdPuertoDestino());
         objViaje.setIdPuertoOrigen(viaje.getIdPuertoOrigen());
         objViaje.setTripulacion(viaje.getTripulacion());
         objViaje.setNumEncomiendas(viaje.getNumEncomiendas());
         objViaje.setPuertosAtraco(viaje.getPuertosAtraco());
-
-        viajes.List.add(objViaje);
     }
 
     @Override
-    public void EliminarViaje(int id) {
-        Viaje deleteViaje = ConsultarViaje(id);
+    public void Eliminar(int id) {
+        Viaje deleteViaje = Consultar(id);
 
         viajes.List.remove(deleteViaje);
     }

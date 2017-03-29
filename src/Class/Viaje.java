@@ -33,6 +33,23 @@ public class Viaje {
     @Element
     private int numEncomiendas;
 
+    
+    public Viaje()
+    {
+    
+    }
+    
+     public Viaje(Viaje viaje)
+    {
+        id=viaje.getId();
+        idBarco=viaje.getIdBarco();
+        idPuertoOrigen=viaje.getIdPuertoOrigen();
+        idPuertoDestino=viaje.getIdPuertoDestino();
+        tripulacion=viaje.getTripulacion();
+        puertosAtraco=viaje.getPuertosAtraco();
+        numEncomiendas=viaje.getNumEncomiendas();
+    }
+    
     public void setId(int id) {
         this.id = id;
     }

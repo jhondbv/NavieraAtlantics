@@ -5,12 +5,19 @@
  */
 package Class;
 
+import org.simpleframework.xml.Root;
+import org.simpleframework.xml.Attribute;
+
 /**
  *
  * @author jhon_Ballesteros
  */
+@Root
 public class Puerto {
+
+    @Attribute
     private int id;
+    @Attribute
     private String descripcion;
 
     public int getId() {
@@ -28,7 +35,5 @@ public class Puerto {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-    
-    
-    
+
 }

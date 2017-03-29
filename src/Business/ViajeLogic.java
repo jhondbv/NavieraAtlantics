@@ -27,27 +27,28 @@ public class ViajeLogic {
     
     public void GuardarViaje(Viaje viaje)
     {
-        DAO.GuardarViaje(viaje);
+        DAO.Guardar(viaje);
     }
     
     public void EliminarViaje(int id)
     {
-        DAO.EliminarViaje(id);
+        DAO.Eliminar(id);
         DAO.GuardarCambios();
     }
     
     public void ActualizarViaje(Viaje viaje )
     {
-        DAO.ActualizarViaje(viaje);
+        DAO.Actualizar(viaje);
+        DAO.GuardarCambios();
     }
     
     public Viaje ConsultarViaje(int id)
     {
-        return DAO.ConsultarViaje(id);
+        return DAO.Consultar(id);
     }
     
     public Viajes ConsultarViajes()
     {
-        return DAO.ConsultarViajes();
+        return DAO.Consultar();
     }
 }
