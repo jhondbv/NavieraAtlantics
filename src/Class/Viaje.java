@@ -5,18 +5,30 @@
  */
 package Class;
 
+import org.simpleframework.xml.Attribute;
+import org.simpleframework.xml.Element;
+import org.simpleframework.xml.Root;
+
 /**
  *
  * @author jhon_Ballesteros
  */
+@Root
 public class Viaje {
 
+    @Attribute
     private int id;
+    @Attribute
     private int idBarco;
+    @Attribute
     private int idPuertoOrigen;
+    @Attribute
     private int idPuertoDestino;
+    @Element
     private String puertosAtraco;
+    @Element
     private String tripulacion;
+    @Element
     private int numEncomiendas;
 
     public void setId(int id) {

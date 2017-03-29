@@ -1,0 +1,5 @@
+<viaje id="0" idBarco="1" idPuertoOrigen="2" idPuertoDestino="3">
+   <puertosAtraco>1,2,3,4</puertosAtraco>
+   <tripulacion>1,4,5</tripulacion>
+   <numEncomiendas>3</numEncomiendas>
+</viaje>
