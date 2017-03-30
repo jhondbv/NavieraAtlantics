@@ -1,0 +1,12 @@
+<puertos>
+   <puerto id="0" descripcion="Puerto #0"/>
+   <puerto id="1" descripcion="Puerto #1"/>
+   <puerto id="2" descripcion="Puerto #2"/>
+   <puerto id="3" descripcion="Puerto #3"/>
+   <puerto id="4" descripcion="Puerto #4"/>
+   <puerto id="5" descripcion="Puerto #5"/>
+   <puerto id="6" descripcion="Puerto #6"/>
+   <puerto id="7" descripcion="Puerto #7"/>
+   <puerto id="8" descripcion="Puerto #8"/>
+   <puerto id="9" descripcion="Puerto #9"/>
+</puertos>

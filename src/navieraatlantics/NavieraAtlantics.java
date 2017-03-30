@@ -7,6 +7,8 @@ package navieraatlantics;
 
 import Class.*;
 import Business.*;
+import Persistence.Archivos;
+import Persistence.Archivos.Repositories;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,17 +28,19 @@ public class NavieraAtlantics {
      */
     public static void main(String[] args) {
 
-        //InitializeFile();
+        new Archivos.Repositories(true);
+        InitializeFile();
        ViajeLogic logic = new ViajeLogic();
-       Viaje viaje = logic.ConsultarViaje(356);
+       Viaje viaje = logic.Consultar(356);
        viaje.setPuertosAtraco("0,1,0,1");
-       logic.ActualizarViaje(viaje);
+       logic.Actualizar(viaje);
+       new Archivos.Repositories(false).GuardarCambios();
        //logic.EliminarViaje(400);
       
     }
 
     public static void InitializeFile() {
-        Serializer serializer = new Persister();
+        
         Random randomGenerator = new Random();
         Viajes viajes = new Viajes();
 
@@ -58,27 +62,21 @@ public class NavieraAtlantics {
             viaje.setTripulacion(tripulantes);
             viajes.List.add(viaje);
         }
-        File result = new File("DataBaseFiles/viajes.xml");
-        try {
-            serializer.write(viajes, result);
-
-        } catch (Exception ex) {
+       Archivos.Repositories.viajes=viajes;
+       
+       Puertos puertos = new Puertos();
+        for (int i = 0; i < 10; i++) {
+            Puerto puerto = new Puerto();
+            puerto.setId(i);
+            puerto.setDescripcion("Puerto #"+i);
+            puertos.List.add(puerto);
         }
+        
+        Archivos.Repositories.puertos=puertos;
+               
+        new Archivos.Repositories(false).GuardarCambios();
     }
 
-    public static void TestGet() throws Exception {
-
-        File result = new File("DataBaseFiles/example.xml");
-        Serializer serializer = new Persister();
-        Viajes viajes = serializer.read(Viajes.class, result);
-        boolean exist = false;
-        for (Viaje viaje : viajes.List) {
-            if (viaje.getId() == 600) {
-                exist=true;
-            }
-        }
-        System.out.println("Existe : " + exist);
-
-    }
+   
 
 }

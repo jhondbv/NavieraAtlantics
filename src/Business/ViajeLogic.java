@@ -14,7 +14,7 @@ import Persistence.ViajeDao;
  *
  * @author jhon_Ballesteros
  */
-public class ViajeLogic {
+public  class ViajeLogic {
     
     private IViajeDao DAO =null; 
 
@@ -25,30 +25,31 @@ public class ViajeLogic {
         DAO=new ViajeDao();
     }
     
-    public void GuardarViaje(Viaje viaje)
+    public void Guardar(Viaje viaje)
     {
         DAO.Guardar(viaje);
     }
     
-    public void EliminarViaje(int id)
+    public void Eliminar(int id)
     {
         DAO.Eliminar(id);
-        DAO.GuardarCambios();
+       
     }
     
-    public void ActualizarViaje(Viaje viaje )
+    public void Actualizar(Viaje viaje )
     {
         DAO.Actualizar(viaje);
-        DAO.GuardarCambios();
+       
     }
     
-    public Viaje ConsultarViaje(int id)
+    public Viaje Consultar(int id)
     {
         return DAO.Consultar(id);
     }
     
-    public Viajes ConsultarViajes()
+    public Viajes Consultar()
     {
         return DAO.Consultar();
     }
+
 }

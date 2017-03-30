@@ -20,5 +20,4 @@ public interface IPuertoDao {
     void Guardar(Puerto viaje);
     void Actualizar(Puerto viaje);
     void Eliminar(int id);
-    void GuardarCambios();
 }

@@ -20,6 +20,16 @@ public class Puerto {
     @Attribute
     private String descripcion;
 
+    public Puerto()
+    {
+    }
+    
+    public Puerto(Puerto puerto)
+    {
+        id=puerto.getId();
+        descripcion=puerto.getDescripcion();
+    }
+        
     public int getId() {
         return id;
     }

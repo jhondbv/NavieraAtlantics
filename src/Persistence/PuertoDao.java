@@ -18,44 +18,67 @@ import org.simpleframework.xml.core.Persister;
  */
 public class PuertoDao implements IPuertoDao {
 
-    private final String Nombre_Archivo = "DataBaseFiles/puertos.xml";
-    private static Puertos puertos = new Puertos();
+    
+    private static Puertos lstItems = new Puertos();
 
+    public PuertoDao()
+    {
+        lstItems=Archivos.Repositories.puertos;
+    }
+    
     @Override
     public Puertos Consultar() {
-         File file = new File(Nombre_Archivo);
-        Serializer serializer = new Persister();
-        try {
-            puertos = serializer.read(Puertos.class, file);
-        } catch (Exception ex) {
-
-        }
-    return puertos;
+        return lstItems;
     }
 
     @Override
     public Puerto Consultar(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
+        for (Puerto item : lstItems.List) {
+            if (item.getId() == id) {
+                return new Puerto(item);
+            }
+        }
+        return null;
+    }
+    
+    private Puerto ConsultarReferencia(int id) {
+
+        for (Puerto item : lstItems.List) {
+            if (item.getId() == id) {
+                return  item;
+            }
+        }
+        return null;
+    }
+    
+
+    @Override
+    public void Guardar(Puerto item) {
+         int maxpos = lstItems.List.size() - 1;
+        Puerto lastItem = lstItems.List.get(maxpos);
+        if (lastItem != null) {
+            item.setId(lastItem.getId() + 1);
+            lstItems.List.add(item);
+        }
+    
     }
 
     @Override
-    public void Guardar(Puerto viaje) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void Actualizar(Puerto viaje) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void Actualizar(Puerto item) {
+        Puerto objItem = ConsultarReferencia(item.getId());
+        objItem.setDescripcion(item.getDescripcion());
+       
+    
     }
 
     @Override
     public void Eliminar(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Puerto deleteItem = Consultar(id);
+
+        lstItems.List.remove(deleteItem);
     }
 
-    @Override
-    public void GuardarCambios() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+ 
 
 }

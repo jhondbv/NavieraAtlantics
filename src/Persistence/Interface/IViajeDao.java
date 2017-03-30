@@ -19,6 +19,5 @@ public interface IViajeDao {
     void Guardar(Viaje viaje);
     void Actualizar(Viaje viaje);
     void Eliminar(int id);
-    void GuardarCambios();
     
 }

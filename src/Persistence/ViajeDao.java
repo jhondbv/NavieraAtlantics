@@ -20,17 +20,19 @@ import org.simpleframework.xml.core.Persister;
  */
 public class ViajeDao implements IViajeDao {
 
-    private final String Nombre_Archivo = "DataBaseFiles/viajes.xml";
-    private static Viajes viajes = new Viajes();
+    
+    private  Viajes viajes = new Viajes();
 
     public ViajeDao() {
-        File file = new File(Nombre_Archivo);
-        Serializer serializer = new Persister();
-        try {
-            viajes = serializer.read(Viajes.class, file);
-        } catch (Exception ex) {
-
-        }
+        
+        viajes =  Archivos.Repositories.viajes;
+//        File file = new File(Nombre_Archivo);
+//        Serializer serializer = new Persister();
+//        try {
+//            viajes = serializer.read(Viajes.class, file);
+//        } catch (Exception ex) {
+//
+//        }
     }
 
     @Override
@@ -92,16 +94,6 @@ public class ViajeDao implements IViajeDao {
         viajes.List.remove(deleteViaje);
     }
 
-    @Override
-    public void GuardarCambios() {
-        Serializer serializer = new Persister();
-        File file = new File(Nombre_Archivo);
-        try {
-            serializer.write(viajes, file);
-
-        } catch (Exception ex) {
-        }
-
-    }
+  
 
 }
