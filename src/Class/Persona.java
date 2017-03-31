@@ -5,18 +5,32 @@
  */
 package Class;
 
+import org.simpleframework.xml.Attribute;
+import org.simpleframework.xml.Root;
+
 /**
  *
  * @author Penagos
  */
+@Root
 public class Persona {
-    
+    @Attribute  
     int id;
+    @Attribute 
     String nombre;
+    @Attribute 
     char sexo;
     
     public Persona(){
     }
+
+    public Persona(Persona persona) {
+        this.id = id;
+        this.nombre = nombre;
+        this.sexo = sexo;
+    }
+    
+    
 
     public int getId() {
         return id;
