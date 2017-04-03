@@ -26,13 +26,7 @@ public class ViajeDao implements IViajeDao {
     public ViajeDao() {
         
         viajes =  Archivos.Repositories.viajes;
-//        File file = new File(Nombre_Archivo);
-//        Serializer serializer = new Persister();
-//        try {
-//            viajes = serializer.read(Viajes.class, file);
-//        } catch (Exception ex) {
-//
-//        }
+
     }
 
     @Override

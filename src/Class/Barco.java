@@ -5,15 +5,52 @@
  */
 package Class;
 
+import org.simpleframework.xml.Attribute;
+import org.simpleframework.xml.Element;
+import org.simpleframework.xml.Root;
+
 /**
  *
  * @author jhon
  */
+@Root
 public class Barco {
     
-    public int Id ;
-    public String  Nombre;
+    @Attribute
+    private int Id;
+    @Element
+    private boolean RegMerc;
+    @Element
+    private int IdTipoBarco;
     
-    public int barcoPirata=100000;
-    
+    public Barco(Barco barco){
+        Id=barco.getId();
+        RegMerc=barco.getRegMerc();
+        IdTipoBarco=barco.getIdTipoBarco();
+    }
+
+    public int getId() {
+        return Id;
+    }
+
+    public void setId(int Id) {
+        this.Id = Id;
+    }
+
+    public boolean getRegMerc() {
+        return RegMerc;
+    }
+
+    public void setRegMerc(boolean RegMerc) {
+        this.RegMerc = RegMerc; 
+    }
+
+    public int getIdTipoBarco() {
+        return IdTipoBarco;
+    }
+
+    public void setIdTipoBarco(int IdTipoBarco) {
+        this.IdTipoBarco = IdTipoBarco;
+    }
+   
 }

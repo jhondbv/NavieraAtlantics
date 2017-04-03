@@ -5,6 +5,7 @@
  */
 package Persistence;
 
+import Class.Barcos;
 import Class.Puertos;
 import Class.Viajes;
 import java.io.File;
@@ -21,15 +22,17 @@ public class Archivos {
 
         private final String Archivo_Viaje = "DataBaseFiles/viajes.xml";
         private final String Archivo_Puertos = "DataBaseFiles/puertos.xml";
+        private final String Archivo_Barcos = "DataBaseFiles/barcos.xml";
         public static Viajes viajes;
         public static Puertos puertos;
+        public static Barcos barcos;
 
         public Repositories(boolean cargaInicial) {
-            if(cargaInicial)
-            {
-            
-            LoadViajes();
-            LoadPuertos();
+            if (cargaInicial) {
+
+                LoadViajes();
+                LoadPuertos();
+                LoadBarcos();
             }
         }
 
@@ -53,8 +56,18 @@ public class Archivos {
             }
         }
 
+        private void LoadBarcos() {
+            File file = new File(Archivo_Barcos);
+            Serializer serializer = new Persister();
+            try {
+                barcos = serializer.read(Barcos.class, file);
+            } catch (Exception ex) {
+
+            }
+        }
+
         private void GuardarViajes() {
-         
+
             Serializer serializer = new Persister();
             File file = new File(Archivo_Viaje);
             try {
@@ -65,8 +78,7 @@ public class Archivos {
         }
 
         private void GuardarPuertos() {
-            
-      
+
             Serializer serializer = new Persister();
             File file = new File(Archivo_Puertos);
             try {
@@ -76,9 +88,21 @@ public class Archivos {
             }
         }
 
+        private void GuardarBarcos() {
+
+            Serializer serializer = new Persister();
+            File file = new File(Archivo_Barcos);
+            try {
+                serializer.write(barcos, file);
+
+            } catch (Exception ex) {
+            }
+        }
+
         public void GuardarCambios() {
             GuardarViajes();
             GuardarPuertos();
+            GuardarBarcos();
         }
     }
 
