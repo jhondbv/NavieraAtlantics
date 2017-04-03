@@ -4,24 +4,26 @@
  * and open the template in the editor.
  */
 package Class;
-
+import org.simpleframework.xml.Attribute;
+import org.simpleframework.xml.Element;
+import org.simpleframework.xml.Root;
 /**
  *
  * @author Penagos
  */
-public class Hijo {
-    
-    String papaCapitan;
-    
-    public Hijo(){
+@Root
+public class Hijo extends Persona {
+  @Element  
+  int idPapa;
+
+    public int getIdPapa() {
+        return idPapa;
     }
-    
-    public void setPapaCapitan(String Capitan){
-        papaCapitan=Capitan;
+
+    public void setIdPapa(int idPapa) {
+        this.idPapa = idPapa;
     }
-    
-    public String getCapitan(){
-        return papaCapitan;
-    }
+  
+  
     
 }
