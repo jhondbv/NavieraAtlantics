@@ -50,4 +50,16 @@ public class Marinero extends Persona {
     public Marinero(){
     }
     
+     public Marinero(Marinero marinero){
+         
+         id=marinero.id;
+        
+         nombre=marinero.nombre;
+         sexo=marinero.sexo;
+         idEsposa=marinero.idEsposa;
+          hijos=marinero.hijos;
+         idTestamento=marinero.idTestamento;
+         
+    }
+    
 }

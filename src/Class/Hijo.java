@@ -25,5 +25,16 @@ public class Hijo extends Persona {
     }
   
   
+    public Hijo()
+    {
     
+    }
+    
+    public Hijo(Hijo hijo)
+    {
+      id=hijo.id;
+         nombre=hijo.nombre;
+         sexo=hijo.sexo;
+         idPapa=hijo.idPapa;
+    }
 }

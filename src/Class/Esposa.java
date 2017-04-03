@@ -4,20 +4,20 @@
  * and open the template in the editor.
  */
 package Class;
+
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;
+
 /**
  *
  * @author Penagos
  */
 @Root
 public class Esposa extends Persona {
+
     @Element
     int IdEsposo;
-    
-    public Esposa(){
-    }
 
     public int getIdEsposo() {
         return IdEsposo;
@@ -27,6 +27,15 @@ public class Esposa extends Persona {
         this.IdEsposo = IdEsposo;
     }
 
-   
-    
+    public Esposa() {
+    }
+
+    public Esposa(Esposa esposa) {
+        id = esposa.id;
+        nombre = esposa.nombre;
+        sexo = esposa.sexo;
+        IdEsposo = esposa.IdEsposo;
+
+    }
+
 }
