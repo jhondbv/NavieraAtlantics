@@ -17,7 +17,7 @@ import Class.Puertos;
 public interface IPuertoDao {
     Puertos Consultar();
     Puerto Consultar(int id);
-    void Guardar(Puerto viaje);
-    void Actualizar(Puerto viaje);
+    void Guardar(Puerto item);
+    void Actualizar(Puerto item);
     void Eliminar(int id);
 }

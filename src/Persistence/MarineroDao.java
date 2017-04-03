@@ -56,7 +56,6 @@ public class MarineroDao implements IMarineroDao {
             item.setId(lastItem.getId() + 1);
             lstItems.List.add(item);
         }
-
     }
 
     @Override
@@ -73,7 +72,6 @@ public class MarineroDao implements IMarineroDao {
     @Override
     public void Eliminar(int id) {
         Marinero deleteItem = Consultar(id);
-
         lstItems.List.remove(deleteItem);
     }
 

@@ -20,7 +20,7 @@ public class BarcoLogic {
         DAO = new BarcoDao();
     }
     
-        public void Guardar(Barco barco)
+    public void Guardar(Barco barco)
     {
         DAO.Guardar(barco);
     }

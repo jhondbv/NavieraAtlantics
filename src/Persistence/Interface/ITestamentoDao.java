@@ -5,19 +5,22 @@
  */
 package Persistence.Interface;
 
-import Class.Viaje;
-import Class.Viajes;
+import Class.Testamento;
+import Class.Testamentos;
 
 /**
  *
  * @author jhon_Ballesteros
  */
-public interface IViajeDao {
-    
-    Viajes Consultar();
-    Viaje Consultar(int id);
-    void Guardar(Viaje item);
-    void Actualizar(Viaje item);
+public interface ITestamentoDao {
+
+    Testamentos Consultar();
+
+    Testamento Consultar(int id);
+
+    void Guardar(Testamento item);
+
+    void Actualizar(Testamento item);
+
     void Eliminar(int id);
-    
 }

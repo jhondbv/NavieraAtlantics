@@ -10,6 +10,7 @@ import Class.Esposas;
 import Class.Hijos;
 import Class.Marineros;
 import Class.Puertos;
+import Class.Testamentos;
 import Class.Viajes;
 import java.io.File;
 import org.simpleframework.xml.Serializer;
@@ -29,6 +30,7 @@ public class Archivos {
         private final String Archivo_Hijos = "DataBaseFiles/hijos.xml";
         private final String Archivo_Marineros = "DataBaseFiles/marineros.xml";
         private final String Archivo_Esposas = "DataBaseFiles/esposas.xml";
+        private final String Archivo_Testamentos = "DataBaseFiles/testamentos.xml";
 
         public static Viajes viajes;
         public static Puertos puertos;
@@ -36,6 +38,7 @@ public class Archivos {
         public static Marineros marineros;
         public static Hijos hijos;
         public static Esposas esposas;
+        public static Testamentos testamentos;
 
         public Repositories(boolean cargaInicial) {
             if (cargaInicial) {
@@ -43,6 +46,11 @@ public class Archivos {
                 LoadViajes();
                 LoadPuertos();
                 LoadBarcos();
+                LoadEsposas();
+                LoadHijos();
+                LoadMarineros();
+                LoadTestamentos();
+                
             }
         }
 
@@ -51,6 +59,16 @@ public class Archivos {
             Serializer serializer = new Persister();
             try {
                 viajes = serializer.read(Viajes.class, file);
+            } catch (Exception ex) {
+
+            }
+        }
+        
+         private void LoadTestamentos() {
+            File file = new File(Archivo_Testamentos);
+            Serializer serializer = new Persister();
+            try {
+                testamentos = serializer.read(Testamentos.class, file);
             } catch (Exception ex) {
 
             }
@@ -171,11 +189,26 @@ public class Archivos {
             } catch (Exception ex) {
             }
         }
+        
+            private void GuuardarTestamentos() {
+
+            Serializer serializer = new Persister();
+            File file = new File(Archivo_Testamentos);
+            try {
+                serializer.write(testamentos, file);
+
+            } catch (Exception ex) {
+            }
+        }
 
         public void GuardarCambios() {
             GuardarViajes();
             GuardarPuertos();
             GuardarBarcos();
+            GuardarEsposas();
+            GuardarMarineros();
+            GuardarHijos();
+            GuuardarTestamentos();
         }
     }
 
