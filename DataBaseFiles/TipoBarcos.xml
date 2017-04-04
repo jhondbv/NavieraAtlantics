@@ -4,4 +4,9 @@
       <capacidadCarga>1000</capacidadCarga>
       <capacidadPersonas>123</capacidadPersonas>
    </tipoBarco>
+   <tipoBarco id="2">
+      <descripcion>4</descripcion>
+      <capacidadCarga>8</capacidadCarga>
+      <capacidadPersonas>8</capacidadPersonas>
+   </tipoBarco>
 </tipoBarcos>
