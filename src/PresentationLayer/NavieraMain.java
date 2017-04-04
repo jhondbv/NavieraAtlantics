@@ -114,6 +114,11 @@ public class NavieraMain extends javax.swing.JFrame {
         });
 
         btnViajes4.setText("Viajes");
+        btnViajes4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViajes4ActionPerformed(evt);
+            }
+        });
 
         btnPuertos.setText("Puertos");
         btnPuertos.addActionListener(new java.awt.event.ActionListener() {
@@ -211,6 +216,10 @@ public class NavieraMain extends javax.swing.JFrame {
     private void btnPuertosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPuertosActionPerformed
         new PuertosView().setVisible(true);
     }//GEN-LAST:event_btnPuertosActionPerformed
+
+    private void btnViajes4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViajes4ActionPerformed
+        new ViajesView().setVisible(true);
+    }//GEN-LAST:event_btnViajes4ActionPerformed
 
     /**
      * @param args the command line arguments

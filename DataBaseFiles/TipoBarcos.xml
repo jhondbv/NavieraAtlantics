@@ -10,13 +10,13 @@
       <capacidadPersonas>12</capacidadPersonas>
    </tipoBarco>
    <tipoBarco id="3">
-      <descripcion>Barco67</descripcion>
-      <capacidadCarga>156</capacidadCarga>
-      <capacidadPersonas>11</capacidadPersonas>
+      <descripcion>Yate23</descripcion>
+      <capacidadCarga>120</capacidadCarga>
+      <capacidadPersonas>12</capacidadPersonas>
    </tipoBarco>
    <tipoBarco id="4">
-      <descripcion>Barco prueba 2</descripcion>
-      <capacidadCarga>11</capacidadCarga>
-      <capacidadPersonas>223</capacidadPersonas>
+      <descripcion>Yate23</descripcion>
+      <capacidadCarga>120</capacidadCarga>
+      <capacidadPersonas>12</capacidadPersonas>
    </tipoBarco>
 </tipoBarcos>
