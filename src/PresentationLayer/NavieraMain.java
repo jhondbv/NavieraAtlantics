@@ -8,12 +8,15 @@ package PresentationLayer;
 import Persistence.Archivos;
 import java.awt.Dialog;
 import java.awt.Dimension;
+import java.awt.TrayIcon;
+import java.awt.TrayIcon.MessageType;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -43,14 +46,29 @@ public class NavieraMain extends javax.swing.JFrame {
         fondo.setBounds(0, 0, uno.getIconWidth(), uno.getIconHeight());
 
         this.addWindowListener(new WindowAdapter() {
-
+            
             public void windowClosing(WindowEvent e) {
-                new Archivos.Repositories(false).GuardarCambios();
+                SaveChanges();
+              
             }
         });
-
+    }
     
-
+    public void SaveChanges()
+    {
+        Thread t = new Thread(new Runnable() {
+            public void run() {
+                new Archivos.Repositories(false).GuardarCambios();
+                 System.exit(0);
+            }
+        });
+        if (JOptionPane.showConfirmDialog( this,
+                "¿ Esta seguro que quiere salir ?", "Realmente quiere salir?",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE) == JOptionPane.YES_OPTION){
+            t.start();
+            JOptionPane.showMessageDialog(this, "Espere mientras se guardan los cambios");
+        }
     }
     /**
      * This method is called from within the constructor to initialize the form.

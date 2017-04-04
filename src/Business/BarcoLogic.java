@@ -6,8 +6,14 @@
 package Business;
 import Class.Barco;
 import Class.Barcos;
+import Class.TipoBarco;
+import Class.TipoBarcos;
 import Persistence.BarcoDao;
 import Persistence.Interface.IBarcoDao;
+import Persistence.Interface.ITipoBarcoDAO;
+import Persistence.TipoBarcoDAO;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  *
@@ -15,10 +21,21 @@ import Persistence.Interface.IBarcoDao;
  */
 public class BarcoLogic {
     private IBarcoDao DAO = null;
+    private ITipoBarcoDAO TipoBarcoDAO=null;
+    
+    private  HashMap<Integer,TipoBarco> hashtipos =null;
     
     public BarcoLogic(){
         DAO = new BarcoDao();
+        TipoBarcoDAO=new TipoBarcoDAO();
+        
+       hashtipos = new HashMap<>();
+       List<TipoBarco>tipos = TipoBarcoDAO.Consultar().List;
+        for (TipoBarco tipo : tipos) {
+            hashtipos.put(tipo.getId(), tipo);
+        }
     }
+    
     
     public void Guardar(Barco barco)
     {
@@ -33,7 +50,9 @@ public class BarcoLogic {
     
     public void Actualizar(Barco barco)
     {
+        barco.tipoBarco=hashtipos.get(barco.getIdTipoBarco());
         DAO.Actualizar(barco);
+        
        
     }
     
@@ -45,6 +64,20 @@ public class BarcoLogic {
     public Barcos Consultar()
     {
         return DAO.Consultar();
+    }
+    
+      public Barcos ConsultarConRelaciones()
+    {
+        Barcos barcos =  DAO.Consultar();
+        if(barcos!=null)
+        {
+            for (Barco barco : barcos.List) {
+                barco.tipoBarco=hashtipos.get(barco.getIdTipoBarco());
+            }
+            
+        }
+        
+        return barcos;
     }
     
 }

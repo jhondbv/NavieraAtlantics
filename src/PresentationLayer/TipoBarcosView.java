@@ -239,9 +239,7 @@ public class TipoBarcosView extends javax.swing.JFrame {
             txtCarga.setText(tblTipoBarco.getValueAt(fila, 2).toString());
             txtPersona.setText(tblTipoBarco.getValueAt(fila, 3).toString());
             id = Integer.parseInt(tblTipoBarco.getValueAt(fila, 0).toString());
-        } else {
-
-        }
+        } 
     }//GEN-LAST:event_tblTipoBarcoMouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

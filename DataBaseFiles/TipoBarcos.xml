@@ -15,7 +15,7 @@
       <capacidadPersonas>11</capacidadPersonas>
    </tipoBarco>
    <tipoBarco id="4">
-      <descripcion>Barco prueba</descripcion>
+      <descripcion>Barco prueba 2</descripcion>
       <capacidadCarga>11</capacidadCarga>
       <capacidadPersonas>223</capacidadPersonas>
    </tipoBarco>

@@ -5,9 +5,18 @@
  */
 package PresentationLayer;
 
+import Business.BarcoLogic;
+import Business.TipoBarcoLogic;
+import Class.Barco;
+import Class.Barcos;
+import Class.TipoBarco;
+import Class.TipoBarcos;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -15,19 +24,40 @@ import javax.swing.JFrame;
  */
 public class BarcosView extends javax.swing.JFrame {
 
+    private static int id;
+    private static BarcoLogic barcoLogic;
+        private static TipoBarcoLogic tipoLogic;
+
     /**
      * Creates new form BarcosView
      */
     public BarcosView() {
         
         initComponents();
+        barcoLogic=new BarcoLogic();
+        tipoLogic=new TipoBarcoLogic();
         configClos();
+        GetData();
+        LoadTipos();
+        id=0;
+
+        
     }
   
     
     public void configClos()
     {
         this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+    }
+    
+    public void LoadTipos()
+    {
+        TipoBarcos lst = tipoLogic.Consultar();
+        DefaultComboBoxModel model = (DefaultComboBoxModel)cmbTipoBarco.getModel();
+        model.removeAllElements();
+        for (TipoBarco item : lst.List) {
+            model.addElement(item);
+        }
     }
     
 
@@ -42,8 +72,18 @@ public class BarcosView extends javax.swing.JFrame {
 
         btnAtras = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblBarcos = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        txtNombre = new javax.swing.JTextField();
+        chkRM = new javax.swing.JCheckBox();
+        cmbTipoBarco = new javax.swing.JComboBox<>();
+        btnActualizar = new javax.swing.JButton();
+        btnEliminar = new javax.swing.JButton();
+        btnGuardar = new javax.swing.JButton();
+        btnLimpiar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,34 +94,115 @@ public class BarcosView extends javax.swing.JFrame {
             }
         });
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblBarcos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Nombre", "Tipo", "Title 3", "Title 4"
+                "Id", "Nombre", "Registro Mercantil", "Tipo Barco"
             }
-        ));
-        jScrollPane1.setViewportView(jTable1);
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tblBarcos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblBarcosMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(tblBarcos);
+        if (tblBarcos.getColumnModel().getColumnCount() > 0) {
+            tblBarcos.getColumnModel().getColumn(0).setResizable(false);
+            tblBarcos.getColumnModel().getColumn(1).setResizable(false);
+            tblBarcos.getColumnModel().getColumn(2).setResizable(false);
+            tblBarcos.getColumnModel().getColumn(3).setResizable(false);
+        }
 
         jLabel1.setText("BARCOS");
+
+        jLabel2.setText("Nombre");
+
+        jLabel3.setText("Registro Mercantil");
+
+        jLabel4.setText("Tipo Barco");
+
+        cmbTipoBarco.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        btnActualizar.setText("Actualizar");
+        btnActualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnActualizarActionPerformed(evt);
+            }
+        });
+
+        btnEliminar.setText("Eliminar");
+        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarActionPerformed(evt);
+            }
+        });
+
+        btnGuardar.setText("Guardar");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
+
+        btnLimpiar.setText("Limpiar");
+        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(94, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 512, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48)
-                .addComponent(btnAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 512, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31))
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel4))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(chkRM)
+                                    .addComponent(cmbTipoBarco, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38)
+                        .addComponent(btnActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(41, 41, 41)
+                        .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -89,25 +210,140 @@ public class BarcosView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 222, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 20, 20))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(54, 54, 54))))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(chkRM))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(cmbTipoBarco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(btnAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
-      
-        new NavieraMain().setVisible(true);
+
         dispose();
     }//GEN-LAST:event_btnAtrasActionPerformed
 
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+          
+        Barco barco=new Barco();
+        
+        barco.setNombre(txtNombre.getText());
+        barco.setRegMerc(chkRM.isSelected());
+        DefaultComboBoxModel cmbmodel = (DefaultComboBoxModel)cmbTipoBarco.getModel();
+        TipoBarco tipo = (TipoBarco)cmbmodel.getSelectedItem();
+        if(tipo == null)
+        {
+            JOptionPane.showMessageDialog(this, "Debe seleccionar un tipo de barco");
+            return ;
+        }
+        barco.setIdTipoBarco(tipo.getId());
+        barco.tipoBarco=tipo;
+        
+        barcoLogic.Guardar(barco);
+        
+        DefaultTableModel model=(DefaultTableModel) tblBarcos.getModel();
+        model.addRow(new Object[]{barco.getId(),barco.getNombre(),barco.getRegMerc(),barco.tipoBarco.getDescripcion()});
+        Clear();
+    }//GEN-LAST:event_btnGuardarActionPerformed
+
+    private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
+         if (id > 0) {
+            int fila = tblBarcos.getSelectedRow();
+            Barco barco = barcoLogic.Consultar(id);
+            barco.setNombre(txtNombre.getText());
+            barco.setIdTipoBarco(((TipoBarco)cmbTipoBarco.getSelectedItem()).getId());
+            barco.setRegMerc(chkRM.isSelected());
+           
+            Clear();
+            barcoLogic.Actualizar(barco);
+            DefaultTableModel model = (DefaultTableModel) tblBarcos.getModel();
+            model.removeRow(fila);
+            model.insertRow(fila, new Object[]{barco.getId(),barco.getNombre(),barco.getRegMerc(),barco.tipoBarco.getDescripcion()});
+
+        } else {
+            JOptionPane.showMessageDialog(this, "Debe seleccionar un registro para editar");
+        }
+    }//GEN-LAST:event_btnActualizarActionPerformed
+
+    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+            if (id > 0) {
+            int fila = tblBarcos.getSelectedRow();
+            barcoLogic.Eliminar(id);
+            DefaultTableModel model = (DefaultTableModel) tblBarcos.getModel();
+            model.removeRow(fila);
+            Clear();
+        } else {
+            JOptionPane.showMessageDialog(this, "Debe seleccionar un registro para eliminar");
+        }
+    }//GEN-LAST:event_btnEliminarActionPerformed
+
+    private void tblBarcosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblBarcosMouseClicked
+        int fila = tblBarcos.getSelectedRow();
+        if (fila >= 0) {
+            
+            txtNombre.setText(tblBarcos.getValueAt(fila, 1).toString());
+            id = Integer.parseInt(tblBarcos.getValueAt(fila, 0).toString());
+            chkRM.setSelected(Boolean.valueOf(tblBarcos.getValueAt(fila, 2).toString()));
+            Barco item = barcoLogic.Consultar(id);
+            SelectTipoBarco(item.getIdTipoBarco());
+        } 
+    }//GEN-LAST:event_tblBarcosMouseClicked
+
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+       Clear();
+    }//GEN-LAST:event_btnLimpiarActionPerformed
+
+    private void SelectTipoBarco(int id)
+    {
+        int size = cmbTipoBarco.getItemCount();
+        DefaultComboBoxModel model = (DefaultComboBoxModel)cmbTipoBarco.getModel();
+        for (int i = 0; i < size; i++) {
+            TipoBarco item = (TipoBarco)model.getElementAt(i);
+            if(item.getId()==id)
+            {
+                model.setSelectedItem(item);
+            }
+        }
+    }
+        
+     
+    public void Clear() {
+     
+      txtNombre.setText("");
+      chkRM.setSelected(false);
+      cmbTipoBarco.setSelectedIndex(0);
+              
+    }
+    
+    
+    public void GetData() {
+        Barcos barcos = new BarcoLogic().ConsultarConRelaciones();
+        DefaultTableModel model = (DefaultTableModel) tblBarcos.getModel();
+        if(barcos==null)
+            return;
+        for (Barco barco : barcos.List) {
+            model.addRow(new Object[]{barco.getId(),barco.getNombre(), barco.getRegMerc(),barco.tipoBarco});
+        }
+    }
     /**
      * @param args the command line arguments
      */
@@ -143,11 +379,26 @@ public class BarcosView extends javax.swing.JFrame {
             }
         });
     }
+    
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnActualizar;
     private javax.swing.JButton btnAtras;
+    private javax.swing.JButton btnEliminar;
+    private javax.swing.JButton btnGuardar;
+    private javax.swing.JButton btnLimpiar;
+    private javax.swing.JCheckBox chkRM;
+    private javax.swing.JComboBox<String> cmbTipoBarco;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tblBarcos;
+    private javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
+
+
+
 }

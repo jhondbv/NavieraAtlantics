@@ -1,0 +1,17 @@
+<barcos>
+   <barco Id="1">
+      <RegMerc>false</RegMerc>
+      <IdTipoBarco>4</IdTipoBarco>
+      <nombre>Barco 1</nombre>
+   </barco>
+   <barco Id="2">
+      <RegMerc>true</RegMerc>
+      <IdTipoBarco>2</IdTipoBarco>
+      <nombre>Barco 2</nombre>
+   </barco>
+   <barco Id="3">
+      <RegMerc>true</RegMerc>
+      <IdTipoBarco>3</IdTipoBarco>
+      <nombre>Barco 2</nombre>
+   </barco>
+</barcos>

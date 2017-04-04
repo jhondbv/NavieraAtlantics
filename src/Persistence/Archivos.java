@@ -72,6 +72,7 @@ public class Archivos {
             File file = new File(Archivo_Viaje);
             Serializer serializer = new Persister();
             try {
+                viajes = new Viajes();
                 viajes = serializer.read(Viajes.class, file);
             } catch (Exception ex) {
 
@@ -82,6 +83,8 @@ public class Archivos {
             File file = new File(Archivo_Testamentos);
             Serializer serializer = new Persister();
             try {
+                testamentos = new Testamentos();
+                
                 testamentos = serializer.read(Testamentos.class, file);
             } catch (Exception ex) {
 
@@ -92,6 +95,7 @@ public class Archivos {
             File file = new File(Archivo_Puertos);
             Serializer serializer = new Persister();
             try {
+                puertos = new Puertos();
                 puertos = serializer.read(Puertos.class, file);
             } catch (Exception ex) {
 
@@ -102,7 +106,9 @@ public class Archivos {
             File file = new File(Archivo_Barcos);
             Serializer serializer = new Persister();
             try {
+                barcos = new Barcos();
                 barcos = serializer.read(Barcos.class, file);
+              
             } catch (Exception ex) {
 
             }
@@ -112,6 +118,7 @@ public class Archivos {
             File file = new File(Archivo_Hijos);
             Serializer serializer = new Persister();
             try {
+                hijos= new Hijos();
                 hijos = serializer.read(Hijos.class, file);
             } catch (Exception ex) {
 
@@ -122,6 +129,7 @@ public class Archivos {
             File file = new File(Archivo_Esposas);
             Serializer serializer = new Persister();
             try {
+                esposas = new Esposas();
                 esposas = serializer.read(Esposas.class, file);
             } catch (Exception ex) {
 
@@ -132,6 +140,7 @@ public class Archivos {
             File file = new File(Archivo_Marineros);
             Serializer serializer = new Persister();
             try {
+                marineros = new Marineros();
                 marineros = serializer.read(Marineros.class, file);
             } catch (Exception ex) {
 

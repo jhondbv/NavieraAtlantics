@@ -28,6 +28,12 @@ public class TipoBarco {
     public TipoBarco() {
     }
     
+    @Override
+    public String toString()
+    {
+        return getDescripcion();
+    }
+    
     public TipoBarco(TipoBarco tipoBarco) {
         id=tipoBarco.getId();
         descripcion=tipoBarco.getDescripcion();

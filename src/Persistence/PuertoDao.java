@@ -77,7 +77,7 @@ public class PuertoDao implements IPuertoDao {
 
     @Override
     public void Eliminar(int id) {
-        Puerto deleteItem = Consultar(id);
+        Puerto deleteItem = ConsultarReferencia(id);
 
         lstItems.List.remove(lstItems.List.indexOf(deleteItem));
     }

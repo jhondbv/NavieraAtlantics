@@ -72,6 +72,8 @@ public class BarcoDao implements IBarcoDao {
         objBarco.setId(barco.getId());
         objBarco.setRegMerc(barco.getRegMerc());
         objBarco.setIdTipoBarco(barco.getIdTipoBarco());
+        objBarco.setNombre(barco.getNombre());
+        objBarco.tipoBarco=barco.tipoBarco;
     }
 
     @Override

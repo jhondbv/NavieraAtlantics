@@ -22,17 +22,35 @@ public class Barco {
     private boolean RegMerc;
     @Element
     private int IdTipoBarco;
+    @Element
+    private String nombre;
+   
+    public TipoBarco tipoBarco;
     
     public Barco(Barco barco){
         Id=barco.getId();
         RegMerc=barco.getRegMerc();
         IdTipoBarco=barco.getIdTipoBarco();
+        nombre=barco.getNombre();
     }
 
     public Barco() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       
     }
 
+    
+    public boolean isRegMerc() {
+        return RegMerc;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    
     public int getId() {
         return Id;
     }
