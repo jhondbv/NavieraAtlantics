@@ -11,17 +11,16 @@ import Class.TipoBarcos;
 import Class.Viaje;
 import Persistence.Interface.ITipoBarcoDAO;
 
-
 /**
  *
  * @author Penagos
  */
 public class TipoBarcoDAO implements ITipoBarcoDAO {
-    
-    private TipoBarcos tipoBarcos=new TipoBarcos();
+
+    private TipoBarcos tipoBarcos = new TipoBarcos();
 
     public TipoBarcoDAO() {
-        tipoBarcos=Archivos.Repositories.tipoBarcos;
+        tipoBarcos = Archivos.Repositories.tipoBarcos;
     }
 
     @Override
@@ -38,12 +37,12 @@ public class TipoBarcoDAO implements ITipoBarcoDAO {
         }
         return null;
     }
-    
-     private TipoBarco ConsultarReferencia(int id) {
+
+    private TipoBarco ConsultarReferencia(int id) {
 
         for (TipoBarco tipobarco : tipoBarcos.List) {
             if (tipobarco.getId() == id) {
-                return  tipobarco;
+                return tipobarco;
             }
         }
         return null;
@@ -51,9 +50,16 @@ public class TipoBarcoDAO implements ITipoBarcoDAO {
 
     @Override
     public void guardar(TipoBarco item) {
-       int maxpos = tipoBarcos.List.size()-1;
-       TipoBarco lastBarco= tipoBarcos.List.get(maxpos);
-       
+        int maxpos = tipoBarcos.List.size() - 1;
+        TipoBarco lastBarco;
+        if (maxpos < 0) {
+            maxpos = 0;
+            lastBarco = new TipoBarco();
+        } else {
+            lastBarco = tipoBarcos.List.get(maxpos);
+
+        }
+
         if (lastBarco != null) {
             item.setId(lastBarco.getId() + 1);
             tipoBarcos.List.add(item);
@@ -62,8 +68,8 @@ public class TipoBarcoDAO implements ITipoBarcoDAO {
 
     @Override
     public void actualizar(TipoBarco item) {
-       
-        TipoBarco objBarco=ConsultarReferencia(item.getId());
+
+        TipoBarco objBarco = ConsultarReferencia(item.getId());
         objBarco.setId(item.getId());
         objBarco.setDescripcion(item.getDescripcion());
         objBarco.setCapacidadCarga(item.getCapacidadCarga());
@@ -73,15 +79,8 @@ public class TipoBarcoDAO implements ITipoBarcoDAO {
 
     @Override
     public void eliminar(int id) {
-        TipoBarco deleteBarco=Consultar(id);
+        TipoBarco deleteBarco = Consultar(id);
         tipoBarcos.List.remove(deleteBarco);
     }
-    
-    
-    
-    
-    
-    
-    
-    
+
 }

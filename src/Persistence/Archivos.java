@@ -62,6 +62,7 @@ public class Archivos {
             File file = new File(Archivo_TipoBarcos);
             Serializer serializer = new Persister();
             try {
+                tipoBarcos= new TipoBarcos();
                 tipoBarcos = serializer.read(TipoBarcos.class, file);
             } catch (Exception ex) {
 

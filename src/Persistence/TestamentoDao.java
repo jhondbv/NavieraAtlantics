@@ -52,6 +52,8 @@ public class TestamentoDao implements ITestamentoDao {
     @Override
     public void Guardar(Testamento item) {
          int maxpos = lstItems.List.size() - 1;
+          if(maxpos<0)
+           maxpos=0;
         Testamento lastItem = lstItems.List.get(maxpos);
         if (lastItem != null) {
             item.setId(lastItem.getId() + 1);

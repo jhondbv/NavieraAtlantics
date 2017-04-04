@@ -36,5 +36,9 @@ public class TipoBarcoLogic {
     public TipoBarco Consultar(int id){
         return DAO.Consultar(id);
     }
+    
+      public TipoBarcos Consultar(){
+        return DAO.Consultar();
+    }
 
 }

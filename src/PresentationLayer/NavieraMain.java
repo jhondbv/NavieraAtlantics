@@ -5,6 +5,7 @@
  */
 package PresentationLayer;
 
+import Persistence.Archivos;
 import java.awt.Dimension;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -23,6 +24,7 @@ public class NavieraMain extends javax.swing.JFrame {
     public NavieraMain() {
         Config();
         initComponents();
+        new Archivos.Repositories(true);
     }
 
     

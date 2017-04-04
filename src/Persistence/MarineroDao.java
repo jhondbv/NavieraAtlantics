@@ -51,6 +51,8 @@ public class MarineroDao implements IMarineroDao {
     @Override
     public void Guardar(Marinero item) {
         int maxpos = lstItems.List.size() - 1;
+         if(maxpos<0)
+           maxpos=0;
         Marinero lastItem = lstItems.List.get(maxpos);
         if (lastItem != null) {
             item.setId(lastItem.getId() + 1);

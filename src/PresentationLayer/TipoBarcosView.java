@@ -5,7 +5,10 @@
  */
 package PresentationLayer;
 
+import Business.TipoBarcoLogic;
+import Class.TipoBarco;
 import javax.swing.JFrame;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -20,9 +23,8 @@ public class TipoBarcosView extends javax.swing.JFrame {
         initComponents();
         configClose();
     }
-    
-     public void configClose()
-    {
+
+    public void configClose() {
         this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
     }
 
@@ -36,7 +38,7 @@ public class TipoBarcosView extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblTipoBarco = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -52,7 +54,7 @@ public class TipoBarcosView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(254, 254, 254));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblTipoBarco.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -68,7 +70,7 @@ public class TipoBarcosView extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tblTipoBarco);
 
         jButton1.setText("Atras");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -106,9 +108,9 @@ public class TipoBarcosView extends javax.swing.JFrame {
                         .addGroup(layout.createSequentialGroup()
                             .addGap(126, 126, 126)
                             .addComponent(btnAgregar)
-                            .addGap(18, 18, 18)
-                            .addComponent(btnActualizar)
                             .addGap(33, 33, 33)
+                            .addComponent(btnActualizar)
+                            .addGap(18, 18, 18)
                             .addComponent(btnEliminar)
                             .addGap(309, 309, 309))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -171,8 +173,17 @@ public class TipoBarcosView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
-       
+
+        TipoBarco tipobarco = new TipoBarco();
+        tipobarco.setDescripcion(txtNombre.getText());
+        tipobarco.setCapacidadCarga(Integer.parseInt(txtCarga.getText()));
+        tipobarco.setCapacidadPersonas(Integer.parseInt(txtPersona.getText()));
         
+        new TipoBarcoLogic().Guardar(tipobarco);
+        
+        DefaultTableModel model = (DefaultTableModel)tblTipoBarco.getModel();
+        model.addRow(new Object[]{tipobarco.getDescripcion(),tipobarco.getCapacidadCarga(),tipobarco.getCapacidadPersonas()});
+
     }//GEN-LAST:event_btnAgregarActionPerformed
 
     /**
@@ -220,7 +231,7 @@ public class TipoBarcosView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tblTipoBarco;
     private javax.swing.JTextField txtCarga;
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtPersona;

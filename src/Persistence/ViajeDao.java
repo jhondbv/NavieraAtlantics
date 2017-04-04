@@ -61,6 +61,8 @@ public class ViajeDao implements IViajeDao {
     public void Guardar(Viaje viaje) {
 
         int maxpos = viajes.List.size() - 1;
+         if(maxpos<0)
+           maxpos=0;
         Viaje lastViaje = viajes.List.get(maxpos);
         if (lastViaje != null) {
             viaje.setId(lastViaje.getId() + 1);

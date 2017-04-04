@@ -51,6 +51,8 @@ public class EsposaDao implements IEsposaDao {
     @Override
     public void Guardar(Esposa item) {
         int maxpos = lstItems.List.size() - 1;
+         if(maxpos<0)
+           maxpos=0;
         Esposa lastItem = lstItems.List.get(maxpos);
         if (lastItem != null) {
             item.setId(lastItem.getId() + 1);
