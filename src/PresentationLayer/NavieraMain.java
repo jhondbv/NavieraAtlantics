@@ -68,6 +68,11 @@ public class NavieraMain extends javax.swing.JFrame {
         btnMarineros.setText("Marineros");
 
         btnEsposas.setText("Esposas");
+        btnEsposas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEsposasActionPerformed(evt);
+            }
+        });
 
         btnHijos.setText("Hijos");
         btnHijos.addActionListener(new java.awt.event.ActionListener() {
@@ -157,6 +162,11 @@ public class NavieraMain extends javax.swing.JFrame {
          this.setVisible(false);
         new TipoBarcosView().setVisible(true);
     }//GEN-LAST:event_btnTipoBarcoActionPerformed
+
+    private void btnEsposasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEsposasActionPerformed
+          this.setVisible(false);
+        new EsposasView().setVisible(true);
+    }//GEN-LAST:event_btnEsposasActionPerformed
 
     /**
      * @param args the command line arguments
