@@ -5,6 +5,7 @@
  */
 package Persistence;
 
+import Class.TipoBarcos;
 import Class.Barcos;
 import Class.Esposas;
 import Class.Hijos;
@@ -23,7 +24,8 @@ import org.simpleframework.xml.core.Persister;
 public class Archivos {
 
     public static class Repositories {
-
+        
+        private final String Archivo_TipoBarcos="DataBaseFiles/TipoBarcos.xml";
         private final String Archivo_Viaje = "DataBaseFiles/viajes.xml";
         private final String Archivo_Puertos = "DataBaseFiles/puertos.xml";
         private final String Archivo_Barcos = "DataBaseFiles/barcos.xml";
@@ -32,6 +34,7 @@ public class Archivos {
         private final String Archivo_Esposas = "DataBaseFiles/esposas.xml";
         private final String Archivo_Testamentos = "DataBaseFiles/testamentos.xml";
 
+        public static TipoBarcos tipoBarcos;
         public static Viajes viajes;
         public static Puertos puertos;
         public static Barcos barcos;
@@ -42,7 +45,8 @@ public class Archivos {
 
         public Repositories(boolean cargaInicial) {
             if (cargaInicial) {
-
+                
+                LoadTipoBarcos();
                 LoadViajes();
                 LoadPuertos();
                 LoadBarcos();
@@ -54,6 +58,15 @@ public class Archivos {
             }
         }
 
+        private void LoadTipoBarcos() {
+            File file = new File(Archivo_TipoBarcos);
+            Serializer serializer = new Persister();
+            try {
+                tipoBarcos = serializer.read(TipoBarcos.class, file);
+            } catch (Exception ex) {
+
+            }
+        }
         private void LoadViajes() {
             File file = new File(Archivo_Viaje);
             Serializer serializer = new Persister();
@@ -124,6 +137,17 @@ public class Archivos {
             }
         }
 
+        
+        private void GuardarTipoBarcos() {
+
+            Serializer serializer = new Persister();
+            File file = new File(Archivo_TipoBarcos);
+            try {
+                serializer.write(tipoBarcos, file);
+
+            } catch (Exception ex) {
+            }
+        }
         private void GuardarViajes() {
 
             Serializer serializer = new Persister();
@@ -202,6 +226,7 @@ public class Archivos {
         }
 
         public void GuardarCambios() {
+            GuardarTipoBarcos();
             GuardarViajes();
             GuardarPuertos();
             GuardarBarcos();
