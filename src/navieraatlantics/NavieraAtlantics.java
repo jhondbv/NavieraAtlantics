@@ -11,11 +11,14 @@ import Persistence.Archivos;
 import Persistence.Archivos.Repositories;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import javax.swing.JOptionPane;
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 import java.util.Random;
+import java.util.Set;
 
 /**
  *
@@ -49,9 +52,23 @@ public class NavieraAtlantics {
             String puertos = String.format("%1$d,%2$d,%3$d", randomGenerator.nextInt(50), randomGenerator.nextInt(10),
                     randomGenerator.nextInt(50),
                     randomGenerator.nextInt(70));
-            String tripulantes = String.format("%1$d,%2$d,%3$d", randomGenerator.nextInt(50), randomGenerator.nextInt(10),
-                    randomGenerator.nextInt(50),
-                    randomGenerator.nextInt(70));
+            List<Tripulacion> tripulantes = new ArrayList<Tripulacion>();
+            Tripulacion tripulante = new Tripulacion();
+                        Tripulacion tripulante2 = new Tripulacion();
+            Tripulacion tripulante3 = new Tripulacion();
+
+            tripulante.setId(randomGenerator.nextInt(20));
+            tripulante.setTipo("Hijo");
+            tripulantes.add(tripulante);
+            
+             tripulante2.setId(randomGenerator.nextInt(20));
+            tripulante2.setTipo("Marinero");
+            tripulantes.add(tripulante2);
+            
+             tripulante3.setId(randomGenerator.nextInt(20));
+            tripulante3.setTipo("Esposa");
+            tripulantes.add(tripulante3);
+
             Viaje viaje = new Viaje();
             viaje.setId(i);
             viaje.setIdBarco(1);

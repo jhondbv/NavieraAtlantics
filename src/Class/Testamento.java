@@ -5,7 +5,9 @@
  */
 package Class;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
@@ -23,8 +25,14 @@ public class Testamento {
     @Element
     double porcentajeEsposa;
     @ElementList(inline=true)
-    Map<Integer,Double> porcentajeHijos ;
+     List<PorcentajeTestamento> porcentajeHijos ;
 
+    
+    public Testamento()
+    {
+      porcentajeHijos=new ArrayList<PorcentajeTestamento>();
+    }
+    
     public void setId(int id) {
         this.id = id;
     }
@@ -33,7 +41,7 @@ public class Testamento {
         this.porcentajeEsposa = porcentajeEsposa;
     }
 
-    public void setPorcentajeHijos(Map<Integer, Double> porcentajeHijos) {
+    public void setPorcentajeHijos(List<PorcentajeTestamento> porcentajeHijos) {
         this.porcentajeHijos = porcentajeHijos;
     }
 
@@ -45,18 +53,15 @@ public class Testamento {
         return porcentajeEsposa;
     }
 
-    public Map<Integer, Double> getPorcentajeHijos() {
+    public List<PorcentajeTestamento> getPorcentajeHijos() {
         return porcentajeHijos;
     }
     
-    public Testamento()
-    {
-        porcentajeHijos= new HashMap<Integer,Double>();
-    }
+ 
     
         public Testamento(Testamento testamento)
     {
-        porcentajeHijos= new HashMap<Integer,Double>();
+        porcentajeHijos= new ArrayList<PorcentajeTestamento>();
         id = testamento.id;
         porcentajeEsposa=testamento.porcentajeEsposa;
         porcentajeHijos=testamento.porcentajeHijos;

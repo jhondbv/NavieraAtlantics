@@ -6,6 +6,7 @@
 package Class;
 
 import org.simpleframework.xml.Attribute;
+import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;
 
 /**
@@ -16,9 +17,9 @@ import org.simpleframework.xml.Root;
 public class Persona {
     @Attribute  
     int id;
-    @Attribute 
+    @Element 
     String nombre;
-    @Attribute 
+    @Element 
     char sexo;
     
     public Persona(){

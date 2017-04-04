@@ -6,9 +6,12 @@
 package Class;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
+import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
 /**
@@ -20,23 +23,23 @@ public class Viaje {
 
     @Attribute
     private int id;
-    @Attribute
+    @Element
     private int idBarco;
-    @Attribute
+    @Element
     private int idPuertoOrigen;
-    @Attribute
+    @Element
     private int idPuertoDestino;
     @Element
     private String puertosAtraco;
-    @Element
-    private String tripulacion;
+    @ElementList(inline=true)
+    private List<Tripulacion> tripulacion;
     @Element
     private int numEncomiendas;
 
     
     public Viaje()
     {
-    
+        tripulacion= new ArrayList<Tripulacion>();
     }
     
      public Viaje(Viaje viaje)
@@ -70,7 +73,7 @@ public class Viaje {
         this.puertosAtraco = puertosAtraco;
     }
 
-    public void setTripulacion(String tripulacion) {
+    public void setTripulacion(List<Tripulacion> tripulacion) {
         this.tripulacion = tripulacion;
     }
 
@@ -98,7 +101,7 @@ public class Viaje {
         return puertosAtraco;
     }
 
-    public String getTripulacion() {
+    public List<Tripulacion>  getTripulacion() {
         return tripulacion;
     }
 
