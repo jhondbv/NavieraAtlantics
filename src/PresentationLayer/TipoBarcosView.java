@@ -7,6 +7,7 @@ package PresentationLayer;
 
 import Business.TipoBarcoLogic;
 import Class.TipoBarco;
+import Class.TipoBarcos;
 import javax.swing.JFrame;
 import javax.swing.table.DefaultTableModel;
 
@@ -22,6 +23,7 @@ public class TipoBarcosView extends javax.swing.JFrame {
     public TipoBarcosView() {
         initComponents();
         configClose();
+        GetData();
     }
 
     public void configClose() {
@@ -59,18 +61,34 @@ public class TipoBarcosView extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Nombre", "Capacidad Carga", "Capacidad Personas"
+                "Id", "Nombre", "Capacidad Carga", "Capacidad Personas"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tblTipoBarco.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblTipoBarcoMouseClicked(evt);
+            }
         });
         jScrollPane1.setViewportView(tblTipoBarco);
+        if (tblTipoBarco.getColumnModel().getColumnCount() > 0) {
+            tblTipoBarco.getColumnModel().getColumn(0).setResizable(false);
+            tblTipoBarco.getColumnModel().getColumn(1).setResizable(false);
+        }
 
         jButton1.setText("Atras");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -168,7 +186,7 @@ public class TipoBarcosView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new NavieraMain().setVisible(true);
+       
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -178,13 +196,32 @@ public class TipoBarcosView extends javax.swing.JFrame {
         tipobarco.setDescripcion(txtNombre.getText());
         tipobarco.setCapacidadCarga(Integer.parseInt(txtCarga.getText()));
         tipobarco.setCapacidadPersonas(Integer.parseInt(txtPersona.getText()));
-        
+
         new TipoBarcoLogic().Guardar(tipobarco);
-        
-        DefaultTableModel model = (DefaultTableModel)tblTipoBarco.getModel();
-        model.addRow(new Object[]{tipobarco.getDescripcion(),tipobarco.getCapacidadCarga(),tipobarco.getCapacidadPersonas()});
+
+        DefaultTableModel model = (DefaultTableModel) tblTipoBarco.getModel();
+        model.addRow(new Object[]{tipobarco.getId(), tipobarco.getDescripcion(), tipobarco.getCapacidadCarga(), tipobarco.getCapacidadPersonas()});
+        Clear();
 
     }//GEN-LAST:event_btnAgregarActionPerformed
+
+    private void tblTipoBarcoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblTipoBarcoMouseClicked
+
+    }//GEN-LAST:event_tblTipoBarcoMouseClicked
+
+    public void Clear() {
+        txtNombre.setText("");
+        txtCarga.setText("");
+        txtPersona.setText("");
+    }
+
+    public void GetData() {
+        TipoBarcos tipos = new TipoBarcoLogic().Consultar();
+        DefaultTableModel model = (DefaultTableModel) tblTipoBarco.getModel();
+        for (TipoBarco tipo : tipos.List) {
+            model.addRow(new Object[]{tipo.getId(), tipo.getDescripcion(), tipo.getCapacidadCarga(), tipo.getCapacidadPersonas()});
+        }
+    }
 
     /**
      * @param args the command line arguments

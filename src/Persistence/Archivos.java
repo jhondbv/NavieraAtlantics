@@ -215,7 +215,7 @@ public class Archivos {
             }
         }
         
-            private void GuuardarTestamentos() {
+            private void GuardarTestamentos() {
 
             Serializer serializer = new Persister();
             File file = new File(Archivo_Testamentos);
@@ -234,7 +234,7 @@ public class Archivos {
             GuardarEsposas();
             GuardarMarineros();
             GuardarHijos();
-            GuuardarTestamentos();
+            GuardarTestamentos();
         }
     }
 

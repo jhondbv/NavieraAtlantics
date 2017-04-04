@@ -1,0 +1,7 @@
+<tipoBarcos>
+   <tipoBarco id="1">
+      <descripcion>Buque</descripcion>
+      <capacidadCarga>1000</capacidadCarga>
+      <capacidadPersonas>123</capacidadPersonas>
+   </tipoBarco>
+</tipoBarcos>

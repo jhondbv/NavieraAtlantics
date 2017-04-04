@@ -18,14 +18,12 @@ import org.simpleframework.xml.core.Persister;
  */
 public class PuertoDao implements IPuertoDao {
 
-    
     private static Puertos lstItems = new Puertos();
 
-    public PuertoDao()
-    {
-        lstItems=Archivos.Repositories.puertos;
+    public PuertoDao() {
+        lstItems = Archivos.Repositories.puertos;
     }
-    
+
     @Override
     public Puertos Consultar() {
         return lstItems;
@@ -33,7 +31,7 @@ public class PuertoDao implements IPuertoDao {
 
     @Override
     public Puerto Consultar(int id) {
-    
+
         for (Puerto item : lstItems.List) {
             if (item.getId() == id) {
                 return new Puerto(item);
@@ -41,37 +39,40 @@ public class PuertoDao implements IPuertoDao {
         }
         return null;
     }
-    
+
     private Puerto ConsultarReferencia(int id) {
 
         for (Puerto item : lstItems.List) {
             if (item.getId() == id) {
-                return  item;
+                return item;
             }
         }
         return null;
     }
-    
 
     @Override
     public void Guardar(Puerto item) {
-         int maxpos = lstItems.List.size() - 1;
-          if(maxpos<0)
-           maxpos=0;
-        Puerto lastItem = lstItems.List.get(maxpos);
+        int maxpos = lstItems.List.size() - 1;
+        Puerto lastItem;
+
+        if (maxpos < 0) {
+            maxpos = 0;
+            lastItem = new Puerto();
+        } else {
+            lastItem = lstItems.List.get(maxpos);
+        }
         if (lastItem != null) {
             item.setId(lastItem.getId() + 1);
             lstItems.List.add(item);
         }
-    
+
     }
 
     @Override
     public void Actualizar(Puerto item) {
         Puerto objItem = ConsultarReferencia(item.getId());
         objItem.setDescripcion(item.getDescripcion());
-       
-    
+
     }
 
     @Override
@@ -80,7 +81,5 @@ public class PuertoDao implements IPuertoDao {
 
         lstItems.List.remove(deleteItem);
     }
-
- 
 
 }

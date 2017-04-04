@@ -15,13 +15,13 @@ import java.util.Set;
  * @author jhon_Ballesteros
  */
 public class TestamentoDao implements ITestamentoDao {
-        private static Testamentos lstItems = new Testamentos();
 
-    public TestamentoDao()
-    {
-        lstItems=Archivos.Repositories.testamentos;
+    private static Testamentos lstItems = new Testamentos();
+
+    public TestamentoDao() {
+        lstItems = Archivos.Repositories.testamentos;
     }
-    
+
     @Override
     public Testamentos Consultar() {
         return lstItems;
@@ -29,7 +29,7 @@ public class TestamentoDao implements ITestamentoDao {
 
     @Override
     public Testamento Consultar(int id) {
-    
+
         for (Testamento item : lstItems.List) {
             if (item.getId() == id) {
                 return new Testamento(item);
@@ -37,38 +37,41 @@ public class TestamentoDao implements ITestamentoDao {
         }
         return null;
     }
-    
+
     private Testamento ConsultarReferencia(int id) {
 
         for (Testamento item : lstItems.List) {
             if (item.getId() == id) {
-                return  item;
+                return item;
             }
         }
         return null;
     }
-    
 
     @Override
     public void Guardar(Testamento item) {
-         int maxpos = lstItems.List.size() - 1;
-          if(maxpos<0)
-           maxpos=0;
-        Testamento lastItem = lstItems.List.get(maxpos);
+        int maxpos = lstItems.List.size() - 1;
+         Testamento lastItem;
+        if (maxpos < 0) {
+            maxpos = 0;
+            lastItem = new Testamento();
+        } else {
+            lastItem = lstItems.List.get(maxpos);
+        }
+
         if (lastItem != null) {
             item.setId(lastItem.getId() + 1);
             lstItems.List.add(item);
         }
-    
+
     }
 
     @Override
     public void Actualizar(Testamento item) {
         Testamento objItem = ConsultarReferencia(item.getId());
-      objItem.setPorcentajeEsposa(item.getPorcentajeEsposa());
-      objItem.setPorcentajeHijos(item.getPorcentajeHijos());
-       
-    
+        objItem.setPorcentajeEsposa(item.getPorcentajeEsposa());
+        objItem.setPorcentajeHijos(item.getPorcentajeHijos());
+
     }
 
     @Override

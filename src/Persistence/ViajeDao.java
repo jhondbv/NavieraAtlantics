@@ -20,12 +20,11 @@ import org.simpleframework.xml.core.Persister;
  */
 public class ViajeDao implements IViajeDao {
 
-    
-    private  Viajes viajes = new Viajes();
+    private Viajes viajes = new Viajes();
 
     public ViajeDao() {
-        
-        viajes =  Archivos.Repositories.viajes;
+
+        viajes = Archivos.Repositories.viajes;
 
     }
 
@@ -45,25 +44,29 @@ public class ViajeDao implements IViajeDao {
         return null;
     }
 
-      
-     private Viaje ConsultarReferencia(int id) {
+    private Viaje ConsultarReferencia(int id) {
 
         for (Viaje viaje : viajes.List) {
             if (viaje.getId() == id) {
-                return  viaje;
+                return viaje;
             }
         }
         return null;
     }
-     
-     
+
     @Override
     public void Guardar(Viaje viaje) {
 
         int maxpos = viajes.List.size() - 1;
-         if(maxpos<0)
-           maxpos=0;
-        Viaje lastViaje = viajes.List.get(maxpos);
+        Viaje lastViaje;
+        if (maxpos < 0) {
+            maxpos = 0;
+            lastViaje = new Viaje();
+
+        } else {
+            lastViaje = viajes.List.get(maxpos);
+        }
+
         if (lastViaje != null) {
             viaje.setId(lastViaje.getId() + 1);
             viajes.List.add(viaje);
@@ -89,7 +92,5 @@ public class ViajeDao implements IViajeDao {
 
         viajes.List.remove(deleteViaje);
     }
-
-  
 
 }
