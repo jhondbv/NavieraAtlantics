@@ -6,10 +6,12 @@
 package PresentationLayer;
 
 import Persistence.Archivos;
+import java.awt.Dialog;
 import java.awt.Dimension;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import javax.swing.ImageIcon;
+import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
@@ -29,9 +31,7 @@ public class NavieraMain extends javax.swing.JFrame {
         new Archivos.Repositories(true);
     }
 
-    
-    public void Config()
-    {
+    public void Config() {
         setLocationRelativeTo(null);
         setResizable(false);
         setTitle("Naviera");
@@ -41,15 +41,16 @@ public class NavieraMain extends javax.swing.JFrame {
         fondo.setIcon(uno);
         getLayeredPane().add(fondo, JLayeredPane.FRAME_CONTENT_LAYER);
         fondo.setBounds(0, 0, uno.getIconWidth(), uno.getIconHeight());
-        
-         this.addWindowListener(new WindowAdapter()
-        {
-          
-            public void windowClosing(WindowEvent e)
-            {
-               new Archivos.Repositories(false).GuardarCambios();
+
+        this.addWindowListener(new WindowAdapter() {
+
+            public void windowClosing(WindowEvent e) {
+                new Archivos.Repositories(false).GuardarCambios();
             }
         });
+
+    
+
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -167,17 +168,20 @@ public class NavieraMain extends javax.swing.JFrame {
     }//GEN-LAST:event_btnHijosActionPerformed
 
     private void btnBarcosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBarcosActionPerformed
-       //this.setVisible(false);
+        //this.setVisible(false);
+
         new BarcosView().setVisible(true);
     }//GEN-LAST:event_btnBarcosActionPerformed
 
     private void btnTipoBarcoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTipoBarcoActionPerformed
         // this.setVisible(false);
+
         new TipoBarcosView().setVisible(true);
+
     }//GEN-LAST:event_btnTipoBarcoActionPerformed
 
     private void btnEsposasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEsposasActionPerformed
-         // this.setVisible(false);
+        // this.setVisible(false);
         new EsposasView().setVisible(true);
     }//GEN-LAST:event_btnEsposasActionPerformed
 

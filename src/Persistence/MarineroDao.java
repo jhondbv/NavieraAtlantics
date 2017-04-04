@@ -77,8 +77,8 @@ public class MarineroDao implements IMarineroDao {
 
     @Override
     public void Eliminar(int id) {
-        Marinero deleteItem = Consultar(id);
-        lstItems.List.remove(deleteItem);
+        Marinero deleteItem = ConsultarReferencia(id);
+        lstItems.List.remove(lstItems.List.indexOf(deleteItem));
     }
 
 }

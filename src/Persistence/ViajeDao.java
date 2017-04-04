@@ -88,9 +88,9 @@ public class ViajeDao implements IViajeDao {
 
     @Override
     public void Eliminar(int id) {
-        Viaje deleteViaje = Consultar(id);
+        Viaje deleteViaje = ConsultarReferencia(id);
 
-        viajes.List.remove(deleteViaje);
+        viajes.List.remove(viajes.List.indexOf(deleteViaje));
     }
 
 }

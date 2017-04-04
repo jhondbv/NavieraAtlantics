@@ -76,8 +76,8 @@ public class BarcoDao implements IBarcoDao {
 
     @Override
     public void Eliminar(int id) {
-        Barco deleteBarco = Consultar(id);
-        barcos.List.remove(deleteBarco);
+        Barco deleteItem = ConsultarReferencia(id);
+        barcos.List.remove(barcos.List.indexOf(deleteItem));
     }
 
 }

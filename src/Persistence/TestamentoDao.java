@@ -76,9 +76,9 @@ public class TestamentoDao implements ITestamentoDao {
 
     @Override
     public void Eliminar(int id) {
-        Testamento deleteItem = Consultar(id);
+        Testamento deleteItem = ConsultarReferencia(id);
 
-        lstItems.List.remove(deleteItem);
+        lstItems.List.remove(lstItems.List.indexOf(deleteItem));
     }
 
 }

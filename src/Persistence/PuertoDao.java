@@ -79,7 +79,7 @@ public class PuertoDao implements IPuertoDao {
     public void Eliminar(int id) {
         Puerto deleteItem = Consultar(id);
 
-        lstItems.List.remove(deleteItem);
+        lstItems.List.remove(lstItems.List.indexOf(deleteItem));
     }
 
 }

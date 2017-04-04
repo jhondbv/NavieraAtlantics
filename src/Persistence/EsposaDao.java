@@ -75,9 +75,9 @@ public class EsposaDao implements IEsposaDao {
 
     @Override
     public void Eliminar(int id) {
-        Esposa deleteItem = Consultar(id);
+        Esposa deleteItem = ConsultarReferencia(id);
 
-        lstItems.List.remove(deleteItem);
+        lstItems.List.remove(lstItems.List.indexOf(deleteItem));
     }
     
 }

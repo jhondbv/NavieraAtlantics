@@ -79,8 +79,8 @@ public class TipoBarcoDAO implements ITipoBarcoDAO {
 
     @Override
     public void eliminar(int id) {
-        TipoBarco deleteBarco = Consultar(id);
-        tipoBarcos.List.remove(deleteBarco);
+        TipoBarco deleteBarco = ConsultarReferencia(id);
+        tipoBarcos.List.remove(tipoBarcos.List.indexOf(deleteBarco) );
     }
 
 }

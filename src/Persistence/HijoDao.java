@@ -74,9 +74,9 @@ public class HijoDao implements IHijoDao {
 
     @Override
     public void Eliminar(int id) {
-        Hijo deleteItem = Consultar(id);
+        Hijo deleteItem = ConsultarReferencia(id);
 
-        lstItems.List.remove(deleteItem);
+        lstItems.List.remove(lstItems.List.indexOf(deleteItem));
     }
 
 }

@@ -8,7 +8,10 @@ package PresentationLayer;
 import Business.TipoBarcoLogic;
 import Class.TipoBarco;
 import Class.TipoBarcos;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -20,14 +23,18 @@ public class TipoBarcosView extends javax.swing.JFrame {
     /**
      * Creates new form TipoBarcosView
      */
+    private static int id;
+
     public TipoBarcosView() {
         initComponents();
         configClose();
         GetData();
+        id = 0;
     }
 
     public void configClose() {
         this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+
     }
 
     /**
@@ -52,6 +59,7 @@ public class TipoBarcosView extends javax.swing.JFrame {
         btnActualizar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(254, 254, 254));
@@ -111,10 +119,27 @@ public class TipoBarcosView extends javax.swing.JFrame {
         });
 
         btnActualizar.setText("Actualizar");
+        btnActualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnActualizarActionPerformed(evt);
+            }
+        });
 
         btnEliminar.setText("Eliminar");
+        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("TIPO BARCOS");
+
+        jButton2.setText("Limpiar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -130,7 +155,8 @@ public class TipoBarcosView extends javax.swing.JFrame {
                             .addComponent(btnActualizar)
                             .addGap(18, 18, 18)
                             .addComponent(btnEliminar)
-                            .addGap(309, 309, 309))
+                            .addGap(38, 38, 38)
+                            .addComponent(jButton2))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                             .addGap(52, 52, 52)
                             .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -151,7 +177,7 @@ public class TipoBarcosView extends javax.swing.JFrame {
                                     .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtCarga, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 649, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -174,7 +200,8 @@ public class TipoBarcosView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAgregar)
                     .addComponent(btnActualizar)
-                    .addComponent(btnEliminar))
+                    .addComponent(btnEliminar)
+                    .addComponent(jButton2))
                 .addGap(46, 46, 46)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
@@ -186,7 +213,7 @@ public class TipoBarcosView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       
+
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -206,18 +233,70 @@ public class TipoBarcosView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAgregarActionPerformed
 
     private void tblTipoBarcoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblTipoBarcoMouseClicked
+        int fila = tblTipoBarco.getSelectedRow();
+        if (fila >= 0) {
+            txtNombre.setText(tblTipoBarco.getValueAt(fila, 1).toString());
+            txtCarga.setText(tblTipoBarco.getValueAt(fila, 2).toString());
+            txtPersona.setText(tblTipoBarco.getValueAt(fila, 3).toString());
+            id = Integer.parseInt(tblTipoBarco.getValueAt(fila, 0).toString());
+        } else {
 
+        }
     }//GEN-LAST:event_tblTipoBarcoMouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+
+        Clear();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
+        // TODO add your handling code here:
+
+        if (id > 0) {
+            int fila = tblTipoBarco.getSelectedRow();
+            TipoBarcoLogic logic = new TipoBarcoLogic();
+            TipoBarco tipobarco = logic.Consultar(id);
+            tipobarco.setDescripcion(txtNombre.getText());
+            tipobarco.setCapacidadCarga(Integer.parseInt(txtCarga.getText()));
+            tipobarco.setCapacidadPersonas(Integer.parseInt(txtPersona.getText()));
+            Clear();
+            logic.Actualizar(tipobarco);
+            DefaultTableModel model = (DefaultTableModel) tblTipoBarco.getModel();
+            model.removeRow(fila);
+            model.insertRow(fila, new Object[]{tipobarco.getId(), tipobarco.getDescripcion(), tipobarco.getCapacidadCarga(), tipobarco.getCapacidadPersonas()});
+
+        } else {
+            JOptionPane.showMessageDialog(this, "Debe seleccionar un registro para editar");
+        }
+    }//GEN-LAST:event_btnActualizarActionPerformed
+
+    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+        if (id > 0) {
+            int fila = tblTipoBarco.getSelectedRow();
+            TipoBarcoLogic logic = new TipoBarcoLogic();
+            logic.Eliminar(id);
+            DefaultTableModel model = (DefaultTableModel) tblTipoBarco.getModel();
+            model.removeRow(fila);
+            Clear();
+        } else {
+            JOptionPane.showMessageDialog(this, "Debe seleccionar un registro para eliminar");
+
+        }
+
+    }//GEN-LAST:event_btnEliminarActionPerformed
 
     public void Clear() {
         txtNombre.setText("");
         txtCarga.setText("");
         txtPersona.setText("");
+        id = 0;
     }
 
     public void GetData() {
         TipoBarcos tipos = new TipoBarcoLogic().Consultar();
         DefaultTableModel model = (DefaultTableModel) tblTipoBarco.getModel();
+
         for (TipoBarco tipo : tipos.List) {
             model.addRow(new Object[]{tipo.getId(), tipo.getDescripcion(), tipo.getCapacidadCarga(), tipo.getCapacidadPersonas()});
         }
@@ -252,8 +331,10 @@ public class TipoBarcosView extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+
             public void run() {
                 new TipoBarcosView().setVisible(true);
+
             }
         });
     }
@@ -263,6 +344,7 @@ public class TipoBarcosView extends javax.swing.JFrame {
     private javax.swing.JButton btnAgregar;
     private javax.swing.JButton btnEliminar;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

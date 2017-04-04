@@ -4,4 +4,19 @@
       <capacidadCarga>1000</capacidadCarga>
       <capacidadPersonas>123</capacidadPersonas>
    </tipoBarco>
+   <tipoBarco id="2">
+      <descripcion>Yate23</descripcion>
+      <capacidadCarga>120</capacidadCarga>
+      <capacidadPersonas>12</capacidadPersonas>
+   </tipoBarco>
+   <tipoBarco id="3">
+      <descripcion>Barco67</descripcion>
+      <capacidadCarga>156</capacidadCarga>
+      <capacidadPersonas>11</capacidadPersonas>
+   </tipoBarco>
+   <tipoBarco id="4">
+      <descripcion>Barco prueba</descripcion>
+      <capacidadCarga>11</capacidadCarga>
+      <capacidadPersonas>223</capacidadPersonas>
+   </tipoBarco>
 </tipoBarcos>
