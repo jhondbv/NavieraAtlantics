@@ -52,9 +52,14 @@ public class BarcoDao implements IBarcoDao {
     @Override
     public void Guardar(Barco barco) {
         int maxpos = barcos.List.size() - 1;
-         if(maxpos<0)
+        Barco lastBarco;
+         if(maxpos<0){
            maxpos=0;
-        Barco lastBarco = barcos.List.get(maxpos);
+           lastBarco =new Barco();
+        }else{
+          lastBarco = barcos.List.get(maxpos);
+         }
+        
         if (lastBarco != null) {
             barco.setId(lastBarco.getId() + 1);
             barcos.List.add(barco);

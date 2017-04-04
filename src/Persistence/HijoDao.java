@@ -50,11 +50,15 @@ public class HijoDao implements IHijoDao {
     @Override
     public void Guardar(Hijo item) {
         int maxpos = lstItems.List.size() - 1;
-         if(maxpos<0)
+        Hijo lastHijo;
+         if(maxpos<0){
            maxpos=0;
-        Hijo lastItem = lstItems.List.get(maxpos);
-        if (lastItem != null) {
-            item.setId(lastItem.getId() + 1);
+           lastHijo =new Hijo();
+         }else{
+             lastHijo = lstItems.List.get(maxpos);
+         }
+        if (lastHijo != null) {
+            item.setId(lastHijo.getId() + 1);
             lstItems.List.add(item);
         }
 
