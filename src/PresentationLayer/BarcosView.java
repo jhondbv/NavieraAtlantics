@@ -26,7 +26,7 @@ public class BarcosView extends javax.swing.JFrame {
 
     private static int id;
     private static BarcoLogic barcoLogic;
-        private static TipoBarcoLogic tipoLogic;
+    private static TipoBarcoLogic tipoLogic;
 
     /**
      * Creates new form BarcosView

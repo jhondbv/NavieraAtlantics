@@ -32,14 +32,22 @@ public class Viaje {
     @Element
     private String puertosAtraco;
     @ElementList(inline=true)
-    private List<Tripulacion> tripulacion;
+    private List<Integer> tripulacion;
     @Element
     private int numEncomiendas;
+    @Element
+    private boolean enCurso;
+    @Element
+    private boolean finalizado;
 
+    
+    public Puerto puertoDestino;
+    public Puerto puertoOrigen;
+    public Barco barco;
     
     public Viaje()
     {
-        tripulacion= new ArrayList<Tripulacion>();
+        tripulacion= new ArrayList<Integer>();
     }
     
      public Viaje(Viaje viaje)
@@ -51,8 +59,24 @@ public class Viaje {
         tripulacion=viaje.getTripulacion();
         puertosAtraco=viaje.getPuertosAtraco();
         numEncomiendas=viaje.getNumEncomiendas();
+        enCurso=viaje.isEnCurso();
+        finalizado=viaje.isFinalizado();
     }
-    
+     public void setEnCurso(boolean enCurso) {
+        this.enCurso = enCurso;
+    }
+
+    public boolean isFinalizado() {
+        return finalizado;
+    }
+
+    public void setFinalizado(boolean finalizado) {
+        this.finalizado = finalizado;
+    }
+   
+    public boolean isEnCurso() {
+        return enCurso;
+    }
     public void setId(int id) {
         this.id = id;
     }
@@ -73,7 +97,7 @@ public class Viaje {
         this.puertosAtraco = puertosAtraco;
     }
 
-    public void setTripulacion(List<Tripulacion> tripulacion) {
+    public void setTripulacion(List<Integer> tripulacion) {
         this.tripulacion = tripulacion;
     }
 
@@ -101,7 +125,7 @@ public class Viaje {
         return puertosAtraco;
     }
 
-    public List<Tripulacion>  getTripulacion() {
+    public List<Integer>  getTripulacion() {
         return tripulacion;
     }
 

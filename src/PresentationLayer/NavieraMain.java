@@ -63,7 +63,7 @@ public class NavieraMain extends javax.swing.JFrame {
             }
         });
         if (JOptionPane.showConfirmDialog( this,
-                "¿ Esta seguro que quiere salir ?", "Realmente quiere salir?",
+                "¿ Desea guardar los datos antes de salir ?", "Guardar Datos",
                 JOptionPane.YES_NO_OPTION,
                 JOptionPane.QUESTION_MESSAGE) == JOptionPane.YES_OPTION){
             t.start();

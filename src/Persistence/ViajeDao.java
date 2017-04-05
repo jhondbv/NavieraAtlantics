@@ -84,6 +84,8 @@ public class ViajeDao implements IViajeDao {
         objViaje.setTripulacion(viaje.getTripulacion());
         objViaje.setNumEncomiendas(viaje.getNumEncomiendas());
         objViaje.setPuertosAtraco(viaje.getPuertosAtraco());
+        objViaje.setEnCurso(viaje.isEnCurso());
+        objViaje.setFinalizado(viaje.isFinalizado());
     }
 
     @Override

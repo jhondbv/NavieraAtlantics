@@ -20,6 +20,16 @@ public class Marinero extends Persona {
     String hijos;
       @Element
     int idTestamento;
+      @Element
+      boolean isCapitan;
+
+    public void setIsCapitan(boolean isCapitan) {
+        this.isCapitan = isCapitan;
+    }
+
+    public boolean isIsCapitan() {
+        return isCapitan;
+    }
 
     public int getIdEsposa() {
         return idEsposa;
@@ -45,7 +55,11 @@ public class Marinero extends Persona {
         this.idTestamento = idTestamento;
     }
     
-    
+    @Override
+    public String toString()
+    {
+        return getNombre();
+    }
     
     public Marinero(){
     }
@@ -53,7 +67,7 @@ public class Marinero extends Persona {
      public Marinero(Marinero marinero){
          
          id=marinero.id;
-        
+        isCapitan=marinero.isCapitan;
          nombre=marinero.nombre;
          sexo=marinero.sexo;
          idEsposa=marinero.idEsposa;
