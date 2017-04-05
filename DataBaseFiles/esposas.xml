@@ -1,1 +1,22 @@
-<esposas/>
+<esposas>
+   <esposa id="1">
+      <nombre>518</nombre>
+      <sexo>F</sexo>
+      <IdEsposo>98498</IdEsposo>
+   </esposa>
+   <esposa id="2">
+      <nombre>518</nombre>
+      <sexo>F</sexo>
+      <IdEsposo>98498</IdEsposo>
+   </esposa>
+   <esposa id="3">
+      <nombre>asdf</nombre>
+      <sexo>F</sexo>
+      <IdEsposo>145</IdEsposo>
+   </esposa>
+   <esposa id="4">
+      <nombre>asdf</nombre>
+      <sexo>F</sexo>
+      <IdEsposo>145</IdEsposo>
+   </esposa>
+</esposas>

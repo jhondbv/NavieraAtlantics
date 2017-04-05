@@ -192,7 +192,7 @@ public class NavieraMain extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnHijosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHijosActionPerformed
-        // TODO add your handling code here:
+        new HijoView().setVisible(true);
     }//GEN-LAST:event_btnHijosActionPerformed
 
     private void btnBarcosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBarcosActionPerformed
@@ -209,8 +209,9 @@ public class NavieraMain extends javax.swing.JFrame {
     }//GEN-LAST:event_btnTipoBarcoActionPerformed
 
     private void btnEsposasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEsposasActionPerformed
-        // this.setVisible(false);
-        new EsposasView().setVisible(true);
+        EsposaView espocita =new EsposaView();
+        espocita.setVisible(true);
+        //new EsposasView().setVisible(true);
     }//GEN-LAST:event_btnEsposasActionPerformed
 
     private void btnPuertosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPuertosActionPerformed
