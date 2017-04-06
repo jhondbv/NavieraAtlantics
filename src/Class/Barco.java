@@ -38,7 +38,11 @@ public class Barco {
        
     }
 
-    
+    @Override
+    public String toString()
+    {
+        return getNombre();
+    }
     public boolean isRegMerc() {
         return RegMerc;
     }

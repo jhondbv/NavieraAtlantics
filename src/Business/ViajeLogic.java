@@ -5,10 +5,31 @@
  */
 package Business;
 
+import Class.Barco;
+import Class.Barcos;
+import Class.Esposa;
+import Class.Hijo;
+import Class.Marinero;
+import Class.Puerto;
+import Class.TipoBarco;
 import Class.Viaje;
 import Class.Viajes;
+import Persistence.BarcoDao;
+import Persistence.EsposaDao;
+import Persistence.HijoDao;
+import Persistence.Interface.IBarcoDao;
+import Persistence.Interface.IEsposaDao;
+import Persistence.Interface.IHijoDao;
+import Persistence.Interface.IMarineroDao;
+import Persistence.Interface.IPuertoDao;
+import Persistence.Interface.ITipoBarcoDAO;
 import Persistence.Interface.IViajeDao;
+import Persistence.MarineroDao;
+import Persistence.PuertoDao;
+import Persistence.TipoBarcoDAO;
 import Persistence.ViajeDao;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  *
@@ -16,28 +37,126 @@ import Persistence.ViajeDao;
  */
 public  class ViajeLogic {
     
-    private IViajeDao DAO =null; 
-
+    private IViajeDao DAO =null;
+    private IPuertoDao PuertoDAO=null;
+    private IBarcoDao BarcoDAO=null;
+    private IEsposaDao EsposaDAO = null;
+    private IHijoDao HijoDAO = null;
+    private IMarineroDao MarineroDAO=null;
+    private ITipoBarcoDAO TipoBarcoDAO=null;
+    private  HashMap<Integer,Barco> hashBarcos =null;
+    private  HashMap<Integer,Puerto> hashPuertos =null;
+    private  HashMap<Integer,Marinero> hashMarineros =null;
+    private HashMap<Integer,TipoBarco> hashTipoBarco = null ;
   
     
     public  ViajeLogic()
     {
         DAO=new ViajeDao();
+        PuertoDAO= new PuertoDao();
+        BarcoDAO= new BarcoDao();
+        EsposaDAO=new EsposaDao();
+        HijoDAO=new HijoDao();
+        MarineroDAO = new MarineroDao();
+        TipoBarcoDAO= new TipoBarcoDAO();
+        
+        hashBarcos = new HashMap<>();
+        List<Barco> items = BarcoDAO.Consultar().List;
+        for (Barco item : items) {
+            hashBarcos.put(item.getId(), item);
+        }
+        
+        hashPuertos = new HashMap<>();
+        List<Puerto> itemsp  = PuertoDAO.Consultar().List;
+        for (Puerto item : itemsp) {
+            hashPuertos.put(item.getId(), item);
+        }
+          hashMarineros = new HashMap<>();
+        List<Marinero> itemsMarineros  = MarineroDAO.Consultar().List;
+        for (Marinero item : itemsMarineros) {
+            hashMarineros.put(item.getId(), item);
+        }
+        
+            hashTipoBarco = new HashMap<>();
+        List<TipoBarco> itemsTipoBarco  = TipoBarcoDAO.Consultar().List;
+        for (TipoBarco item : itemsTipoBarco) {
+            hashTipoBarco.put(item.getId(), item);
+        }
     }
     
-    public void Guardar(Viaje viaje)
+    public void Guardar(Viaje viaje) throws Exception
     {
+        TipoBarco tipo = hashTipoBarco.get(viaje.barco.getIdTipoBarco());
+        int bCapitan = 0;
+        if(viaje.getTripulacion().size()>tipo.getCapacidadPersonas())
+        {
+            throw new Exception("No puede exceder la capacidad de tripulacion del barco");
+        }
+        if(viaje.getNumEncomiendas()>tipo.getCapacidadCarga())
+        {
+          throw new Exception("No puede exceder la capacidad de carga del barco");
+        }
+        
+        for (int item : viaje.getTripulacion()) {
+            
+                Marinero marinero = hashMarineros.get(item);
+                if(marinero.isIsCapitan())
+                {
+                    bCapitan++;
+                }
+        }
+        
+         for (String item : viaje.getPuertosAtraco().split(",")) {
+            
+                Puerto puerto = hashPuertos.get(Integer.parseInt(item));
+                if(puerto.getId()==viaje.getIdPuertoDestino() || puerto.getId()==viaje.getIdPuertoOrigen())
+                {
+                    throw new Exception("Los puertos de atraco no pueden ser igual a los puertos de origen y destino");
+                }
+        }
+        
+        if(bCapitan!=1)
+        {
+            throw new Exception("Debe escoger solo 1 capitan para este viaje");
+        }
+        
+        if(BarcoEnCurso(viaje.getIdBarco()))
+        {
+            throw new Exception("El barco seleccionado para este viaje , ya tiene otro viaje en curso ");
+        }
+        
         DAO.Guardar(viaje);
     }
     
-    public void Eliminar(int id)
+    public boolean BarcoEnCurso(int idBarco)
     {
+        Viajes viajes = Consultar();
+        
+        for(Viaje item : viajes.List)
+        {
+            if(item.getIdBarco()==idBarco && item.isEnCurso() && !item.isFinalizado())
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public void Eliminar(int id) throws Exception
+    {
+        Viaje viaje = Consultar(id);
+        if(viaje.isEnCurso())
+        {
+             throw new Exception("El viaje se encuentra en curso , debe finalizarlo para poderlo eliminar");
+             
+        }
         DAO.Eliminar(id);
        
     }
     
     public void Actualizar(Viaje viaje )
     {
+        
         DAO.Actualizar(viaje);
        
     }
@@ -50,6 +169,22 @@ public  class ViajeLogic {
     public Viajes Consultar()
     {
         return DAO.Consultar();
+    }
+    
+     public Viajes ConsultarConRelaciones()
+    {
+        Viajes viajes =  DAO.Consultar();
+        if(viajes!=null)
+        {
+            for (Viaje viaje  : viajes.List) {
+                viaje.barco =  hashBarcos.get(viaje.getIdBarco());
+                viaje.puertoDestino=hashPuertos.get(viaje.getIdPuertoDestino());
+                viaje.puertoOrigen=hashPuertos.get(viaje.getIdPuertoOrigen());
+            }
+            
+        }
+        
+        return viajes;
     }
 
 }

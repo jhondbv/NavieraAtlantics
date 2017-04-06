@@ -51,22 +51,7 @@ public class EsposasView extends javax.swing.JFrame {
         }
     }
   
-  
-  
-  
-  
-     private void tblEsposasMouseClicked(java.awt.event.MouseEvent evt) {                                       
-        int fila = tblEsposas.getSelectedRow();
-        if (fila >= 0) {
-            
-            txtNombre.setText(tblEsposas.getValueAt(fila, 1).toString());
-            id = Integer.parseInt(tblEsposas.getValueAt(fila, 0).toString());
-            
-            Esposa item = esposaLogic.Consultar(id);
-            
-            SelectIDEsposo(item.getIdEsposo());
-        } 
-    } 
+ 
   private void SelectIDEsposo(int id)
     {
         int size = cmbMarineros.getItemCount();
@@ -125,6 +110,11 @@ public class EsposasView extends javax.swing.JFrame {
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
+            }
+        });
+        tblEsposas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblEsposasMouseClicked(evt);
             }
         });
         jScrollPane1.setViewportView(tblEsposas);
@@ -251,6 +241,19 @@ public class EsposasView extends javax.swing.JFrame {
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
    
     }//GEN-LAST:event_btnActualizarActionPerformed
+
+    private void tblEsposasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblEsposasMouseClicked
+        int fila = tblEsposas.getSelectedRow();
+        if (fila >= 0) {
+            
+            txtNombre.setText(tblEsposas.getValueAt(fila, 1).toString());
+            id = Integer.parseInt(tblEsposas.getValueAt(fila, 0).toString());
+            
+            Esposa item = esposaLogic.Consultar(id);
+            
+            SelectIDEsposo(item.getIdEsposo());
+        } 
+    }//GEN-LAST:event_tblEsposasMouseClicked
 
     /**
      * @param args the command line arguments

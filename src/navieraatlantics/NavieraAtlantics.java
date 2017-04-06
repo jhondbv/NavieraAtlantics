@@ -52,22 +52,19 @@ public class NavieraAtlantics {
             String puertos = String.format("%1$d,%2$d,%3$d", randomGenerator.nextInt(50), randomGenerator.nextInt(10),
                     randomGenerator.nextInt(50),
                     randomGenerator.nextInt(70));
-            List<Tripulacion> tripulantes = new ArrayList<Tripulacion>();
-            Tripulacion tripulante = new Tripulacion();
-                        Tripulacion tripulante2 = new Tripulacion();
-            Tripulacion tripulante3 = new Tripulacion();
+            List<Integer> tripulantes = new ArrayList<Integer>();
+          
 
-            tripulante.setId(randomGenerator.nextInt(20));
-            tripulante.setTipo("Hijo");
-            tripulantes.add(tripulante);
+          
+            tripulantes.add(randomGenerator.nextInt(20));
+                        tripulantes.add(randomGenerator.nextInt(20));
+            tripulantes.add(randomGenerator.nextInt(20));
+
+           
+          
             
-             tripulante2.setId(randomGenerator.nextInt(20));
-            tripulante2.setTipo("Marinero");
-            tripulantes.add(tripulante2);
             
-             tripulante3.setId(randomGenerator.nextInt(20));
-            tripulante3.setTipo("Esposa");
-            tripulantes.add(tripulante3);
+          
 
             Viaje viaje = new Viaje();
             viaje.setId(i);

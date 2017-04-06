@@ -24,6 +24,12 @@ public class Puerto {
     {
     }
     
+    @Override
+    public String toString()
+    {
+        return getDescripcion();
+    }
+    
     public Puerto(Puerto puerto)
     {
         id=puerto.getId();

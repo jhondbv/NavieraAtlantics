@@ -15,6 +15,7 @@ import org.simpleframework.xml.Root;
 public class Hijo extends Persona {
   @Element  
   int idPapa;
+  public Marinero padre;
 
     public int getIdPapa() {
         return idPapa;
@@ -32,7 +33,7 @@ public class Hijo extends Persona {
     
     public Hijo(Hijo hijo)
     {
-      id=hijo.id;
+         id=hijo.id;
          nombre=hijo.nombre;
          sexo=hijo.sexo;
          idPapa=hijo.idPapa;

@@ -7,8 +7,13 @@ package Business;
 
 import Class.Hijo;
 import Class.Hijos;
+import Class.Marinero;
 import Persistence.HijoDao;
 import Persistence.Interface.IHijoDao;
+import Persistence.Interface.IMarineroDao;
+import Persistence.MarineroDao;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  *
@@ -16,12 +21,19 @@ import Persistence.Interface.IHijoDao;
  */
 public class HijoLogic {
       private IHijoDao DAO =null; 
-
+      private IMarineroDao marineroDAO=null;
   
-    
+     private  HashMap<Integer,Marinero> hashMarinero =null;
     public  HijoLogic()
     {
         DAO=new HijoDao();
+        marineroDAO=new MarineroDao();
+        
+        hashMarinero = new HashMap<>();
+        List<Marinero>marineros = marineroDAO.Consultar().List;
+        for (Marinero marinero : marineros) {
+            hashMarinero.put(marinero.getId(), marinero);
+        }
     }
     
     public void Guardar(Hijo item)
@@ -49,5 +61,18 @@ public class HijoLogic {
     public Hijos Consultar()
     {
         return DAO.Consultar();
+    }
+    
+    public Hijos ConsultarConRelaciones()
+    {
+        Hijos hijos =  DAO.Consultar();
+        if(hijos!=null)
+        {
+            for (Hijo hijo : hijos.List) {
+                hijo.padre =hashMarinero.get(hijo.getIdPapa());
+            }
+        }
+        
+        return hijos;
     }
 }

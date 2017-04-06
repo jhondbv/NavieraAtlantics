@@ -6,8 +6,13 @@
 package PresentationLayer;
 
 import Business.HijoLogic;
+import Business.MarineroLogic;
 import Business.TipoBarcoLogic;
 import Class.Hijo;
+import Class.Hijos;
+import Class.Marinero;
+import Class.Marineros;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -20,18 +25,54 @@ public class HijoView extends javax.swing.JFrame {
     /**
      * Creates new form HijoView
      */
+    private HijoLogic hijoLogic =null;
+        private MarineroLogic marineroLogic =null;
+
     private static int id;
     public HijoView() {
         initComponents();
+        hijoLogic= new HijoLogic();
+        marineroLogic=new MarineroLogic();
+        LoadPadres();
     }
     public void Clear() {
-        txtID.setText("");
         txtNombre.setText("");
-        //txtSexo.setText("");
-        txtIDPadre.setText("");
+         cmbPadre.setSelectedIndex(0);
         id = 0;
     }
     
+    private void LoadPadres()
+    {
+        Marineros lst = marineroLogic.Consultar();
+        DefaultComboBoxModel model = (DefaultComboBoxModel)cmbPadre.getModel();
+        model.removeAllElements();
+        for (Marinero item : lst.List) {
+            model.addElement(item);
+        }
+    }
+    
+     private void SelectPadre(int id)
+    {
+        int size = cmbPadre.getItemCount();
+        DefaultComboBoxModel model = (DefaultComboBoxModel)cmbPadre.getModel();
+        for (int i = 0; i < size; i++) {
+            Marinero item = (Marinero)model.getElementAt(i);
+            if(item.getId()==id)
+            {
+                model.setSelectedItem(item);
+            }
+        }
+    }
+     
+       public void GetData() {
+        Hijos hijos  = hijoLogic.ConsultarConRelaciones();
+        DefaultTableModel model = (DefaultTableModel) tblHijo.getModel();
+        if(hijos==null)
+            return;
+        for (Hijo hijo : hijos.List) {
+            model.addRow(new Object[]{hijo.getId(), hijo.getNombre(), hijo.getSexo(), hijo.padre.getNombre()});
+        }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -42,48 +83,68 @@ public class HijoView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         ComboSexo = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        txtID = new javax.swing.JTextField();
         txtNombre = new javax.swing.JTextField();
-        txtIDPadre = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblHijo = new javax.swing.JTable();
         btnAgregar = new javax.swing.JButton();
         btnActualizar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
         btnLimpiar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        cmbPadre = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("ID");
-
         jLabel2.setText("Nombre");
 
-        jLabel3.setText("IDPadre");
+        jLabel3.setText("Padre");
 
         ComboSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "M", "F" }));
 
-        jLabel4.setText("Hijos");
+        jLabel4.setText("HIJOS");
 
         jLabel5.setText("Sexo");
 
         tblHijo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Id", "Nombre", "Sexo", "Padre"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tblHijo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblHijoMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tblHijo);
+        if (tblHijo.getColumnModel().getColumnCount() > 0) {
+            tblHijo.getColumnModel().getColumn(0).setResizable(false);
+            tblHijo.getColumnModel().getColumn(1).setResizable(false);
+            tblHijo.getColumnModel().getColumn(2).setResizable(false);
+            tblHijo.getColumnModel().getColumn(3).setResizable(false);
+        }
 
         btnAgregar.setText("Agregar");
         btnAgregar.addActionListener(new java.awt.event.ActionListener() {
@@ -113,76 +174,84 @@ public class HijoView extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("Atras");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        cmbPadre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel2))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(txtNombre, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
-                                    .addComponent(ComboSexo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtID, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtIDPadre, javax.swing.GroupLayout.Alignment.LEADING)))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(41, 41, 41)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGap(61, 61, 61)
-                                .addComponent(btnAgregar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnActualizar))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGap(205, 205, 205)
-                                .addComponent(jLabel4)))
-                        .addGap(52, 52, 52)
-                        .addComponent(btnEliminar)
-                        .addGap(34, 34, 34)
-                        .addComponent(btnLimpiar)))
-                .addContainerGap(144, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(205, 205, 205)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(41, 41, 41)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabel2)
+                                        .addComponent(jLabel5)
+                                        .addComponent(jLabel3))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(txtNombre, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(ComboSexo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addComponent(cmbPadre, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addGap(61, 61, 61)
+                                    .addComponent(btnAgregar)
+                                    .addGap(17, 17, 17)
+                                    .addComponent(btnActualizar)))
+                            .addGap(52, 52, 52)
+                            .addComponent(btnEliminar)
+                            .addGap(34, 34, 34)
+                            .addComponent(btnLimpiar))))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel4)
-                .addGap(33, 33, 33)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(59, 59, 59)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel5)
+                            .addComponent(ComboSexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ComboSexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5))
-                .addGap(12, 12, 12)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(txtIDPadre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(42, 42, 42)
+                    .addComponent(cmbPadre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(46, 46, 46)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAgregar)
                     .addComponent(btnActualizar)
                     .addComponent(btnEliminar)
                     .addComponent(btnLimpiar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(53, 53, 53))
+                .addGap(42, 42, 42)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         pack();
@@ -190,40 +259,35 @@ public class HijoView extends javax.swing.JFrame {
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
         Hijo hijo = new Hijo();
-        hijo.setId(Integer.parseInt(txtID.getText()));
+         DefaultComboBoxModel cmbmodel = (DefaultComboBoxModel)cmbPadre.getModel();
+             Marinero h = (Marinero)cmbmodel.getSelectedItem();
+            
         hijo.setNombre(txtNombre.getText());
         hijo.setSexo(ComboSexo.getSelectedItem().toString().charAt(0));
-        hijo.setIdPapa(Integer.parseInt(txtIDPadre.getText()));
-
+         hijo.setIdPapa(h.getId());
         new HijoLogic().Guardar(hijo);
 
         DefaultTableModel model = (DefaultTableModel) tblHijo.getModel();
-        model.addRow(new Object[]{hijo.getId(), hijo.getNombre(), hijo.getSexo(), hijo.getIdPapa()});
+        model.addRow(new Object[]{hijo.getId(), hijo.getNombre(), hijo.getSexo(), hijo.padre.getNombre()});
         Clear();
     }//GEN-LAST:event_btnAgregarActionPerformed
-private void tblTipoBarcoMouseClicked(java.awt.event.MouseEvent evt) {                                          
-        int fila = tblHijo.getSelectedRow();
-        if (fila >= 0) {
-            txtID.setText(tblHijo.getValueAt(fila, 1).toString());
-            txtNombre.setText(tblHijo.getValueAt(fila, 2).toString());
-           // txtIDPadre.getText(tblHijo.getValueAt(fila, 4));
-            id = Integer.parseInt(tblHijo.getValueAt(fila, 0).toString());
-        } 
-    }     
+   
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
         if (id > 0) {
             int fila = tblHijo.getSelectedRow();
-            HijoLogic logic = new HijoLogic();
-            Hijo hijo = logic.Consultar(id);
+             DefaultComboBoxModel cmbmodel = (DefaultComboBoxModel)cmbPadre.getModel();
+             Marinero h = (Marinero)cmbmodel.getSelectedItem();
+            
+            Hijo hijo = hijoLogic.Consultar(id);
             hijo.setNombre(txtNombre.getText());
             hijo.setSexo(ComboSexo.getSelectedItem().toString().charAt(0));
-            hijo.setIdPapa(Integer.parseInt(txtIDPadre.getText()));
+            hijo.setIdPapa(h.getId());
             
             Clear();
-            logic.Actualizar(hijo);
+            hijoLogic.Actualizar(hijo);
             DefaultTableModel model = (DefaultTableModel) tblHijo.getModel();
             model.removeRow(fila);
-            model.insertRow(fila, new Object[]{hijo.getId(), hijo.getNombre(), hijo.getSexo(), hijo.getIdPapa() });
+            model.insertRow(fila, new Object[]{hijo.getId(), hijo.getNombre(), hijo.getSexo(), hijo.padre.getNombre()});
 
         } else {
             JOptionPane.showMessageDialog(this, "Debe seleccionar un registro para editar");
@@ -245,9 +309,27 @@ private void tblTipoBarcoMouseClicked(java.awt.event.MouseEvent evt) {
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
-        // TODO add your handling code here:
+        Clear();
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void tblHijoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblHijoMouseClicked
+        int fila = tblHijo.getSelectedRow();
+        if (fila >= 0) {
+            txtNombre.setText(tblHijo.getValueAt(fila, 1).toString());
+            id = Integer.parseInt(tblHijo.getValueAt(fila, 0).toString());
+            Hijo hijo = hijoLogic.Consultar(id);
+            SelectPadre(hijo.getIdPapa());
+        } 
+    }//GEN-LAST:event_tblHijoMouseClicked
+
+  
+    
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -289,15 +371,14 @@ private void tblTipoBarcoMouseClicked(java.awt.event.MouseEvent evt) {
     private javax.swing.JButton btnAgregar;
     private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnLimpiar;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JComboBox<String> cmbPadre;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblHijo;
-    private javax.swing.JTextField txtID;
-    private javax.swing.JTextField txtIDPadre;
     private javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
 }
