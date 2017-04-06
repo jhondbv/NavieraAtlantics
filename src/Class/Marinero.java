@@ -4,8 +4,11 @@
  * and open the template in the editor.
  */
 package Class;
+import java.util.ArrayList;
+import java.util.List;
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
+import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 /**
  *
@@ -16,12 +19,15 @@ public class Marinero extends Persona {
     
     @Element
     int idEsposa;
-     @Element
-    String hijos;
+     @ElementList(inline=true)
+    List<Integer> hijos;
       @Element
     int idTestamento;
       @Element
       boolean isCapitan;
+      
+      public Esposa esposa;
+      
 
     public void setIsCapitan(boolean isCapitan) {
         this.isCapitan = isCapitan;
@@ -35,7 +41,7 @@ public class Marinero extends Persona {
         return idEsposa;
     }
 
-    public String getHijos() {
+    public List<Integer> getHijos() {
         return hijos;
     }
 
@@ -47,7 +53,7 @@ public class Marinero extends Persona {
         this.idEsposa = idEsposa;
     }
 
-    public void setHijos(String hijos) {
+    public void setHijos(List<Integer> hijos) {
         this.hijos = hijos;
     }
 
@@ -62,6 +68,7 @@ public class Marinero extends Persona {
     }
     
     public Marinero(){
+        hijos=new ArrayList<Integer>();
     }
     
      public Marinero(Marinero marinero){
