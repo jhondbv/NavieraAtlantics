@@ -14,4 +14,9 @@
       <IdTipoBarco>3</IdTipoBarco>
       <nombre>Barco 2</nombre>
    </barco>
+   <barco Id="4">
+      <RegMerc>false</RegMerc>
+      <IdTipoBarco>5</IdTipoBarco>
+      <nombre>897</nombre>
+   </barco>
 </barcos>

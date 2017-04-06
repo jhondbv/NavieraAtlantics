@@ -5,25 +5,81 @@
  */
 package PresentationLayer;
 
+import Business.EsposaLogic;
+import Business.MarineroLogic;
+import Class.Esposa;
+import Class.Esposas;
+import Class.Marinero;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author jhon
  */
-public class EsposasView extends javax.swing.JFrame {
 
-    /**
-     * Creates new form EsposasView
-     */
+
+public class EsposasView extends javax.swing.JFrame {
+    
+    private static EsposaLogic esposaLogic;
+    private static MarineroLogic marineroLogic;
+    private static int id;
+    
     public EsposasView() {
         initComponents();
+        esposaLogic=new EsposaLogic();
+        marineroLogic=new MarineroLogic();
         configClose();
+         id=0;
     }
   public void configClose()
     {
         this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
     }
+  public void Clear() {
+      txtNombre.setText("");      
+    }
+  public void GetData() {
+        Esposas esposas = new EsposaLogic().ConsultarConRelaciones();
+        DefaultTableModel model = (DefaultTableModel) tblEsposas.getModel();
+        if(esposas==null)
+            return;
+        for (Esposa esposa : esposas.List) {
+            model.addRow(new Object[]{esposa.getNombre(), esposa.getIdEsposo()});
+        }
+    }
+  
+  
+  
+  
+  
+     private void tblEsposasMouseClicked(java.awt.event.MouseEvent evt) {                                       
+        int fila = tblEsposas.getSelectedRow();
+        if (fila >= 0) {
+            
+            txtNombre.setText(tblEsposas.getValueAt(fila, 1).toString());
+            id = Integer.parseInt(tblEsposas.getValueAt(fila, 0).toString());
+            
+            Esposa item = esposaLogic.Consultar(id);
+            
+            SelectIDEsposo(item.getIdEsposo());
+        } 
+    } 
+  private void SelectIDEsposo(int id)
+    {
+        int size = cmbMarineros.getItemCount();
+        DefaultComboBoxModel model = (DefaultComboBoxModel)cmbMarineros.getModel();
+        for (int i = 0; i < size; i++) {
+            Marinero item = (Marinero)model.getElementAt(i);
+            if(item.getId()==id)
+            {
+                model.setSelectedItem(item);
+            }
+        }
+    }
+  
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -34,17 +90,21 @@ public class EsposasView extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblEsposas = new javax.swing.JTable();
         jToggleButton1 = new javax.swing.JToggleButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
         cmbMarineros = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
+        btnAgregar = new javax.swing.JButton();
+        btnActualizar = new javax.swing.JButton();
+        btnEliminar = new javax.swing.JButton();
+        btnLimpiar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblEsposas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -67,7 +127,7 @@ public class EsposasView extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tblEsposas);
 
         jToggleButton1.setText("Atras");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -83,6 +143,24 @@ public class EsposasView extends javax.swing.JFrame {
         cmbMarineros.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel3.setText("ESPOSA");
+
+        btnAgregar.setText("Agregar");
+        btnAgregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarActionPerformed(evt);
+            }
+        });
+
+        btnActualizar.setText("Actualizar");
+        btnActualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnActualizarActionPerformed(evt);
+            }
+        });
+
+        btnEliminar.setText("Eliminar");
+
+        btnLimpiar.setText("Limpiar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -106,7 +184,16 @@ public class EsposasView extends javax.swing.JFrame {
                                     .addComponent(cmbMarineros, 0, 175, Short.MAX_VALUE)))))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel3)))
+                        .addComponent(jLabel3))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(63, 63, 63)
+                        .addComponent(btnAgregar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnActualizar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnEliminar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnLimpiar)))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -122,7 +209,13 @@ public class EsposasView extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2)
                     .addComponent(cmbMarineros, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnAgregar)
+                    .addComponent(btnActualizar)
+                    .addComponent(btnEliminar)
+                    .addComponent(btnLimpiar))
+                .addGap(28, 28, 28)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -136,6 +229,28 @@ public class EsposasView extends javax.swing.JFrame {
         new NavieraMain().setVisible(true);
         dispose();
     }//GEN-LAST:event_jToggleButton1ActionPerformed
+
+    private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
+        Esposa esposa=new Esposa();
+        
+        esposa.setNombre(txtNombre.getText());
+        DefaultComboBoxModel cmbModel =(DefaultComboBoxModel)cmbMarineros.getModel();
+        Marinero marinero=(Marinero)cmbModel.getSelectedItem();
+        if(marinero==null){
+            JOptionPane.showMessageDialog(this, "Debe seleccionar un esposo");
+            return;
+        }
+        esposa.setIdEsposo(marinero.getId());
+        
+        esposaLogic.Guardar(esposa);
+        DefaultTableModel model=(DefaultTableModel) tblEsposas.getModel();
+        model.addRow(new Object[]{esposa.getNombre(),esposa.getIdEsposo()});
+        Clear();
+    }//GEN-LAST:event_btnAgregarActionPerformed
+
+    private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
+   
+    }//GEN-LAST:event_btnActualizarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -173,13 +288,17 @@ public class EsposasView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnActualizar;
+    private javax.swing.JButton btnAgregar;
+    private javax.swing.JButton btnEliminar;
+    private javax.swing.JButton btnLimpiar;
     private javax.swing.JComboBox<String> cmbMarineros;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JTable tblEsposas;
     private javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
 }

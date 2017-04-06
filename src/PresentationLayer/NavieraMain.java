@@ -209,7 +209,7 @@ public class NavieraMain extends javax.swing.JFrame {
     }//GEN-LAST:event_btnTipoBarcoActionPerformed
 
     private void btnEsposasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEsposasActionPerformed
-        EsposaView espocita =new EsposaView();
+        EsposasView espocita =new EsposasView();
         espocita.setVisible(true);
         //new EsposasView().setVisible(true);
     }//GEN-LAST:event_btnEsposasActionPerformed

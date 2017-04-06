@@ -19,4 +19,9 @@
       <capacidadCarga>120</capacidadCarga>
       <capacidadPersonas>12</capacidadPersonas>
    </tipoBarco>
+   <tipoBarco id="5">
+      <descripcion>asdf</descripcion>
+      <capacidadCarga>50</capacidadCarga>
+      <capacidadPersonas>50</capacidadPersonas>
+   </tipoBarco>
 </tipoBarcos>
