@@ -19,4 +19,19 @@
       <sexo>F</sexo>
       <IdEsposo>145</IdEsposo>
    </esposa>
+   <esposa id="5">
+      <nombre>123</nombre>
+      <sexo>F</sexo>
+      <IdEsposo>123</IdEsposo>
+   </esposa>
+   <esposa id="6">
+      <nombre>123</nombre>
+      <sexo>F</sexo>
+      <IdEsposo>123</IdEsposo>
+   </esposa>
+   <esposa id="7">
+      <nombre>123</nombre>
+      <sexo>F</sexo>
+      <IdEsposo>123</IdEsposo>
+   </esposa>
 </esposas>

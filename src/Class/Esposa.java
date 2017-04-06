@@ -27,6 +27,8 @@ public class Esposa extends Persona {
         this.IdEsposo = IdEsposo;
     }
 
+    public Marinero esposo;
+    
     public Esposa() {
     }
 

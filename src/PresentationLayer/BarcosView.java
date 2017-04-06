@@ -139,6 +139,11 @@ public class BarcosView extends javax.swing.JFrame {
         jLabel4.setText("Tipo Barco");
 
         cmbTipoBarco.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbTipoBarco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbTipoBarcoActionPerformed(evt);
+            }
+        });
 
         btnActualizar.setText("Actualizar");
         btnActualizar.addActionListener(new java.awt.event.ActionListener() {
@@ -311,6 +316,10 @@ public class BarcosView extends javax.swing.JFrame {
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
        Clear();
     }//GEN-LAST:event_btnLimpiarActionPerformed
+
+    private void cmbTipoBarcoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbTipoBarcoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbTipoBarcoActionPerformed
 
     private void SelectTipoBarco(int id)
     {
