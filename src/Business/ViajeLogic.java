@@ -9,6 +9,7 @@ import Class.Barco;
 import Class.Barcos;
 import Class.Esposa;
 import Class.Hijo;
+import Class.ID;
 import Class.Marinero;
 import Class.Puerto;
 import Class.TipoBarco;
@@ -86,7 +87,8 @@ public  class ViajeLogic {
     
     public void Guardar(Viaje viaje) throws Exception
     {
-        TipoBarco tipo = hashTipoBarco.get(viaje.barco.getIdTipoBarco());
+        Barco barco = hashBarcos.get(viaje.getIdBarco());
+        TipoBarco tipo = hashTipoBarco.get(barco.getIdTipoBarco());
         int bCapitan = 0;
         if(viaje.getTripulacion().size()>tipo.getCapacidadPersonas())
         {
@@ -97,18 +99,18 @@ public  class ViajeLogic {
           throw new Exception("No puede exceder la capacidad de carga del barco");
         }
         
-        for (int item : viaje.getTripulacion()) {
+        for (ID item : viaje.getTripulacion()) {
             
-                Marinero marinero = hashMarineros.get(item);
+                Marinero marinero = hashMarineros.get(item.id);
                 if(marinero.isIsCapitan())
                 {
                     bCapitan++;
                 }
         }
         
-         for (String item : viaje.getPuertosAtraco().split(",")) {
+         for (ID item : viaje.getPuertosAtraco()) {
             
-                Puerto puerto = hashPuertos.get(Integer.parseInt(item));
+                Puerto puerto = hashPuertos.get(item.id);
                 if(puerto.getId()==viaje.getIdPuertoDestino() || puerto.getId()==viaje.getIdPuertoOrigen())
                 {
                     throw new Exception("Los puertos de atraco no pueden ser igual a los puertos de origen y destino");
@@ -154,9 +156,47 @@ public  class ViajeLogic {
        
     }
     
-    public void Actualizar(Viaje viaje )
+    public void Actualizar(Viaje viaje ) throws Exception
     {
+        Barco barco = hashBarcos.get(viaje.getIdBarco());
+        TipoBarco tipo = hashTipoBarco.get(barco.getIdTipoBarco());
+        int bCapitan = 0;
+        if(viaje.getTripulacion().size()>tipo.getCapacidadPersonas())
+        {
+            throw new Exception("No puede exceder la capacidad de tripulacion del barco");
+        }
+        if(viaje.getNumEncomiendas()>tipo.getCapacidadCarga())
+        {
+          throw new Exception("No puede exceder la capacidad de carga del barco");
+        }
         
+        for (ID item : viaje.getTripulacion()) {
+            
+                Marinero marinero = hashMarineros.get(item.id);
+                if(marinero.isIsCapitan())
+                {
+                    bCapitan++;
+                }
+        }
+        
+         for (ID item : viaje.getPuertosAtraco()) {
+            
+                Puerto puerto = hashPuertos.get(item.id);
+                if(puerto.getId()==viaje.getIdPuertoDestino() || puerto.getId()==viaje.getIdPuertoOrigen())
+                {
+                    throw new Exception("Los puertos de atraco no pueden ser igual a los puertos de origen y destino");
+                }
+        }
+        
+        if(bCapitan!=1)
+        {
+            throw new Exception("Debe escoger solo 1 capitan para este viaje");
+        }
+        
+        if(BarcoEnCurso(viaje.getIdBarco()))
+        {
+            throw new Exception("El barco seleccionado para este viaje , ya tiene otro viaje en curso ");
+        }
         DAO.Actualizar(viaje);
        
     }

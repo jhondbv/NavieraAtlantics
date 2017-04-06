@@ -29,10 +29,11 @@ public class Viaje {
     private int idPuertoOrigen;
     @Element
     private int idPuertoDestino;
-    @Element
-    private String puertosAtraco;
-    @ElementList(inline=true)
-    private List<Integer> tripulacion;
+   
+    @ElementList
+    private List<ID> tripulacion=new ArrayList<ID>();
+     @ElementList
+    private List<ID> puertosAtraco=new ArrayList<ID>();
     @Element
     private int numEncomiendas;
     @Element
@@ -47,7 +48,8 @@ public class Viaje {
     
     public Viaje()
     {
-        tripulacion= new ArrayList<Integer>();
+        tripulacion= new ArrayList<ID>();
+        puertosAtraco=new ArrayList<ID>();
     }
     
      public Viaje(Viaje viaje)
@@ -93,11 +95,11 @@ public class Viaje {
         this.idPuertoDestino = idPuertoDestino;
     }
 
-    public void setPuertosAtraco(String puertosAtraco) {
+    public void setPuertosAtraco(List<ID> puertosAtraco) {
         this.puertosAtraco = puertosAtraco;
     }
 
-    public void setTripulacion(List<Integer> tripulacion) {
+    public void setTripulacion(List<ID> tripulacion) {
         this.tripulacion = tripulacion;
     }
 
@@ -121,11 +123,11 @@ public class Viaje {
         return idPuertoDestino;
     }
 
-    public String getPuertosAtraco() {
+    public List<ID> getPuertosAtraco() {
         return puertosAtraco;
     }
 
-    public List<Integer>  getTripulacion() {
+    public List<ID>  getTripulacion() {
         return tripulacion;
     }
 

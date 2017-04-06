@@ -19,8 +19,8 @@ public class Marinero extends Persona {
     
     @Element
     int idEsposa;
-     @ElementList(inline=true)
-    List<Integer> hijos;
+     @ElementList
+        List<ID> hijos=new ArrayList<ID>();
       @Element
     int idTestamento;
       @Element
@@ -41,7 +41,7 @@ public class Marinero extends Persona {
         return idEsposa;
     }
 
-    public List<Integer> getHijos() {
+    public List<ID> getHijos() {
         return hijos;
     }
 
@@ -53,7 +53,7 @@ public class Marinero extends Persona {
         this.idEsposa = idEsposa;
     }
 
-    public void setHijos(List<Integer> hijos) {
+    public void setHijos(List<ID> hijos) {
         this.hijos = hijos;
     }
 
@@ -68,7 +68,7 @@ public class Marinero extends Persona {
     }
     
     public Marinero(){
-        hijos=new ArrayList<Integer>();
+        hijos=new ArrayList<ID>();
     }
     
      public Marinero(Marinero marinero){

@@ -12,6 +12,7 @@ import Class.Esposa;
 import Class.Esposas;
 import Class.Hijo;
 import Class.Hijos;
+import Class.ID;
 import Class.Marinero;
 import Class.Marineros;
 import java.util.ArrayList;
@@ -350,10 +351,12 @@ dispose();
             }
         marinero.setIsCapitan(rdbCapitan.isSelected());
         DefaultListModel listahijos = (DefaultListModel) lstHijos.getModel();
-        List<Integer> hijos = new ArrayList<Integer>();
-        for (int i = 0; i < listahijos.getSize(); i++) {
-            hijos.add(((Hijo) listahijos.getElementAt(i)).getId());
-        }
+         List<ID> hijos = new ArrayList<ID>();
+            for (int i = 0; i < listahijos.getSize(); i++) {
+                ID t = new ID();
+                t.id=((Hijo)listahijos.getElementAt(i)).getId();
+                hijos.add(t);
+            }
         marinero.setHijos(hijos);
 
     try {
@@ -390,9 +393,11 @@ dispose();
 
             marinero.setIsCapitan(rdbCapitan.isSelected());
             DefaultListModel listahijos = (DefaultListModel) lstHijos.getModel();
-            List<Integer> hijos = new ArrayList<Integer>();
+            List<ID> hijos = new ArrayList<ID>();
             for (int i = 0; i < listahijos.getSize(); i++) {
-                hijos.add(((Hijo) listahijos.getElementAt(i)).getId());
+                ID t = new ID();
+                t.id=((Hijo)listahijos.getElementAt(i)).getId();
+                hijos.add(t);
             }
             marinero.setHijos(hijos);
            
@@ -488,7 +493,7 @@ dispose();
     {
         int size = cmbEsposas.getItemCount();
         DefaultComboBoxModel model = (DefaultComboBoxModel)cmbEsposas.getModel();
-        for (int i = 0; i < size; i++) {
+        for (int i = 1; i < size; i++) {
             Esposa item = (Esposa)model.getElementAt(i);
             if(item.getId()==id)
             {
@@ -500,8 +505,8 @@ dispose();
     public void SetHijos(Marinero item) {
          DefaultListModel listahijos = (DefaultListModel) lstHijos.getModel();
          listahijos.removeAllElements();
-        for (Integer idHijo : item.getHijos()) {
-            Hijo hijo = hijoLogic.Consultar(idHijo);
+        for (ID idHijo : item.getHijos()) {
+            Hijo hijo = hijoLogic.Consultar(idHijo.id);
             if (hijo != null) {
                
                 listahijos.addElement(hijo);

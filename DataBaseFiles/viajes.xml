@@ -1,1 +1,44 @@
-<viajes/>
+<viajes>
+   <viaje id="2">
+      <idBarco>1</idBarco>
+      <idPuertoOrigen>0</idPuertoOrigen>
+      <idPuertoDestino>5</idPuertoDestino>
+      <tripulacion class="java.util.ArrayList">
+         <ID>
+            <id>1</id>
+         </ID>
+         <ID>
+            <id>2</id>
+         </ID>
+      </tripulacion>
+      <puertosAtraco class="java.util.ArrayList">
+         <ID>
+            <id>1</id>
+         </ID>
+         <ID>
+            <id>3</id>
+         </ID>
+      </puertosAtraco>
+      <numEncomiendas>3</numEncomiendas>
+      <enCurso>true</enCurso>
+      <finalizado>false</finalizado>
+   </viaje>
+   <viaje id="3">
+      <idBarco>2</idBarco>
+      <idPuertoOrigen>0</idPuertoOrigen>
+      <idPuertoDestino>8</idPuertoDestino>
+      <tripulacion class="java.util.ArrayList">
+         <ID>
+            <id>1</id>
+         </ID>
+      </tripulacion>
+      <puertosAtraco class="java.util.ArrayList">
+         <ID>
+            <id>3</id>
+         </ID>
+      </puertosAtraco>
+      <numEncomiendas>7</numEncomiendas>
+      <enCurso>false</enCurso>
+      <finalizado>false</finalizado>
+   </viaje>
+</viajes>

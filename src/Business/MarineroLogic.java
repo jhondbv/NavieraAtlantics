@@ -65,7 +65,7 @@ public class MarineroLogic {
         if(item.getHijos().size()>0)
         {
             for (int i = 0; i < item.getHijos().size(); i++) {
-                Hijo hijo = hijoDao.Consultar(item.getHijos().get(i));
+                Hijo hijo = hijoDao.Consultar(item.getHijos().get(i).id);
                 hijo.setIdPapa(item.getId());
                 hijoDao.Actualizar(hijo);
             }
@@ -95,7 +95,7 @@ public class MarineroLogic {
         if(item.getHijos().size()>0)
         {
             for (int i = 0; i < item.getHijos().size(); i++) {
-                Hijo hijo = hijoDao.Consultar(item.getHijos().get(i));
+                Hijo hijo = hijoDao.Consultar(item.getHijos().get(i).id);
                 hijo.setIdPapa(item.getId());
                 hijoDao.Actualizar(hijo);
             }

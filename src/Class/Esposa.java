@@ -47,7 +47,7 @@ public class Esposa extends Persona {
     }
 
     public void setSexo(String f) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       sexo=f.charAt(0) ;
     }
 
 }

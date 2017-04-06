@@ -13,6 +13,7 @@ import Business.PuertoLogic;
 import Business.ViajeLogic;
 import Class.Barco;
 import Class.Barcos;
+import Class.ID;
 import Class.Marinero;
 import Class.Marineros;
 import Class.Puerto;
@@ -40,8 +41,7 @@ public class ViajesView extends javax.swing.JFrame {
     private static HijoLogic hijoLogic;
     private static MarineroLogic marineroLogic;
     private static ViajeLogic viajeLogic;
-    private static List<Integer> tripulacion;
-    private static String atracos; 
+ 
 
 
     /**
@@ -51,7 +51,7 @@ public class ViajesView extends javax.swing.JFrame {
         initComponents();
         configClose();
         id=0;
-        tripulacion=new ArrayList<Integer>();
+      
         barcoLogic= new BarcoLogic();
         puertoLogic=new PuertoLogic();
         esposaLogic=new EsposaLogic();
@@ -70,6 +70,32 @@ public class ViajesView extends javax.swing.JFrame {
     {
         this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
           
+    }
+    public void SetTripulacion(Viaje item) {
+         DefaultListModel listaTripulacion = (DefaultListModel) lstTripulacion.getModel();
+         listaTripulacion.removeAllElements();
+        for (ID idMarinero : item.getTripulacion()) {
+            Marinero marinero = marineroLogic.Consultar(idMarinero.id);
+            if (marinero != null) {
+               
+                listaTripulacion.addElement(marinero);
+            }
+
+        }
+
+    }
+    public void SetAtracos(Viaje item) {
+         DefaultListModel listaAtracos = (DefaultListModel) lstAtracos.getModel();
+         listaAtracos.removeAllElements();
+        for (ID idPuerto : item.getPuertosAtraco()) {
+            Puerto puerto = puertoLogic.Consultar(idPuerto.id);
+            if (puerto != null) {
+               
+                listaAtracos.addElement(puerto);
+            }
+
+        }
+
     }
     
     public void LoadPuertos()
@@ -121,11 +147,10 @@ public class ViajesView extends javax.swing.JFrame {
     
      public void Clear() {
      
-         tripulacion=new ArrayList<Integer>();
-         atracos="";
+       
          txtEncomienda.setText("");
         DefaultListModel listatracos = (DefaultListModel) lstAtracos.getModel();
-        DefaultListModel listtripulacion = (DefaultListModel) lstAtracos.getModel();
+        DefaultListModel listtripulacion = (DefaultListModel) lstTripulacion.getModel();
         listatracos.removeAllElements();
         listtripulacion.removeAllElements();
          cmbBarco.setSelectedIndex(0);
@@ -483,7 +508,10 @@ public class ViajesView extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Debe ingresar un numero valido para las encomiendas");
                 return;
             }
-            if(tripulacion.size()==0)
+             DefaultListModel listaTripulacion = (DefaultListModel) lstTripulacion.getModel();
+                          DefaultListModel listaAtracos = (DefaultListModel) lstAtracos.getModel();
+
+            if(listaTripulacion.getSize()==0)
             {
                 JOptionPane.showMessageDialog(this, "Debe Seleccionar una tripulacion");
                 return;
@@ -495,10 +523,26 @@ public class ViajesView extends javax.swing.JFrame {
             Barco barco = (Barco)modelBarco.getSelectedItem();
             Puerto origen = (Puerto)modelOrigen.getSelectedItem();
             Puerto destino = (Puerto)modelDestino.getSelectedItem();
-            
+            viaje.barco=barco;
+            viaje.puertoDestino=destino;
+            viaje.puertoOrigen=origen;
+                   
             viaje.setIdBarco(barco.getId());
             viaje.setIdPuertoDestino(destino.getId());
             viaje.setIdPuertoOrigen(origen.getId());
+           List<ID> tripulacion = new ArrayList<ID>();
+            for (int i = 0; i < listaTripulacion.getSize(); i++) {
+                 ID t = new ID();
+                t.id=((Marinero) listaTripulacion.getElementAt(i)).getId();
+                tripulacion.add(t);
+              
+            }
+            List<ID> atracos = new ArrayList<ID>();
+            for (int i = 0; i < listaAtracos.getSize(); i++) {
+                ID t = new ID();
+                t.id=((Puerto) listaAtracos.getElementAt(i)).getId();
+                atracos.add(t);
+            }
             viaje.setTripulacion(tripulacion);
             viaje.setPuertosAtraco(atracos);
              viaje.setFinalizado(rdbFinalizado.isSelected());
@@ -526,11 +570,15 @@ public class ViajesView extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Debe ingresar un numero valido para las encomiendas");
                 return;
             }
-            if(tripulacion.size()==0)
+            DefaultListModel listaTripulacion = (DefaultListModel) lstTripulacion.getModel();
+            DefaultListModel listaAtracos = (DefaultListModel) lstAtracos.getModel();
+            if(listaTripulacion.getSize()==0)
             {
                 JOptionPane.showMessageDialog(this, "Debe Seleccionar una tripulacion");
                 return;
             }
+            
+            
             DefaultComboBoxModel modelBarco = (DefaultComboBoxModel)cmbBarco.getModel();
             DefaultComboBoxModel modelDestino = (DefaultComboBoxModel)cmbDestino.getModel();
             DefaultComboBoxModel modelOrigen = (DefaultComboBoxModel)cmbOrigen.getModel();
@@ -538,10 +586,25 @@ public class ViajesView extends javax.swing.JFrame {
             Barco barco = (Barco)modelBarco.getSelectedItem();
             Puerto origen = (Puerto)modelOrigen.getSelectedItem();
             Puerto destino = (Puerto)modelDestino.getSelectedItem();
-            
+             viaje.barco=barco;
+            viaje.puertoDestino=destino;
+            viaje.puertoOrigen=origen;
             viaje.setIdBarco(barco.getId());
             viaje.setIdPuertoDestino(destino.getId());
             viaje.setIdPuertoOrigen(origen.getId());
+           List<ID> tripulacion = new ArrayList<ID>();
+            for (int i = 0; i < listaTripulacion.getSize(); i++) {
+                 ID t = new ID();
+                t.id=((Marinero) listaTripulacion.getElementAt(i)).getId();
+                tripulacion.add(t);
+              
+            }
+            List<ID> atracos = new ArrayList<ID>();
+            for (int i = 0; i < listaAtracos.getSize(); i++) {
+                ID t = new ID();
+                t.id=((Puerto) listaAtracos.getElementAt(i)).getId();
+                atracos.add(t);
+            }
             viaje.setTripulacion(tripulacion);
             viaje.setPuertosAtraco(atracos);
             viaje.setFinalizado(rdbFinalizado.isSelected());
@@ -599,6 +662,8 @@ public class ViajesView extends javax.swing.JFrame {
             SelectOrigen(viaje.getIdPuertoOrigen());
             rdbEnCurso.setSelected(viaje.isEnCurso());
             rdbFinalizado.setSelected(viaje.isFinalizado());
+            SetTripulacion(viaje);
+            SetAtracos(viaje);
             
         } 
     }//GEN-LAST:event_tblViajesMouseClicked
@@ -613,7 +678,7 @@ public class ViajesView extends javax.swing.JFrame {
 
     private void btnAgregarTripulacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarTripulacionActionPerformed
         DefaultComboBoxModel modelMarinero = (DefaultComboBoxModel)cmbTripulacion.getModel();
-        DefaultListModel listtripulacion = (DefaultListModel) lstAtracos.getModel();
+        DefaultListModel listtripulacion = (DefaultListModel) lstTripulacion.getModel();
         Marinero marinero = (Marinero)modelMarinero.getSelectedItem();
         boolean bandCapitan = marinero.isIsCapitan();
         int size = listtripulacion.getSize();

@@ -22,7 +22,7 @@ import java.util.List;
 public class EsposaLogic {
       private IEsposaDao DAO =null; 
       private IMarineroDao MarineroDAO=null;
-      private HashMap<Integer,Marinero>hashtipos=null;
+      private HashMap<Integer,Marinero>hashesposos=null;
 
   
     
@@ -31,10 +31,10 @@ public class EsposaLogic {
         DAO=new EsposaDao();
         MarineroDAO=new MarineroDao();
         
-        hashtipos = new HashMap<>();
+        hashesposos = new HashMap<>();
         List<Marinero>tipos = MarineroDAO.Consultar().List;
         for (Marinero tipo : tipos) {
-            hashtipos.put(tipo.getId(), tipo);
+            hashesposos.put(tipo.getId(), tipo);
         }  
     }
     
@@ -42,6 +42,7 @@ public class EsposaLogic {
     
     public void Guardar(Esposa item)
     {
+        item.setSexo("F");
         DAO.Guardar(item);
     }
     public void Eliminar(int id)
@@ -50,6 +51,7 @@ public class EsposaLogic {
     }
     public void Actualizar(Esposa item )
     {
+        item.setSexo("F");
         DAO.Actualizar(item);
        
     }
@@ -70,7 +72,8 @@ public class EsposaLogic {
         if(esposas!=null)
         {
             for (Esposa esposa : esposas.List) {
-                esposa.esposo=hashtipos.get(esposa.getIdEsposo());
+                if(esposa.getIdEsposo()>0)
+                esposa.esposo=hashesposos.get(esposa.getIdEsposo());
             }
             
         }

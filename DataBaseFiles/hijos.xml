@@ -1,12 +1,7 @@
 <hijos>
    <hijo id="1">
-      <nombre>jhon</nombre>
+      <nombre>Jhon</nombre>
       <sexo>M</sexo>
-      <idPapa>2</idPapa>
-   </hijo>
-   <hijo id="2">
-      <nombre>Laura</nombre>
-      <sexo>F</sexo>
-      <idPapa>2</idPapa>
+      <idPapa>1</idPapa>
    </hijo>
 </hijos>
