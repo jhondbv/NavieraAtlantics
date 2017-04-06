@@ -13,8 +13,11 @@ import Class.Esposas;
 import Class.Hijo;
 import Class.Hijos;
 import Class.Marinero;
+import Class.Marineros;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
 import javax.swing.JFrame;
@@ -43,12 +46,23 @@ private static int id;
         LoadEsposas();
         lstHijos.setModel(new DefaultListModel());
         marineroLogic= new MarineroLogic();
+        GetData();
         
     }
 
      public void configClose()
     {
         this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+    }
+     
+     public void GetData() {
+        Marineros items  = marineroLogic.Consultar();
+        DefaultTableModel model = (DefaultTableModel) tblMarineros.getModel();
+        if(items==null)
+            return;
+        for (Marinero marinero : items.List) {
+            model.addRow(new Object[]{marinero.getId(), marinero.getNombre(), marinero.getSexo(), marinero.isIsCapitan()});
+        }
     }
      
      public void LoadHijos()
@@ -65,7 +79,7 @@ private static int id;
      {
          Esposas lst = esposaLogic.Consultar();
          DefaultComboBoxModel model = (DefaultComboBoxModel) cmbEsposas.getModel();
-         model.removeAllElements();
+         
          for (Esposa item : lst.List) {
              model.addElement(item);
          }
@@ -156,14 +170,22 @@ private static int id;
 
         jLabel5.setText("Hijos");
 
+        cmbEsposas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ninguna" }));
+
         cmbSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "M", "F" }));
 
         btnAgregarHijos.setText("Agregar");
+        btnAgregarHijos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarHijosActionPerformed(evt);
+            }
+        });
 
-        lstHijos.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
+        lstHijos.setToolTipText("");
+        lstHijos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lstHijosMouseClicked(evt);
+            }
         });
         jScrollPane2.setViewportView(lstHijos);
 
@@ -243,7 +265,7 @@ private static int id;
                                         .addComponent(cmbHijos, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(btnAgregarHijos))
-                                    .addComponent(jScrollPane2))
+                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 304, Short.MAX_VALUE))
                                 .addGap(21, 21, 21))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(15, 15, 15)
@@ -254,7 +276,7 @@ private static int id;
                                 .addComponent(btnEliminar)
                                 .addGap(56, 56, 56)
                                 .addComponent(btnLimpiar)
-                                .addGap(0, 109, Short.MAX_VALUE)))))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -311,10 +333,21 @@ dispose();
 
         marinero.setNombre(txtNombre.getText());
         marinero.setSexo(cmbSexo.getSelectedItem().toString().charAt(0));
-        DefaultComboBoxModel cmbmodel = (DefaultComboBoxModel) cmbEsposas.getModel();
-        Esposa esposa = (Esposa) cmbEsposas.getSelectedItem();
-        marinero.setIdEsposa(esposa.getId());
-        marinero.esposa = esposa;
+       
+        if (cmbEsposas.getSelectedIndex() > 0) {
+                DefaultComboBoxModel cmbmodel = (DefaultComboBoxModel) cmbEsposas.getModel();
+                Esposa esposa = (Esposa) cmbEsposas.getSelectedItem();
+                if(esposa.getIdEsposo()>0)
+                {
+                            JOptionPane.showMessageDialog(this, "Esta esposa ya esta asignada a otro marinero");
+                            return;
+
+                }
+                
+                marinero.setIdEsposa(esposa.getId());
+                marinero.esposa = esposa;
+                
+            }
         marinero.setIsCapitan(rdbCapitan.isSelected());
         DefaultListModel listahijos = (DefaultListModel) lstHijos.getModel();
         List<Integer> hijos = new ArrayList<Integer>();
@@ -323,7 +356,13 @@ dispose();
         }
         marinero.setHijos(hijos);
 
+    try {
         marineroLogic.Guardar(marinero);
+    } catch (Exception ex) {
+                                   JOptionPane.showMessageDialog(this, ex.getMessage());
+                                   return;
+
+    }
 
         DefaultTableModel model = (DefaultTableModel) tblMarineros.getModel();
         model.addRow(new Object[]{marinero.getId(), marinero.getNombre(), marinero.getSexo(), marinero.isIsCapitan()});
@@ -334,24 +373,40 @@ dispose();
         if (id > 0) {
             int fila = tblMarineros.getSelectedRow();
             Marinero marinero = marineroLogic.Consultar(id);
-             marinero.setNombre(txtNombre.getText());
-        marinero.setSexo(cmbSexo.getSelectedItem().toString().charAt(0));
-        DefaultComboBoxModel cmbmodel = (DefaultComboBoxModel) cmbEsposas.getModel();
-        Esposa esposa = (Esposa) cmbEsposas.getSelectedItem();
-        marinero.setIdEsposa(esposa.getId());
-        marinero.esposa = esposa;
-        marinero.setIsCapitan(rdbCapitan.isSelected());
-        DefaultListModel listahijos = (DefaultListModel) lstHijos.getModel();
-        List<Integer> hijos = new ArrayList<Integer>();
-        for (int i = 0; i < listahijos.getSize(); i++) {
-            hijos.add(((Hijo) listahijos.getElementAt(i)).getId());
-        }
-        marinero.setHijos(hijos);
-            Clear();
-            marineroLogic.Actualizar(marinero);
+            marinero.setNombre(txtNombre.getText());
+            marinero.setSexo(cmbSexo.getSelectedItem().toString().charAt(0));
+            if (cmbEsposas.getSelectedIndex() > 0) {
+                DefaultComboBoxModel cmbmodel = (DefaultComboBoxModel) cmbEsposas.getModel();
+                Esposa esposa = (Esposa) cmbEsposas.getSelectedItem();
+                if(esposa.getIdEsposo()>0 && esposa.getIdEsposo()!= id)
+                {
+                            JOptionPane.showMessageDialog(this, "Esta esposa ya esta asignada a otro marinero");
+                            return;
+
+                }
+                marinero.setIdEsposa(esposa.getId());
+                marinero.esposa = esposa;
+            }
+
+            marinero.setIsCapitan(rdbCapitan.isSelected());
+            DefaultListModel listahijos = (DefaultListModel) lstHijos.getModel();
+            List<Integer> hijos = new ArrayList<Integer>();
+            for (int i = 0; i < listahijos.getSize(); i++) {
+                hijos.add(((Hijo) listahijos.getElementAt(i)).getId());
+            }
+            marinero.setHijos(hijos);
+           
+            try {
+                marineroLogic.Actualizar(marinero);
+            } catch (Exception ex) {
+                            JOptionPane.showMessageDialog(this, ex.getMessage());
+                            return;
+
+            }
+             Clear();
             DefaultTableModel model = (DefaultTableModel) tblMarineros.getModel();
             model.removeRow(fila);
-            model.insertRow(fila,new Object[]{marinero.getId(), marinero.getNombre(), marinero.getSexo(), marinero.isIsCapitan()});
+            model.insertRow(fila, new Object[]{marinero.getId(), marinero.getNombre(), marinero.getSexo(), marinero.isIsCapitan()});
 
         } else {
             JOptionPane.showMessageDialog(this, "Debe seleccionar un registro para editar");
@@ -381,10 +436,52 @@ dispose();
             id = Integer.parseInt(tblMarineros.getValueAt(fila, 0).toString());
             rdbCapitan.setSelected(Boolean.valueOf(tblMarineros.getValueAt(fila, 3).toString()));
              Marinero item = marineroLogic.Consultar(id);
+             if(item.getIdEsposa()>0)
             SelectEsposa(item.getIdEsposa());
             SetHijos(item);
+            DefaultComboBoxModel model = (DefaultComboBoxModel)cmbSexo.getModel();
+            for (int i = 0; i < model.getSize(); i++) {
+                if(model.getElementAt(i).equals(tblMarineros.getValueAt(fila, 2).toString()))
+                {
+                    cmbSexo.setSelectedIndex(i);
+                }
+            }
         }
     }//GEN-LAST:event_tblMarinerosMouseClicked
+
+    private void btnAgregarHijosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarHijosActionPerformed
+        DefaultComboBoxModel model = (DefaultComboBoxModel) cmbHijos.getModel();
+        DefaultListModel listaHijos = (DefaultListModel) lstHijos.getModel();
+        Hijo hijonuevo = (Hijo) model.getSelectedItem();
+            if(hijonuevo.getIdPapa()>0)
+            {
+                if(id>0 && hijonuevo.getIdPapa()!=id)
+                {
+                 JOptionPane.showMessageDialog(this, "Este hijo ya pertenece a otro papa");
+                return;
+                }
+            }
+            
+                
+        for (int i = 0; i < listaHijos.getSize(); i++) {
+            Hijo hijo = (Hijo) listaHijos.getElementAt(i);
+            if (hijo.getId() == hijonuevo.getId()) {
+                JOptionPane.showMessageDialog(this, "No se puede agregar el mismo hijo dos veces");
+                return;
+
+            }
+            
+        }
+        listaHijos.addElement(model.getSelectedItem());
+    }//GEN-LAST:event_btnAgregarHijosActionPerformed
+
+    private void lstHijosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lstHijosMouseClicked
+        int fila = lstHijos.getSelectedIndex();
+        if (fila >= 0) {
+             DefaultListModel listatracos = (DefaultListModel) lstHijos.getModel();
+           listatracos.remove(fila);
+        } 
+    }//GEN-LAST:event_lstHijosMouseClicked
 
     
     public void SelectEsposa(int id)
@@ -401,10 +498,12 @@ dispose();
     }
     
     public void SetHijos(Marinero item) {
+         DefaultListModel listahijos = (DefaultListModel) lstHijos.getModel();
+         listahijos.removeAllElements();
         for (Integer idHijo : item.getHijos()) {
             Hijo hijo = hijoLogic.Consultar(idHijo);
             if (hijo != null) {
-                DefaultListModel listahijos = (DefaultListModel) lstHijos.getModel();
+               
                 listahijos.addElement(hijo);
             }
 
@@ -419,7 +518,7 @@ dispose();
          txtNombre.setText("");
         DefaultListModel listaHijos = (DefaultListModel) lstHijos.getModel();
         listaHijos.removeAllElements();
-        
+        rdbCapitan.setSelected(false);
          cmbEsposas.setSelectedIndex(0);
          cmbHijos.setSelectedIndex(0);
          cmbSexo.setSelectedIndex(0); 

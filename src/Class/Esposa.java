@@ -32,6 +32,12 @@ public class Esposa extends Persona {
     public Esposa() {
     }
 
+    @Override
+    public String toString()
+    {
+        return getNombre();
+    }
+    
     public Esposa(Esposa esposa) {
         id = esposa.id;
         nombre = esposa.nombre;

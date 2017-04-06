@@ -31,6 +31,13 @@ public class Hijo extends Persona {
     
     }
     
+    @Override
+    public String toString()
+    {
+        return getNombre();
+    }
+    
+    
     public Hijo(Hijo hijo)
     {
          id=hijo.id;

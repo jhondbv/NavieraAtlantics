@@ -33,36 +33,15 @@ public class HijoView extends javax.swing.JFrame {
         initComponents();
         hijoLogic= new HijoLogic();
         marineroLogic=new MarineroLogic();
-        LoadPadres();
+        GetData();
+       
     }
     public void Clear() {
         txtNombre.setText("");
-         cmbPadre.setSelectedIndex(0);
+        
         id = 0;
     }
-    
-    private void LoadPadres()
-    {
-        Marineros lst = marineroLogic.Consultar();
-        DefaultComboBoxModel model = (DefaultComboBoxModel)cmbPadre.getModel();
-        model.removeAllElements();
-        for (Marinero item : lst.List) {
-            model.addElement(item);
-        }
-    }
-    
-     private void SelectPadre(int id)
-    {
-        int size = cmbPadre.getItemCount();
-        DefaultComboBoxModel model = (DefaultComboBoxModel)cmbPadre.getModel();
-        for (int i = 0; i < size; i++) {
-            Marinero item = (Marinero)model.getElementAt(i);
-            if(item.getId()==id)
-            {
-                model.setSelectedItem(item);
-            }
-        }
-    }
+ 
      
        public void GetData() {
         Hijos hijos  = hijoLogic.ConsultarConRelaciones();
@@ -70,7 +49,14 @@ public class HijoView extends javax.swing.JFrame {
         if(hijos==null)
             return;
         for (Hijo hijo : hijos.List) {
-            model.addRow(new Object[]{hijo.getId(), hijo.getNombre(), hijo.getSexo(), hijo.padre.getNombre()});
+            String padre = "";
+            if(hijo.padre==null)
+            {
+             padre = "N/A";
+            }
+            else
+                padre = hijo.padre.getNombre();
+            model.addRow(new Object[]{hijo.getId(), hijo.getNombre(), hijo.getSexo(),padre });
         }
     }
 
@@ -84,7 +70,6 @@ public class HijoView extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         ComboSexo = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -96,13 +81,10 @@ public class HijoView extends javax.swing.JFrame {
         btnEliminar = new javax.swing.JButton();
         btnLimpiar = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        cmbPadre = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel2.setText("Nombre");
-
-        jLabel3.setText("Padre");
 
         ComboSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "M", "F" }));
 
@@ -181,8 +163,6 @@ public class HijoView extends javax.swing.JFrame {
             }
         });
 
-        cmbPadre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -200,23 +180,17 @@ public class HijoView extends javax.swing.JFrame {
                                 .addGroup(layout.createSequentialGroup()
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addComponent(jLabel2)
-                                        .addComponent(jLabel5)
-                                        .addComponent(jLabel3))
+                                        .addComponent(jLabel5))
                                     .addGap(18, 18, 18)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addComponent(txtNombre, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(ComboSexo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addComponent(cmbPadre, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addGap(61, 61, 61)
-                                    .addComponent(btnAgregar)
-                                    .addGap(17, 17, 17)
-                                    .addComponent(btnActualizar)))
+                            .addGap(61, 61, 61)
+                            .addComponent(btnAgregar)
+                            .addGap(17, 17, 17)
+                            .addComponent(btnActualizar)
                             .addGap(52, 52, 52)
                             .addComponent(btnEliminar)
                             .addGap(34, 34, 34)
@@ -237,11 +211,7 @@ public class HijoView extends javax.swing.JFrame {
                             .addComponent(jLabel5)
                             .addComponent(ComboSexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(cmbPadre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46)
+                .addGap(91, 91, 91)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAgregar)
                     .addComponent(btnActualizar)
@@ -259,35 +229,45 @@ public class HijoView extends javax.swing.JFrame {
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
         Hijo hijo = new Hijo();
-         DefaultComboBoxModel cmbmodel = (DefaultComboBoxModel)cmbPadre.getModel();
-             Marinero h = (Marinero)cmbmodel.getSelectedItem();
-            
         hijo.setNombre(txtNombre.getText());
         hijo.setSexo(ComboSexo.getSelectedItem().toString().charAt(0));
-         hijo.setIdPapa(h.getId());
+       
         new HijoLogic().Guardar(hijo);
 
         DefaultTableModel model = (DefaultTableModel) tblHijo.getModel();
-        model.addRow(new Object[]{hijo.getId(), hijo.getNombre(), hijo.getSexo(), hijo.padre.getNombre()});
+        String padre = "";
+            if(hijo.padre==null)
+            {
+             padre = "N/A";
+            }
+            else
+                padre = hijo.padre.getNombre();
+        model.addRow(new Object[]{hijo.getId(), hijo.getNombre(), hijo.getSexo(), padre});
         Clear();
     }//GEN-LAST:event_btnAgregarActionPerformed
    
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
         if (id > 0) {
             int fila = tblHijo.getSelectedRow();
-             DefaultComboBoxModel cmbmodel = (DefaultComboBoxModel)cmbPadre.getModel();
-             Marinero h = (Marinero)cmbmodel.getSelectedItem();
+            
             
             Hijo hijo = hijoLogic.Consultar(id);
             hijo.setNombre(txtNombre.getText());
             hijo.setSexo(ComboSexo.getSelectedItem().toString().charAt(0));
-            hijo.setIdPapa(h.getId());
+            
             
             Clear();
             hijoLogic.Actualizar(hijo);
             DefaultTableModel model = (DefaultTableModel) tblHijo.getModel();
             model.removeRow(fila);
-            model.insertRow(fila, new Object[]{hijo.getId(), hijo.getNombre(), hijo.getSexo(), hijo.padre.getNombre()});
+            String padre = "";
+            if(hijo.padre==null)
+            {
+             padre = "N/A";
+            }
+            else
+                padre = hijo.padre.getNombre();
+            model.insertRow(fila, new Object[]{hijo.getId(), hijo.getNombre(), hijo.getSexo(), padre});
 
         } else {
             JOptionPane.showMessageDialog(this, "Debe seleccionar un registro para editar");
@@ -321,8 +301,14 @@ public class HijoView extends javax.swing.JFrame {
         if (fila >= 0) {
             txtNombre.setText(tblHijo.getValueAt(fila, 1).toString());
             id = Integer.parseInt(tblHijo.getValueAt(fila, 0).toString());
-            Hijo hijo = hijoLogic.Consultar(id);
-            SelectPadre(hijo.getIdPapa());
+            DefaultComboBoxModel model = (DefaultComboBoxModel)ComboSexo.getModel();
+            for (int i = 0; i < model.getSize(); i++) {
+                if(model.getElementAt(i).equals(tblHijo.getValueAt(fila, 2).toString()))
+                {
+                    ComboSexo.setSelectedIndex(i);
+                }
+            }
+           
         } 
     }//GEN-LAST:event_tblHijoMouseClicked
 
@@ -371,10 +357,8 @@ public class HijoView extends javax.swing.JFrame {
     private javax.swing.JButton btnAgregar;
     private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnLimpiar;
-    private javax.swing.JComboBox<String> cmbPadre;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
