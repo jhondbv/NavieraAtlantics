@@ -52,18 +52,7 @@ public class EsposasView extends javax.swing.JFrame {
     }
   
  
-  private void SelectIDEsposo(int id)
-    {
-        int size = cmbMarineros.getItemCount();
-        DefaultComboBoxModel model = (DefaultComboBoxModel)cmbMarineros.getModel();
-        for (int i = 0; i < size; i++) {
-            Marinero item = (Marinero)model.getElementAt(i);
-            if(item.getId()==id)
-            {
-                model.setSelectedItem(item);
-            }
-        }
-    }
+ 
   
     /**
      * This method is called from within the constructor to initialize the form.
@@ -125,7 +114,7 @@ public class EsposasView extends javax.swing.JFrame {
 
         jLabel2.setText("Esposo");
 
-        cmbMarineros.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbMarineros.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0" }));
 
         jLabel3.setText("ESPOSA");
 
@@ -144,8 +133,18 @@ public class EsposasView extends javax.swing.JFrame {
         });
 
         btnEliminar.setText("Eliminar");
+        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarActionPerformed(evt);
+            }
+        });
 
         btnLimpiar.setText("Limpiar");
+        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -234,8 +233,39 @@ public class EsposasView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAgregarActionPerformed
 
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
-   
+   if (id > 0) {
+            int fila = tblEsposas.getSelectedRow();
+            Esposa esposa = esposaLogic.Consultar(id);
+            esposa.setNombre(txtNombre.getText());
+            esposa.setIdEsposo(((Marinero)cmbMarineros.getSelectedItem()).getId());
+            
+           
+            Clear();
+            esposaLogic.Actualizar(esposa);
+            DefaultTableModel model = (DefaultTableModel) tblEsposas.getModel();
+            model.removeRow(fila);
+            model.insertRow(fila, new Object[]{esposa.getId(),esposa.getIdEsposo()});
+
+        } else {
+            JOptionPane.showMessageDialog(this, "Debe seleccionar un registro para editar");
+        }
     }//GEN-LAST:event_btnActualizarActionPerformed
+
+    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+        if (id > 0) {
+            int fila = tblEsposas.getSelectedRow();
+            esposaLogic.Eliminar(id);
+            DefaultTableModel model = (DefaultTableModel) tblEsposas.getModel();
+            model.removeRow(fila);
+            Clear();
+        } else {
+            JOptionPane.showMessageDialog(this, "Debe seleccionar un registro para eliminar");
+        }
+    }//GEN-LAST:event_btnEliminarActionPerformed
+
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+        Clear();
+    }//GEN-LAST:event_btnLimpiarActionPerformed
 
     /**
      * @param args the command line arguments
