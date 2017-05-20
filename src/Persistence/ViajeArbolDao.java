@@ -22,7 +22,7 @@ public class ViajeArbolDao implements IViajeDao{
      
      public ViajeArbolDao()
      {
-        lstItems = Archivos.Repositories.esposas;
+        lstItems = Archivos.Repositories.viajes;
      
      }
     @Override

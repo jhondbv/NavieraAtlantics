@@ -22,7 +22,7 @@ public class MarineroArbolDao implements IMarineroDao {
      
      public MarineroArbolDao()
      {
-        lstItems = Archivos.Repositories.esposas;
+        lstItems = Archivos.Repositories.marineros;
      
      }
     @Override

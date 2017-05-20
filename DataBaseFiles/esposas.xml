@@ -1,12 +1,17 @@
 <esposas>
+   <esposa id="2">
+      <nombre>Julieta</nombre>
+      <sexo>F</sexo>
+      <IdEsposo>1</IdEsposo>
+   </esposa>
+   <esposa id="3">
+      <nombre>Ana</nombre>
+      <sexo>F</sexo>
+      <IdEsposo>2</IdEsposo>
+   </esposa>
    <esposa id="1">
       <nombre>Maria</nombre>
       <sexo>F</sexo>
       <IdEsposo>1</IdEsposo>
-   </esposa>
-   <esposa id="2">
-      <nombre>Julieta</nombre>
-      <sexo>F</sexo>
-      <IdEsposo>0</IdEsposo>
    </esposa>
 </esposas>

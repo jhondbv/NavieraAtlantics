@@ -1,22 +1,22 @@
 <barcos>
-   <barco Id="1">
-      <RegMerc>false</RegMerc>
-      <IdTipoBarco>4</IdTipoBarco>
-      <nombre>Barco 1</nombre>
-   </barco>
-   <barco Id="2">
-      <RegMerc>true</RegMerc>
-      <IdTipoBarco>2</IdTipoBarco>
-      <nombre>Barco 2</nombre>
-   </barco>
    <barco Id="3">
       <RegMerc>true</RegMerc>
       <IdTipoBarco>3</IdTipoBarco>
       <nombre>Barco 2</nombre>
    </barco>
    <barco Id="4">
-      <RegMerc>false</RegMerc>
+      <RegMerc>true</RegMerc>
       <IdTipoBarco>5</IdTipoBarco>
-      <nombre>897</nombre>
+      <nombre>barco jhon</nombre>
+   </barco>
+   <barco Id="2">
+      <RegMerc>true</RegMerc>
+      <IdTipoBarco>6</IdTipoBarco>
+      <nombre>Barco 7</nombre>
+   </barco>
+   <barco Id="1">
+      <RegMerc>false</RegMerc>
+      <IdTipoBarco>4</IdTipoBarco>
+      <nombre>Barco 1</nombre>
    </barco>
 </barcos>

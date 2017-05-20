@@ -4,4 +4,9 @@
       <sexo>M</sexo>
       <idPapa>1</idPapa>
    </hijo>
+   <hijo id="2">
+      <nombre>Cristian</nombre>
+      <sexo>M</sexo>
+      <idPapa>2</idPapa>
+   </hijo>
 </hijos>

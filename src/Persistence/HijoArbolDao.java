@@ -21,7 +21,7 @@ public class HijoArbolDao implements IHijoDao{
      
      public HijoArbolDao()
      {
-        lstItems = Archivos.Repositories.esposas;
+        lstItems = Archivos.Repositories.hijos;
      
      }
     @Override

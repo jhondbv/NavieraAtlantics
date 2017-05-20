@@ -1,1 +1,26 @@
-<marineros/>
+<marineros>
+   <marinero id="1">
+      <nombre>jhon</nombre>
+      <sexo>M</sexo>
+      <idEsposa>2</idEsposa>
+      <hijos class="java.util.ArrayList">
+         <ID>
+            <id>1</id>
+         </ID>
+      </hijos>
+      <idTestamento>0</idTestamento>
+      <isCapitan>false</isCapitan>
+   </marinero>
+   <marinero id="2">
+      <nombre>marinero 2</nombre>
+      <sexo>M</sexo>
+      <idEsposa>3</idEsposa>
+      <hijos class="java.util.ArrayList">
+         <ID>
+            <id>2</id>
+         </ID>
+      </hijos>
+      <idTestamento>0</idTestamento>
+      <isCapitan>true</isCapitan>
+   </marinero>
+</marineros>
