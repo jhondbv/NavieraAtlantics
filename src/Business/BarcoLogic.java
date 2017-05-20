@@ -8,9 +8,11 @@ import Class.Barco;
 import Class.Barcos;
 import Class.TipoBarco;
 import Class.TipoBarcos;
+import Persistence.BarcoArbolDao;
 import Persistence.BarcoDao;
 import Persistence.Interface.IBarcoDao;
 import Persistence.Interface.ITipoBarcoDAO;
+import Persistence.TipoBarcoArbolDao;
 import Persistence.TipoBarcoDAO;
 import java.util.HashMap;
 import java.util.List;
@@ -26,8 +28,8 @@ public class BarcoLogic {
     private  HashMap<Integer,TipoBarco> hashtipos =null;
     
     public BarcoLogic(){
-        DAO = new BarcoDao();
-        TipoBarcoDAO=new TipoBarcoDAO();
+        DAO = new BarcoArbolDao();
+        TipoBarcoDAO=new TipoBarcoArbolDao();
         
        hashtipos = new HashMap<>();
        List<TipoBarco>tipos = TipoBarcoDAO.Consultar().List;

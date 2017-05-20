@@ -8,9 +8,11 @@ package Business;
 import Class.Esposa;
 import Class.Esposas;
 import Class.Marinero;
+import Persistence.EsposaArbolDao;
 import Persistence.EsposaDao;
 import Persistence.Interface.IEsposaDao;
 import Persistence.Interface.IMarineroDao;
+import Persistence.MarineroArbolDao;
 import Persistence.MarineroDao;
 import java.util.HashMap;
 import java.util.List;
@@ -28,8 +30,8 @@ public class EsposaLogic {
     
     public  EsposaLogic()
     {
-        DAO=new EsposaDao();
-        MarineroDAO=new MarineroDao();
+        DAO=new EsposaArbolDao();
+        MarineroDAO=new MarineroArbolDao();
         
         hashesposos = new HashMap<>();
         List<Marinero>tipos = MarineroDAO.Consultar().List;

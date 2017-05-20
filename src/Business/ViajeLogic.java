@@ -15,8 +15,11 @@ import Class.Puerto;
 import Class.TipoBarco;
 import Class.Viaje;
 import Class.Viajes;
+import Persistence.BarcoArbolDao;
 import Persistence.BarcoDao;
+import Persistence.EsposaArbolDao;
 import Persistence.EsposaDao;
+import Persistence.HijoArbolDao;
 import Persistence.HijoDao;
 import Persistence.Interface.IBarcoDao;
 import Persistence.Interface.IEsposaDao;
@@ -25,9 +28,13 @@ import Persistence.Interface.IMarineroDao;
 import Persistence.Interface.IPuertoDao;
 import Persistence.Interface.ITipoBarcoDAO;
 import Persistence.Interface.IViajeDao;
+import Persistence.MarineroArbolDao;
 import Persistence.MarineroDao;
+import Persistence.PuertoArbolDao;
 import Persistence.PuertoDao;
+import Persistence.TipoBarcoArbolDao;
 import Persistence.TipoBarcoDAO;
+import Persistence.ViajeArbolDao;
 import Persistence.ViajeDao;
 import java.util.HashMap;
 import java.util.List;
@@ -53,13 +60,13 @@ public  class ViajeLogic {
     
     public  ViajeLogic()
     {
-        DAO=new ViajeDao();
-        PuertoDAO= new PuertoDao();
-        BarcoDAO= new BarcoDao();
-        EsposaDAO=new EsposaDao();
-        HijoDAO=new HijoDao();
-        MarineroDAO = new MarineroDao();
-        TipoBarcoDAO= new TipoBarcoDAO();
+        DAO=new ViajeArbolDao();
+        PuertoDAO= new PuertoArbolDao();
+        BarcoDAO= new BarcoArbolDao();
+        EsposaDAO=new EsposaArbolDao();
+        HijoDAO=new HijoArbolDao();
+        MarineroDAO = new MarineroArbolDao();
+        TipoBarcoDAO= new TipoBarcoArbolDao();
         
         hashBarcos = new HashMap<>();
         List<Barco> items = BarcoDAO.Consultar().List;

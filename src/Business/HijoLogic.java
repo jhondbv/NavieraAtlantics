@@ -8,9 +8,11 @@ package Business;
 import Class.Hijo;
 import Class.Hijos;
 import Class.Marinero;
+import Persistence.HijoArbolDao;
 import Persistence.HijoDao;
 import Persistence.Interface.IHijoDao;
 import Persistence.Interface.IMarineroDao;
+import Persistence.MarineroArbolDao;
 import Persistence.MarineroDao;
 import java.util.HashMap;
 import java.util.List;
@@ -26,8 +28,8 @@ public class HijoLogic {
      private  HashMap<Integer,Marinero> hashMarinero =null;
     public  HijoLogic()
     {
-        DAO=new HijoDao();
-        marineroDAO=new MarineroDao();
+        DAO=new HijoArbolDao();
+        marineroDAO=new MarineroArbolDao();
         
         hashMarinero = new HashMap<>();
         List<Marinero>marineros = marineroDAO.Consultar().List;

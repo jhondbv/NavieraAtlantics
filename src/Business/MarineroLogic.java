@@ -10,11 +10,14 @@ import Class.Esposas;
 import Class.Hijo;
 import Class.Marinero;
 import Class.Marineros;
+import Persistence.EsposaArbolDao;
 import Persistence.EsposaDao;
+import Persistence.HijoArbolDao;
 import Persistence.HijoDao;
 import Persistence.Interface.IEsposaDao;
 import Persistence.Interface.IHijoDao;
 import Persistence.Interface.IMarineroDao;
+import Persistence.MarineroArbolDao;
 import Persistence.MarineroDao;
 import java.util.HashMap;
 import java.util.List;
@@ -32,9 +35,9 @@ public class MarineroLogic {
     
     public  MarineroLogic()
     {
-        DAO=new MarineroDao();
-        esposaDao= new EsposaDao();
-        hijoDao = new HijoDao();
+        DAO=new MarineroArbolDao();
+        esposaDao= new EsposaArbolDao();
+        hijoDao = new HijoArbolDao();
         
          hashHijos = new HashMap<>();
         List<Hijo> items = hijoDao.Consultar().List;

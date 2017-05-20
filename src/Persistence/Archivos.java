@@ -297,13 +297,6 @@ public class Archivos {
             }
         }
         
-      
-
-       
-
-       
-
-        
 
         private void GuardarTipoBarcos() {
 
@@ -323,7 +316,9 @@ public class Archivos {
             Serializer serializer = new Persister();
             File file = new File(Archivo_Viaje);
             try {
-                serializer.write(viajes, file);
+                Viajes items = new Viajes();
+                items.List=(List<Viaje>)(Object)viajes.generarLista();
+                serializer.write(items, file);
 
             } catch (Exception ex) {
             }
@@ -334,7 +329,9 @@ public class Archivos {
             Serializer serializer = new Persister();
             File file = new File(Archivo_Marineros);
             try {
-                serializer.write(marineros, file);
+                                Marineros items = new Marineros();
+                items.List=(List<Marinero>)(Object)marineros.generarLista();
+                serializer.write(items, file);
 
             } catch (Exception ex) {
             }
@@ -345,7 +342,9 @@ public class Archivos {
             Serializer serializer = new Persister();
             File file = new File(Archivo_Esposas);
             try {
-                serializer.write(esposas, file);
+                Esposas items = new Esposas();
+                items.List=(List<Esposa>)(Object)esposas.generarLista();
+                serializer.write(items, file);
 
             } catch (Exception ex) {
             }
@@ -356,7 +355,9 @@ public class Archivos {
             Serializer serializer = new Persister();
             File file = new File(Archivo_Hijos);
             try {
-                serializer.write(hijos, file);
+                Hijos items = new Hijos();
+                items.List=(List<Hijo>)(Object)hijos.generarLista();
+                serializer.write(items, file);
 
             } catch (Exception ex) {
             }
@@ -367,7 +368,9 @@ public class Archivos {
             Serializer serializer = new Persister();
             File file = new File(Archivo_Puertos);
             try {
-                serializer.write(puertos, file);
+                 Puertos items = new Puertos();
+                items.List=(List<Puerto>)(Object)puertos.generarLista();
+                serializer.write(items, file);
 
             } catch (Exception ex) {
             }
@@ -378,7 +381,9 @@ public class Archivos {
             Serializer serializer = new Persister();
             File file = new File(Archivo_Barcos);
             try {
-                serializer.write(barcos, file);
+                Barcos items = new Barcos();
+                items.List=(List<Barco>)(Object)barcos.generarLista();
+                serializer.write(items, file);
 
             } catch (Exception ex) {
             }

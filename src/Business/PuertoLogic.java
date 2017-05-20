@@ -8,6 +8,7 @@ package Business;
 import Class.Puerto;
 import Class.Puertos;
 import Persistence.Interface.IPuertoDao;
+import Persistence.PuertoArbolDao;
 import Persistence.PuertoDao;
 
 /**
@@ -21,7 +22,7 @@ public class PuertoLogic {
     
     public  PuertoLogic()
     {
-        DAO=new PuertoDao();
+        DAO=new PuertoArbolDao();
     }
     
     public void Guardar(Puerto item)
