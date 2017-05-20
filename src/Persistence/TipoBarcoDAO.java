@@ -20,7 +20,7 @@ public class TipoBarcoDAO implements ITipoBarcoDAO {
     private TipoBarcos tipoBarcos = new TipoBarcos();
 
     public TipoBarcoDAO() {
-        tipoBarcos = Archivos.Repositories.tipoBarcos;
+      //  tipoBarcos = Archivos.Repositories.tipoBarcos;
     }
 
     @Override

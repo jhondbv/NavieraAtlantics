@@ -9,6 +9,7 @@ package Business;
 import Class.TipoBarco;
 import Class.TipoBarcos;
 import Persistence.Interface.ITipoBarcoDAO;
+import Persistence.TipoBarcoArbolDao;
 import Persistence.TipoBarcoDAO;
 
 /**
@@ -21,7 +22,7 @@ public class TipoBarcoLogic {
     
    
     public TipoBarcoLogic(){
-        DAO=new TipoBarcoDAO();
+        DAO=new TipoBarcoArbolDao();
     }
     
     public void Guardar (TipoBarco barco){

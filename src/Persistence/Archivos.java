@@ -5,6 +5,8 @@
  */
 package Persistence;
 
+import Class.ArbolAvl.ArbolAvl;
+import Class.ArbolAvl.DatoNodo;
 import Class.TipoBarcos;
 import Class.Barcos;
 import Class.Esposas;
@@ -12,8 +14,11 @@ import Class.Hijos;
 import Class.Marineros;
 import Class.Puertos;
 import Class.Testamentos;
+import Class.TipoBarco;
 import Class.Viajes;
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 
@@ -24,8 +29,8 @@ import org.simpleframework.xml.core.Persister;
 public class Archivos {
 
     public static class Repositories {
-        
-        private final String Archivo_TipoBarcos="DataBaseFiles/TipoBarcos.xml";
+
+        private final String Archivo_TipoBarcos = "DataBaseFiles/TipoBarcos.xml";
         private final String Archivo_Viaje = "DataBaseFiles/viajes.xml";
         private final String Archivo_Puertos = "DataBaseFiles/puertos.xml";
         private final String Archivo_Barcos = "DataBaseFiles/barcos.xml";
@@ -34,7 +39,7 @@ public class Archivos {
         private final String Archivo_Esposas = "DataBaseFiles/esposas.xml";
         private final String Archivo_Testamentos = "DataBaseFiles/testamentos.xml";
 
-        public static TipoBarcos tipoBarcos;
+        public static ArbolAvl tipoBarcos;
         public static Viajes viajes;
         public static Puertos puertos;
         public static Barcos barcos;
@@ -45,7 +50,7 @@ public class Archivos {
 
         public Repositories(boolean cargaInicial) {
             if (cargaInicial) {
-                
+
                 LoadTipoBarcos();
                 LoadViajes();
                 LoadPuertos();
@@ -54,7 +59,7 @@ public class Archivos {
                 LoadHijos();
                 LoadMarineros();
                 LoadTestamentos();
-                
+
             }
         }
 
@@ -62,12 +67,30 @@ public class Archivos {
             File file = new File(Archivo_TipoBarcos);
             Serializer serializer = new Persister();
             try {
-                tipoBarcos= new TipoBarcos();
-                tipoBarcos = serializer.read(TipoBarcos.class, file);
+                tipoBarcos = new ArbolAvl();
+                TipoBarcos tipoBarcoss = new TipoBarcos();
+                tipoBarcoss = serializer.read(TipoBarcos.class, file);
+                if(tipoBarcoss == null)
+                {
+                   
+                    return ;
+                }
+                List<DatoNodo> datosNodos = new ArrayList<DatoNodo>();
+                for (TipoBarco tipo : tipoBarcoss.List) {
+
+                    int id = tipo.getId();
+                    DatoNodo dt = new DatoNodo();
+                    dt.dato=tipo;
+                    dt.id=tipo.getId();
+                    datosNodos.add(dt);
+                }
+               tipoBarcos = new ArbolAvl();
+               tipoBarcos.construyeAvl(datosNodos);
             } catch (Exception ex) {
 
             }
         }
+
         private void LoadViajes() {
             File file = new File(Archivo_Viaje);
             Serializer serializer = new Persister();
@@ -78,13 +101,13 @@ public class Archivos {
 
             }
         }
-        
-         private void LoadTestamentos() {
+
+        private void LoadTestamentos() {
             File file = new File(Archivo_Testamentos);
             Serializer serializer = new Persister();
             try {
                 testamentos = new Testamentos();
-                
+
                 testamentos = serializer.read(Testamentos.class, file);
             } catch (Exception ex) {
 
@@ -108,7 +131,7 @@ public class Archivos {
             try {
                 barcos = new Barcos();
                 barcos = serializer.read(Barcos.class, file);
-              
+
             } catch (Exception ex) {
 
             }
@@ -118,7 +141,7 @@ public class Archivos {
             File file = new File(Archivo_Hijos);
             Serializer serializer = new Persister();
             try {
-                hijos= new Hijos();
+                hijos = new Hijos();
                 hijos = serializer.read(Hijos.class, file);
             } catch (Exception ex) {
 
@@ -147,17 +170,19 @@ public class Archivos {
             }
         }
 
-        
         private void GuardarTipoBarcos() {
 
             Serializer serializer = new Persister();
             File file = new File(Archivo_TipoBarcos);
             try {
-                serializer.write(tipoBarcos, file);
+                TipoBarcos objTipoBarcos = new TipoBarcos();
+                objTipoBarcos.List=(List<TipoBarco>)(Object)tipoBarcos.generarLista();
+                serializer.write(objTipoBarcos, file);
 
             } catch (Exception ex) {
             }
         }
+
         private void GuardarViajes() {
 
             Serializer serializer = new Persister();
@@ -223,8 +248,8 @@ public class Archivos {
             } catch (Exception ex) {
             }
         }
-        
-            private void GuardarTestamentos() {
+
+        private void GuardarTestamentos() {
 
             Serializer serializer = new Persister();
             File file = new File(Archivo_Testamentos);
