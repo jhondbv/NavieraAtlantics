@@ -21,7 +21,7 @@ public class PuertoDao implements IPuertoDao {
     private static Puertos lstItems = new Puertos();
 
     public PuertoDao() {
-        lstItems = Archivos.Repositories.puertos;
+        //lstItems = Archivos.Repositories.puertos;
     }
 
     @Override

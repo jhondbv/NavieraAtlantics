@@ -24,7 +24,7 @@ public class ViajeDao implements IViajeDao {
 
     public ViajeDao() {
 
-        viajes = Archivos.Repositories.viajes;
+       // viajes = Archivos.Repositories.viajes;
 
     }
 

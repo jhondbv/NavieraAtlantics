@@ -21,7 +21,7 @@ public class BarcoDao implements IBarcoDao {
     private static Barcos barcos = new Barcos();
 
     public BarcoDao() {
-        barcos = Archivos.Repositories.barcos;
+       // barcos = Archivos.Repositories.barcos;
     }
 
     @Override

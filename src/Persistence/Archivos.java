@@ -7,14 +7,20 @@ package Persistence;
 
 import Class.ArbolAvl.ArbolAvl;
 import Class.ArbolAvl.DatoNodo;
+import Class.Barco;
 import Class.TipoBarcos;
 import Class.Barcos;
+import Class.Esposa;
 import Class.Esposas;
+import Class.Hijo;
 import Class.Hijos;
+import Class.Marinero;
 import Class.Marineros;
 import Class.Puertos;
+import Class.Puerto;
 import Class.Testamentos;
 import Class.TipoBarco;
+import Class.Viaje;
 import Class.Viajes;
 import java.io.File;
 import java.util.ArrayList;
@@ -40,12 +46,12 @@ public class Archivos {
         private final String Archivo_Testamentos = "DataBaseFiles/testamentos.xml";
 
         public static ArbolAvl tipoBarcos;
-        public static Viajes viajes;
-        public static Puertos puertos;
-        public static Barcos barcos;
-        public static Marineros marineros;
-        public static Hijos hijos;
-        public static Esposas esposas;
+        public static ArbolAvl viajes;
+        public static ArbolAvl puertos;
+        public static ArbolAvl barcos;
+        public static ArbolAvl marineros;
+        public static ArbolAvl hijos;
+        public static ArbolAvl esposas;
         public static Testamentos testamentos;
 
         public Repositories(boolean cargaInicial) {
@@ -95,13 +101,190 @@ public class Archivos {
             File file = new File(Archivo_Viaje);
             Serializer serializer = new Persister();
             try {
-                viajes = new Viajes();
-                viajes = serializer.read(Viajes.class, file);
+                viajes = new ArbolAvl();
+                
+                Viajes objViajes = new Viajes();
+                objViajes = serializer.read(Viajes.class, file);
+                if(objViajes == null)
+                {
+                   
+                    return ;
+                }
+            List<DatoNodo> datosNodos = new ArrayList<DatoNodo>();
+                for (Viaje viaje : objViajes.List) {
+
+                    int id = viaje.getId();
+                    DatoNodo dt = new DatoNodo();
+                    dt.dato=viaje;
+                    dt.id=viaje.getId();
+                    datosNodos.add(dt);
+                }
+               viajes = new ArbolAvl();
+               viajes.construyeAvl(datosNodos);
             } catch (Exception ex) {
 
             }
         }
 
+       
+
+        private void LoadPuertos() {
+            File file = new File(Archivo_Puertos);
+            Serializer serializer = new Persister();
+            try {
+                puertos= new ArbolAvl();
+                
+                Puertos objPuertos = new Puertos();
+                objPuertos= serializer.read(Puertos.class, file);
+                if(objPuertos == null)
+                {
+                   
+                    return ;
+                }
+                List<DatoNodo> datosNodos = new ArrayList<DatoNodo>();
+                for (Puerto puerto : objPuertos.List) {
+
+                    int id = puerto.getId();
+                    DatoNodo dt = new DatoNodo();
+                    dt.dato=puerto;
+                    dt.id=puerto.getId();
+                    datosNodos.add(dt);
+                }
+               puertos = new ArbolAvl();
+               puertos.construyeAvl(datosNodos);
+            } catch (Exception ex) {
+
+            }
+        }
+        
+        
+        
+         
+
+        private void LoadBarcos() {
+            File file = new File(Archivo_Barcos);
+            Serializer serializer = new Persister();
+            try {
+                barcos= new ArbolAvl();
+                
+                Barcos objBarcos = new Barcos();
+                objBarcos= serializer.read(Barcos.class, file);
+                if(objBarcos == null)
+                {
+                   
+                    return ;
+                }
+                List<DatoNodo> datosNodos = new ArrayList<DatoNodo>();
+                for (Barco barco : objBarcos.List) {
+
+                    int id = barco.getId();
+                    DatoNodo dt = new DatoNodo();
+                    dt.dato=barco;
+                    dt.id=barco.getId();
+                    datosNodos.add(dt);
+                }
+               barcos = new ArbolAvl();
+               barcos.construyeAvl(datosNodos);
+            } catch (Exception ex) {
+
+            }
+        }
+        
+        
+        
+          private void LoadMarineros() {
+            File file = new File(Archivo_Marineros);
+            Serializer serializer = new Persister();
+           try {
+                marineros= new ArbolAvl();
+                
+                Marineros objMarineros = new Marineros();
+                objMarineros= serializer.read(Marineros.class, file);
+                if(objMarineros == null)
+                {
+                   
+                    return ;
+                }
+                List<DatoNodo> datosNodos = new ArrayList<DatoNodo>();
+                for (Marinero marinero : objMarineros.List) {
+
+                    int id = marinero.getId();
+                    DatoNodo dt = new DatoNodo();
+                    dt.dato=marinero;
+                    dt.id=marinero.getId();
+                    datosNodos.add(dt);
+                }
+               marineros = new ArbolAvl();
+               marineros.construyeAvl(datosNodos);
+            } catch (Exception ex) {
+
+            }
+        }
+        
+          
+          
+        
+         private void LoadHijos() {
+            File file = new File(Archivo_Hijos);
+            Serializer serializer = new Persister();
+            try {
+                hijos= new ArbolAvl();
+                
+                Hijos objHijos = new Hijos();
+                objHijos= serializer.read(Hijos.class, file);
+                if(objHijos == null)
+                {
+                   
+                    return ;
+                }
+                List<DatoNodo> datosNodos = new ArrayList<DatoNodo>();
+                for (Hijo hijo : objHijos.List) {
+
+                    int id = hijo.getId();
+                    DatoNodo dt = new DatoNodo();
+                    dt.dato=hijo;
+                    dt.id=hijo.getId();
+                    datosNodos.add(dt);
+                }
+               hijos = new ArbolAvl();
+               hijos.construyeAvl(datosNodos);
+            } catch (Exception ex) {
+
+            }
+        }
+        
+         private void LoadEsposas() {
+            File file = new File(Archivo_Esposas);
+            Serializer serializer = new Persister();
+           try {
+                esposas= new ArbolAvl();
+                
+                Esposas objEsposas = new Esposas();
+                objEsposas= serializer.read(Esposas.class, file);
+                if(objEsposas == null)
+                {
+                   
+                    return ;
+                }
+                List<DatoNodo> datosNodos = new ArrayList<DatoNodo>();
+                for (Esposa esposa : objEsposas.List) {
+
+                    int id = esposa.getId();
+                    DatoNodo dt = new DatoNodo();
+                    dt.dato=esposa;
+                    dt.id=esposa.getId();
+                    datosNodos.add(dt);
+                }
+               esposas = new ArbolAvl();
+               esposas.construyeAvl(datosNodos);
+            } catch (Exception ex) {
+
+            }
+        }
+         
+         
+         
+        
         private void LoadTestamentos() {
             File file = new File(Archivo_Testamentos);
             Serializer serializer = new Persister();
@@ -113,62 +296,14 @@ public class Archivos {
 
             }
         }
+        
+      
 
-        private void LoadPuertos() {
-            File file = new File(Archivo_Puertos);
-            Serializer serializer = new Persister();
-            try {
-                puertos = new Puertos();
-                puertos = serializer.read(Puertos.class, file);
-            } catch (Exception ex) {
+       
 
-            }
-        }
+       
 
-        private void LoadBarcos() {
-            File file = new File(Archivo_Barcos);
-            Serializer serializer = new Persister();
-            try {
-                barcos = new Barcos();
-                barcos = serializer.read(Barcos.class, file);
-
-            } catch (Exception ex) {
-
-            }
-        }
-
-        private void LoadHijos() {
-            File file = new File(Archivo_Hijos);
-            Serializer serializer = new Persister();
-            try {
-                hijos = new Hijos();
-                hijos = serializer.read(Hijos.class, file);
-            } catch (Exception ex) {
-
-            }
-        }
-
-        private void LoadEsposas() {
-            File file = new File(Archivo_Esposas);
-            Serializer serializer = new Persister();
-            try {
-                esposas = new Esposas();
-                esposas = serializer.read(Esposas.class, file);
-            } catch (Exception ex) {
-
-            }
-        }
-
-        private void LoadMarineros() {
-            File file = new File(Archivo_Marineros);
-            Serializer serializer = new Persister();
-            try {
-                marineros = new Marineros();
-                marineros = serializer.read(Marineros.class, file);
-            } catch (Exception ex) {
-
-            }
-        }
+        
 
         private void GuardarTipoBarcos() {
 

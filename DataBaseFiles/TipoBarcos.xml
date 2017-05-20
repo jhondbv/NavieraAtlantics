@@ -1,27 +1,27 @@
 <tipoBarcos>
-   <tipoBarco id="4">
-      <descripcion>porta avion</descripcion>
-      <capacidadCarga>34</capacidadCarga>
-      <capacidadPersonas>3344</capacidadPersonas>
-   </tipoBarco>
    <tipoBarco id="5">
       <descripcion>lancha</descripcion>
-      <capacidadCarga>323</capacidadCarga>
-      <capacidadPersonas>12</capacidadPersonas>
+      <capacidadCarga>777</capacidadCarga>
+      <capacidadPersonas>13</capacidadPersonas>
    </tipoBarco>
    <tipoBarco id="6">
       <descripcion>yate</descripcion>
       <capacidadCarga>642</capacidadCarga>
       <capacidadPersonas>23</capacidadPersonas>
    </tipoBarco>
-   <tipoBarco id="1">
-      <descripcion>buque</descripcion>
-      <capacidadCarga>556</capacidadCarga>
-      <capacidadPersonas>55</capacidadPersonas>
-   </tipoBarco>
    <tipoBarco id="3">
       <descripcion>crucero</descripcion>
       <capacidadCarga>58</capacidadCarga>
       <capacidadPersonas>66</capacidadPersonas>
+   </tipoBarco>
+   <tipoBarco id="4">
+      <descripcion>porta avion</descripcion>
+      <capacidadCarga>34</capacidadCarga>
+      <capacidadPersonas>3344</capacidadPersonas>
+   </tipoBarco>
+   <tipoBarco id="1">
+      <descripcion>buque</descripcion>
+      <capacidadCarga>556</capacidadCarga>
+      <capacidadPersonas>55</capacidadPersonas>
    </tipoBarco>
 </tipoBarcos>

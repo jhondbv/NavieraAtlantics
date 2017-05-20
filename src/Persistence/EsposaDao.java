@@ -19,7 +19,7 @@ public class EsposaDao implements IEsposaDao {
 
     
       public EsposaDao() {
-        lstItems = Archivos.Repositories.esposas;
+        //lstItems = Archivos.Repositories.esposas;
     }
 
     @Override

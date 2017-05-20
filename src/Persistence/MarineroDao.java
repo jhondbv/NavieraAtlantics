@@ -19,7 +19,7 @@ public class MarineroDao implements IMarineroDao {
     private static Marineros lstItems = new Marineros();
 
     public MarineroDao() {
-        lstItems = Archivos.Repositories.marineros;
+        //lstItems = Archivos.Repositories.marineros;
     }
 
     @Override

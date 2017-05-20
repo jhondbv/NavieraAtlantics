@@ -18,7 +18,7 @@ public class HijoDao implements IHijoDao {
     private static Hijos lstItems = new Hijos();
 
     public HijoDao() {
-        lstItems = Archivos.Repositories.hijos;
+        //lstItems = Archivos.Repositories.hijos;
     }
 
     @Override
